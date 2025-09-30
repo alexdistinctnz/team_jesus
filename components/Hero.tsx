@@ -46,7 +46,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-6xl md:text-8xl font-display font-black text-white mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-8xl font-display font-black text-white mb-6 tracking-tight">
             #TEAMJESUS
           </h1>
           <p className="text-xl md:text-2xl text-white/90 font-semibold mb-2">
