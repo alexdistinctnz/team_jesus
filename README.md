@@ -10,7 +10,7 @@ A production-ready Next.js donor-facing microsite built with modern design, anim
 
 This microsite features:
 
-- ✨ Stunning animations with Framer Motion
+- ✨ Animations with Framer Motion
 - 🎨 Professional design with Lucide icons
 - 💳 Live donation tracking with optimistic updates
 - 📊 Results-based funding model ($0.01 per 10 views)
@@ -57,7 +57,7 @@ npm run lint         # Run ESLint
 
 ## 🎨 Design Features
 
-### What Makes This Special
+### What Makes This Tick
 
 **Modern Tech Stack:**
 
@@ -417,19 +417,6 @@ Replace placeholders in `components/TrustBand.tsx` with actual logos.
 4. **No authentication** - Add if admin dashboard needed
 5. **No email receipts** - Implement after payment integration
 
-## 🎉 What Makes This Tick
-
-- ✨ Animated hero with floating elements
-- 🎭 Framer Motion throughout
-- 🎯 30+ Lucide icons
-- 🎨 Custom gradients & shadows
-- 💫 Shimmer effects
-- 🌊 Glassmorphism
-- 🎪 Micro-interactions
-- 📱 Professional mobile design
-- ♿ Enhanced accessibility
-- 🚀 Production-ready
-
 ## 📦 Dependencies
 
 **Production:**
@@ -449,17 +436,6 @@ Replace placeholders in `components/TrustBand.tsx` with actual logos.
 - `vitest` - Testing framework
 - `@testing-library/react` - Component testing
 - `@vitejs/plugin-react` - React support
-
-## 📞 Support
-
-Questions or issues:
-
-- Email: hello@postclips.com
-- Update contact info in `components/FAQ.tsx` & `components/Footer.tsx`
-
-## 📄 License
-
-Copyright © 2025 PostClips. All rights reserved.
 
 ---
 
