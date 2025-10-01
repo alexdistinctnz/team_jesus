@@ -47,6 +47,7 @@ const config: Config = {
         'hero-blue': 'linear-gradient(to bottom, #0091ff, #0080FF)',
         'card-gradient': 'linear-gradient(to bottom right, var(--tw-gradient-stops))',
         'shine': 'linear-gradient(110deg, transparent 25%, rgba(255,255,255,0.3) 50%, transparent 75%)',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       boxShadow: {
         'glow': '0 0 40px rgba(0, 128, 255, 0.3)',

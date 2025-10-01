@@ -50,7 +50,7 @@ export function ImpactStats() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900 text-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Impact stats */}
@@ -61,11 +61,19 @@ export function ImpactStats() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <div>
+            <div className="relative">
               <p className="text-2xl md:text-4xl font-heading mb-4">You told</p>
-              <div className="text-4xl md:text-7xl font-display font-black text-white tabular-nums mb-4">
-                10,029,090
+
+              {/* Radial gradient circle behind number */}
+              <div className="relative mb-4">
+                <div className="absolute inset-0 flex items-center justify-start">
+                  <div className="w-[600px] h-[600px] -translate-x-1/4 -translate-y-1/4 bg-gradient-radial from-primary-500/20 via-primary-600/10 to-transparent rounded-full blur-2xl"></div>
+                </div>
+                <div className="relative text-4xl md:text-7xl font-display font-black text-white tabular-nums">
+                  10,029,090
+                </div>
               </div>
+
               <p className="text-2xl md:text-4xl font-heading font-bold">people about Jesus!</p>
             </div>
 
