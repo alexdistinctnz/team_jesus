@@ -160,10 +160,42 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-0"
         >
-          {/* Wavy top border */}
-          <svg className="w-full" height="40" viewBox="0 0 1200 40" preserveAspectRatio="none">
-            <path d="M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z" fill="#1e3a8a" />
-          </svg>
+          {/* Wavy top border with animation */}
+          <motion.svg
+            className="w-full"
+            height="40"
+            viewBox="0 0 1200 40"
+            preserveAspectRatio="none"
+            animate={{
+              d: [
+                "M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z",
+                "M0,20 Q300,40 600,20 T1200,20 L1200,40 L0,40 Z",
+                "M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z"
+              ]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            <motion.path
+              d="M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z"
+              fill="#1e3a8a"
+              animate={{
+                d: [
+                  "M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z",
+                  "M0,20 Q300,40 600,20 T1200,20 L1200,40 L0,40 Z",
+                  "M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z"
+                ]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+          </motion.svg>
 
           <div className="bg-primary-900 p-8 md:p-12 -mt-1">
             <motion.p
@@ -189,19 +221,30 @@ export function HowItWorksStepper() {
                 const isLeft = section.align === 'left';
 
                 return (
-                  <div
+                  <motion.div
                     key={index}
-                    className={`grid md:grid-cols-2 gap-8 items-center ${
-                      isLeft ? 'border-l-4 border-primary-500 pl-8' : 'border-r-4 border-primary-500 pr-8'
-                    }`}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="grid md:grid-cols-2 gap-8 items-center relative"
                   >
+                    {/* Animated border line */}
+                    <motion.div
+                      initial={{ scaleY: 0 }}
+                      whileInView={{ scaleY: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: index * 0.1 }}
+                      className={`absolute top-0 ${isLeft ? 'left-0' : 'right-0'} w-1 h-full bg-primary-500 origin-top`}
+                    />
+
                     {isLeft ? (
                       <>
-                        <div>
+                        <div className="pl-8">
                           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{section.title}</h3>
                           <p className="text-white/80 leading-relaxed">{section.text}</p>
                         </div>
-                        <div className="rounded-2xl overflow-hidden">
+                        <div className="hidden md:block rounded-2xl overflow-hidden">
                           <div className="aspect-video bg-primary-800 flex items-center justify-center">
                             <Icon className="w-16 h-16 text-primary-400" />
                           </div>
@@ -209,18 +252,18 @@ export function HowItWorksStepper() {
                       </>
                     ) : (
                       <>
-                        <div className="rounded-2xl overflow-hidden order-2 md:order-1">
+                        <div className="hidden md:block rounded-2xl overflow-hidden order-2 md:order-1">
                           <div className="aspect-video bg-primary-800 flex items-center justify-center">
                             <Icon className="w-16 h-16 text-primary-400" />
                           </div>
                         </div>
-                        <div className="order-1 md:order-2">
+                        <div className="order-1 md:order-2 pr-8">
                           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{section.title}</h3>
                           <p className="text-white/80 leading-relaxed">{section.text}</p>
                         </div>
                       </>
                     )}
-                  </div>
+                  </motion.div>
                 );
               })}
             </motion.div>
