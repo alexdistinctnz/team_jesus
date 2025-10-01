@@ -35,7 +35,7 @@ export function Hero() {
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <Image
-              src="/images/logo.png"
+              src="/images/logo_transparent.png"
               alt="PostClips Logo"
               width={200}
               height={200}
