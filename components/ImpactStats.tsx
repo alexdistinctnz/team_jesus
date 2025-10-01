@@ -87,15 +87,17 @@ export function ImpactStats() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col items-center space-y-8"
+            className="flex flex-col items-center"
           >
             {/* Donate Widget and Progress Bar side by side */}
-            <div className="flex items-start gap-6">
-              {/* Donate Widget */}
-              <DonateWidget />
+            <div className="flex items-stretch gap-6 mb-8">
+              {/* Donate Widget Container */}
+              <div className="flex flex-col">
+                <DonateWidget />
+              </div>
 
-              {/* Progress Bar Section */}
-              <div className="flex flex-col items-center space-y-4">
+              {/* Progress Bar Section - matches donate panel height */}
+              <div className="flex flex-col items-center justify-between py-4">
                 {/* Badge Icon */}
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -103,13 +105,13 @@ export function ImpactStats() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center shadow-2xl border-4 border-white/20">
-                    <Fish className="w-10 h-10 text-white" />
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center shadow-2xl border-4 border-white/20">
+                    <Fish className="w-8 h-8 text-white" />
                   </div>
                 </motion.div>
 
-                {/* Vertical Progress Bar */}
-                <div className="relative w-24 h-80 bg-slate-700/50 rounded-full overflow-hidden border-4 border-slate-600/50">
+                {/* Vertical Progress Bar - full height */}
+                <div className="relative w-20 flex-1 bg-slate-700/50 rounded-full overflow-hidden border-4 border-slate-600/50 my-4">
                   <motion.div
                     initial={{ height: 0 }}
                     whileInView={{ height: '40%' }}
@@ -125,25 +127,27 @@ export function ImpactStats() {
                 </div>
 
                 {/* Fisherman Badge Label */}
-                <p className="text-base font-heading font-bold">Fisherman</p>
+                <p className="text-sm font-heading font-bold">Fisherman</p>
               </div>
             </div>
 
-            {/* Donor circles below */}
-            <div className="flex flex-wrap justify-center gap-3 max-w-md">
-              {topDonors.map((donor, index) => (
-                <motion.div
-                  key={donor.id}
-                  initial={{ scale: 0, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
-                  whileHover={{ scale: 1.1 }}
-                  className={`w-14 h-14 rounded-full bg-gradient-to-br ${getDonorColor(donor.icon)} flex items-center justify-center shadow-lg border-2 border-white/20`}
-                >
-                  {getDonorIcon(donor.icon)}
-                </motion.div>
-              ))}
+            {/* Donor circles below - centered under donate widget */}
+            <div className="w-full max-w-[440px]">
+              <div className="flex flex-wrap justify-center gap-3">
+                {topDonors.map((donor, index) => (
+                  <motion.div
+                    key={donor.id}
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
+                    whileHover={{ scale: 1.1 }}
+                    className={`w-14 h-14 rounded-full bg-gradient-to-br ${getDonorColor(donor.icon)} flex items-center justify-center shadow-lg border-2 border-white/20`}
+                  >
+                    {getDonorIcon(donor.icon)}
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
