@@ -69,7 +69,7 @@ export function Hero() {
               isLoading={isLoading}
               large
             />
-            <p className="text-white text-2xl md:text-6xl font-black mt-2 uppercase tracking-wide">
+            <p className="text-white text-xl md:text-4xl font-black mt-2 uppercase tracking-wide">
               People told about Jesus
             </p>
           </div>
