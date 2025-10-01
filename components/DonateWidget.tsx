@@ -315,6 +315,14 @@ export function DonateWidget() {
           )}
         </button>
 
+        {/* Alternative payment methods button */}
+        <button
+          type="button"
+          className="w-full py-4 font-bungee text-sm rounded-2xl border-2 border-slate-300 text-slate-700 hover:border-primary-500 hover:text-primary-700 transition-all duration-300"
+        >
+          Crypto, ACH & DAFPay Donations
+        </button>
+
         <p className="text-xs text-center text-slate-500">
           This is a demo using a mock payment provider. No actual charges will be made.
         </p>
