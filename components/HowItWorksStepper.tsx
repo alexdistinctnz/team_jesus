@@ -90,7 +90,7 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-5xl md:text-7xl font-heading text-white mb-6">
+          <h2 className="text-6xl md:text-8xl font-heading font-bold text-white mb-6">
             HOW IT WORKS
           </h2>
           <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-12">
@@ -120,7 +120,7 @@ export function HowItWorksStepper() {
             <div className="inline-flex items-center bg-primary-900 rounded-full p-2 gap-2">
               <button
                 onClick={() => setActiveTab('why')}
-                className={`px-8 py-3 rounded-full font-heading text-sm transition-all ${
+                className={`px-8 py-3 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'why'
                     ? 'bg-primary-500 text-white'
                     : 'text-white/70 hover:text-white'
@@ -130,7 +130,7 @@ export function HowItWorksStepper() {
               </button>
               <button
                 onClick={() => setActiveTab('how')}
-                className={`px-8 py-3 rounded-full font-heading text-sm transition-all ${
+                className={`px-8 py-3 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'how'
                     ? 'bg-primary-500 text-white'
                     : 'text-white/70 hover:text-white'
@@ -140,7 +140,7 @@ export function HowItWorksStepper() {
               </button>
               <button
                 onClick={() => setActiveTab('impact')}
-                className={`px-8 py-3 rounded-full font-heading text-sm transition-all ${
+                className={`px-8 py-3 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'impact'
                     ? 'bg-primary-500 text-white'
                     : 'text-white/70 hover:text-white'
