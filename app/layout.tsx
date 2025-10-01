@@ -1,24 +1,16 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins, Bungee } from 'next/font/google';
+import { Sora, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
+const sora = Sora({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-sora',
   display: 'swap',
 });
 
-const poppins = Poppins({
-  weight: ['600', '700', '800', '900'],
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  variable: '--font-poppins',
-  display: 'swap',
-});
-
-const bungee = Bungee({
-  weight: ['400'],
-  subsets: ['latin'],
-  variable: '--font-bungee',
+  variable: '--font-space-grotesk',
   display: 'swap',
 });
 
@@ -53,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable} ${bungee.variable}`}>
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${sora.variable} ${spaceGrotesk.variable}`}>
+      <body className={sora.className}>{children}</body>
     </html>
   );
 }

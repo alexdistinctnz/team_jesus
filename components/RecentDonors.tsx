@@ -67,7 +67,7 @@ export function RecentDonors() {
             <div className="flex items-center gap-2 bg-slate-100 rounded-full p-1">
               <button
                 onClick={() => setActiveTab('recent')}
-                className={`px-6 py-2 rounded-full font-bungee text-xs transition-all ${
+                className={`px-6 py-2 rounded-full font-heading text-xs transition-all ${
                   activeTab === 'recent'
                     ? 'bg-primary-600 text-white'
                     : 'text-slate-600 hover:text-slate-900'
@@ -77,7 +77,7 @@ export function RecentDonors() {
               </button>
               <button
                 onClick={() => setActiveTab('impact')}
-                className={`px-6 py-2 rounded-full font-bungee text-xs transition-all ${
+                className={`px-6 py-2 rounded-full font-heading text-xs transition-all ${
                   activeTab === 'impact'
                     ? 'bg-primary-600 text-white'
                     : 'text-slate-600 hover:text-slate-900'
@@ -139,7 +139,7 @@ export function RecentDonors() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 text-center"
           >
-            <button className="px-8 py-3 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-bungee text-sm rounded-full transition-colors uppercase tracking-wide">
+            <button className="px-8 py-3 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-heading text-sm rounded-full transition-colors uppercase tracking-wide">
               SEE ALL
             </button>
           </motion.div>

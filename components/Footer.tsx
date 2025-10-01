@@ -27,7 +27,7 @@ export function Footer() {
           className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12"
         >
           {/* Navigation links */}
-          <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-8 font-bungee text-sm">
+          <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-8 font-heading text-sm">
             <a href="#faq" className="hover:text-white/80 transition-colors">
               FAQ
             </a>
@@ -61,7 +61,7 @@ export function Footer() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center space-y-4"
         >
-          <div className="font-bungee text-lg">
+          <div className="font-heading text-lg">
             #TEAMJESUS #POSTCLIPS
           </div>
           <div className="flex items-center justify-center gap-6 text-sm text-white/70">
