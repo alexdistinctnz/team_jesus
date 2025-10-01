@@ -17,8 +17,6 @@ const mostRecentDonors: Donor[] = [
   { name: 'Sarah M.', message: 'May this help spread the Good News!', amount: 50, peopleReached: 50000, timestamp: '10/1/2025, 5:11 PM' },
   { name: 'Anonymous', amount: 100, peopleReached: 100000, timestamp: '10/1/2025, 4:45 PM' },
   { name: 'Michael T.', message: 'Thank you for all your good deeds and for the fact that we can help each other! 💙💙💙', amount: 75, peopleReached: 75000, timestamp: '10/1/2025, 4:40 PM' },
-  { name: 'Anonymous', amount: 25, peopleReached: 25000, timestamp: '10/1/2025, 4:25 PM' },
-  { name: 'David K.', amount: 40, peopleReached: 40000, timestamp: '10/1/2025, 4:13 PM' },
   { name: 'Jessica L.', message: 'Blessed to give!', amount: 150, peopleReached: 150000, timestamp: '10/1/2025, 4:10 PM' },
   { name: 'TeamChurch', message: 'Thank you to everyone who made this possible!', amount: 500, peopleReached: 500000, timestamp: '10/1/2025, 3:27 PM' },
   { name: 'Alex R.', message: 'With love, sharing Jesus <3', amount: 30, peopleReached: 30000, timestamp: '10/1/2025, 2:34 PM' },
@@ -31,8 +29,6 @@ const mostImpactDonors: Donor[] = [
   { name: 'Anonymous', amount: 100, peopleReached: 100000, timestamp: '10/1/2025, 4:45 PM' },
   { name: 'Michael T.', message: 'Thank you for all your good deeds and for the fact that we can help each other! 💙💙💙', amount: 75, peopleReached: 75000, timestamp: '10/1/2025, 4:40 PM' },
   { name: 'Sarah M.', message: 'May this help spread the Good News!', amount: 50, peopleReached: 50000, timestamp: '10/1/2025, 5:11 PM' },
-  { name: 'David K.', amount: 40, peopleReached: 40000, timestamp: '10/1/2025, 4:13 PM' },
-  { name: 'Alex R.', message: 'With love, sharing Jesus <3', amount: 30, peopleReached: 30000, timestamp: '10/1/2025, 2:34 PM' },
 ];
 
 const getDonorIcon = (peopleReached: number) => {
