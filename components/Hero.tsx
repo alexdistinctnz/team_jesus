@@ -10,7 +10,7 @@ export function Hero() {
   const { metrics, isLoading } = useMetrics();
 
   return (
-    <section className="relative py-20 md:py-32 overflow-hidden">
+    <section className="relative pt-10 md:pt-16 pb-20 md:pb-32 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -33,21 +33,21 @@ export function Hero() {
           className="text-center mb-12"
         >
           {/* Logo */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6">
             <Image
               src="/images/Team_Jesus_Logo.png"
               alt="PostClips Logo"
-              width={200}
-              height={200}
-              className="w-32 md:w-48 h-auto"
+              width={180}
+              height={180}
+              className="w-28 md:w-44 h-auto"
             />
           </div>
 
-          <h1 className="text-4xl md:text-8xl font-display text-primary-900 mb-6 tracking-tight">
+          <h1 className="text-2xl md:text-6xl font-display text-primary-900 mb-4 tracking-tight">
             <span className="font-extralight">#TEAM</span>
             <span className="font-black">JESUS</span>
           </h1>
-          <p className="text-xl md:text-2xl text-primary-900 font-black">
+          <p className="text-base md:text-lg text-primary-900 font-black">
             Raising $8M to tell 8 billion people about Jesus
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ export function Hero() {
               isLoading={isLoading}
               large
             />
-            <p className="text-primary-900 text-xl md:text-4xl font-black mt-2 uppercase tracking-wide">
+            <p className="text-primary-900 text-base md:text-2xl font-black mt-2 uppercase tracking-wide">
               People told about Jesus
             </p>
           </div>
@@ -78,6 +78,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-2xl mx-auto"
+          style={{ transform: 'scale(0.6)', transformOrigin: 'top center' }}
         >
           <DonateWidget />
         </motion.div>
