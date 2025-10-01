@@ -13,7 +13,7 @@ interface Donor {
 }
 
 // Mock recent donors - in production, fetch from API
-const recentDonors: Donor[] = [
+const mostRecentDonors: Donor[] = [
   { name: 'Sarah M.', message: 'May this help spread the Good News!', amount: 50, peopleReached: 50000, timestamp: '10/1/2025, 5:11 PM' },
   { name: 'Anonymous', amount: 100, peopleReached: 100000, timestamp: '10/1/2025, 4:45 PM' },
   { name: 'Michael T.', message: 'Thank you for all your good deeds and for the fact that we can help each other! 💙💙💙', amount: 75, peopleReached: 75000, timestamp: '10/1/2025, 4:40 PM' },
@@ -24,8 +24,21 @@ const recentDonors: Donor[] = [
   { name: 'Alex R.', message: 'With love, sharing Jesus <3', amount: 30, peopleReached: 30000, timestamp: '10/1/2025, 2:34 PM' },
 ];
 
+const mostImpactDonors: Donor[] = [
+  { name: 'TeamChurch', message: 'Thank you to everyone who made this possible!', amount: 500, peopleReached: 500000, timestamp: '10/1/2025, 3:27 PM' },
+  { name: 'Grace Fellowship', message: 'So grateful to partner in spreading the Gospel!', amount: 250, peopleReached: 250000, timestamp: '10/1/2025, 1:15 PM' },
+  { name: 'Jessica L.', message: 'Blessed to give!', amount: 150, peopleReached: 150000, timestamp: '10/1/2025, 4:10 PM' },
+  { name: 'Anonymous', amount: 100, peopleReached: 100000, timestamp: '10/1/2025, 4:45 PM' },
+  { name: 'Michael T.', message: 'Thank you for all your good deeds and for the fact that we can help each other! 💙💙💙', amount: 75, peopleReached: 75000, timestamp: '10/1/2025, 4:40 PM' },
+  { name: 'Sarah M.', message: 'May this help spread the Good News!', amount: 50, peopleReached: 50000, timestamp: '10/1/2025, 5:11 PM' },
+  { name: 'David K.', amount: 40, peopleReached: 40000, timestamp: '10/1/2025, 4:13 PM' },
+  { name: 'Alex R.', message: 'With love, sharing Jesus <3', amount: 30, peopleReached: 30000, timestamp: '10/1/2025, 2:34 PM' },
+];
+
 export function RecentDonors() {
   const [activeTab, setActiveTab] = useState('recent');
+
+  const displayedDonors = activeTab === 'recent' ? mostRecentDonors : mostImpactDonors;
 
   return (
     <section className="py-16 bg-slate-50">
@@ -68,7 +81,7 @@ export function RecentDonors() {
 
           {/* Donor list */}
           <div className="space-y-0 divide-y divide-slate-200">
-            {recentDonors.map((donor, index) => (
+            {displayedDonors.map((donor, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
