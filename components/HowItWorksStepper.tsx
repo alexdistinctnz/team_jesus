@@ -14,49 +14,49 @@ export function HowItWorksStepper() {
       sections: [
         {
           title: "Gospel Creators",
-          text: "When creators share the Gospel through short-form video, lives are transformed. They no longer just entertain—they point people to Jesus. By creating compelling content about Christ, they're reaching millions who might never enter a church, giving them the opportunity to hear about salvation, find hope, and discover eternal life. With the Gospel in video form, they can spread the message with greater reach, impact, and authenticity.",
+          text: "When creators share the Gospel through short-form video, lives are transformed. They no longer just entertain; they point people to Jesus. By creating compelling content about Christ, they're reaching millions who might never enter a church, giving them the opportunity to hear about salvation, find hope, and discover eternal life. With the Gospel in video form, they can spread the message with greater reach, impact, and authenticity.",
           icon: Video,
           align: "left"
         },
         {
           title: "Global Reach",
-          text: "Short-form Gospel content is essential for reaching the world—without it, billions remain unreached through traditional methods. When clean, compelling videos about Jesus are readily available, people encounter the Gospel organically, through platforms they already use. By flooding social media with Christ-centered content, we're breaking down barriers to the Gospel. Reliable, viral Jesus content can transform lives in communities around the world, one view at a time.",
+          text: "Short-form Gospel content is essential for reaching the world. Without it, billions remain unreached through traditional methods. When clean, compelling videos about Jesus are readily available, people encounter the Gospel organically, through platforms they already use. By flooding social media with Christ-centered content, we're breaking down barriers to the Gospel. Reliable, viral Jesus content can transform lives in communities around the world, one view at a time.",
           icon: Target,
           align: "right"
         },
         {
           title: "Verified Results",
-          text: "Results-based funding ensures maximum accountability. We only pay creators for verified views, meaning every donation directly translates to people hearing about Jesus. This puts already fragile ministry budgets to their best use—reaching as many souls as possible. Providing transparent, verifiable metrics helps donors stay confident, support the mission effectively, and see real Kingdom impact. It gives supporters—especially younger generations—the accountability they need to trust and invest in a changing world.",
+          text: "Results-based funding ensures maximum accountability. We only pay creators for verified views, meaning every donation directly translates to people hearing about Jesus. This puts already fragile ministry budgets to their best use: reaching as many souls as possible. Providing transparent, verifiable metrics helps donors stay confident, support the mission effectively, and see real Kingdom impact. It gives supporters, especially younger generations, the accountability they need to trust and invest in a changing world.",
           icon: Heart,
           align: "left"
         }
       ]
     },
     how: {
-      description: "You donate → PostClips pays creators to cut and post compelling short Gospel videos → We pay $0.01 per 10 views, ensuring every dollar drives real impact. 100% of donations go directly to creator commissions, with operations funded separately through business revenue.",
+      description: "You donate, PostClips pays creators to cut and post compelling short Gospel videos, and we pay $0.01 per 10 views, ensuring every dollar drives real impact. 100% of donations go directly to creator commissions, with operations funded separately through business revenue.",
       sections: [
         {
           title: "Step 1: You Donate",
-          text: "Your gift directly funds the mission to reach people with the Gospel. Every dollar you give becomes content that shares Jesus with thousands. When you donate, you're not just giving money—you're investing in eternal impact. Your contribution immediately goes to work, funding creators who will share the message of Christ across the globe through compelling short-form videos.",
+          text: "Your gift directly funds the mission to reach people with the Gospel. Every dollar you give becomes content that shares Jesus with thousands. When you donate, you're not just giving money; you're investing in eternal impact. Your contribution immediately goes to work, funding creators who will share the message of Christ across the globe through compelling short-form videos.",
           icon: Heart,
           align: "left"
         },
         {
           title: "Step 2: Creators Share Jesus",
-          text: "PostClips pays talented creators to produce and distribute Gospel content. These clippers take powerful sermons, testimonies, and Bible teachings and transform them into engaging short videos optimized for TikTok, Instagram, and YouTube. Each piece of content is crafted to capture attention, communicate truth, and point viewers to Jesus—reaching people where they already spend their time.",
+          text: "PostClips pays talented creators to produce and distribute Gospel content. These clippers take powerful sermons, testimonies, and Bible teachings and transform them into engaging short videos optimized for TikTok, Instagram, and YouTube. Each piece of content is crafted to capture attention, communicate truth, and point viewers to Jesus, reaching people where they already spend their time.",
           icon: Video,
           align: "right"
         },
         {
           title: "Step 3: Results-Based Payment",
-          text: "We pay creators $0.01 per 10 verified views. This means every penny is tied to measurable results—real people seeing real Gospel content. No views, no payment. This performance-based model ensures maximum efficiency and impact. Your donation funds actual reach, not just content creation. It's transparent, accountable, and effective—exactly what modern ministry should be.",
+          text: "We pay creators $0.01 per 10 verified views. This means every penny is tied to measurable results: real people seeing real Gospel content. No views, no payment. This performance-based model ensures maximum efficiency and impact. Your donation funds actual reach, not just content creation. It's transparent, accountable, and effective, exactly what modern ministry should be.",
           icon: Target,
           align: "left"
         }
       ]
     },
     impact: {
-      description: "$1 reaches 1,000 people with the Gospel message. Your gift directly funds results-based content creation, paying clippers only for verified views. This ensures maximum accountability and impact—every donation translates to thousands hearing about Jesus.",
+      description: "$1 reaches 1,000 people with the Gospel message. Your gift directly funds results-based content creation, paying clippers only for verified views. This ensures maximum accountability and impact: every donation translates to thousands hearing about Jesus.",
       sections: [
         {
           title: "$1 = 1,000 People",
@@ -66,13 +66,13 @@ export function HowItWorksStepper() {
         },
         {
           title: "Maximum Efficiency",
-          text: "100% of your donation goes directly to creator commissions. Not a penny is wasted on overhead or admin costs—those are covered separately through business revenue. Every single dollar you give becomes Gospel content that reaches people. This is ministry efficiency at its finest, ensuring your generosity has the greatest possible Kingdom impact without dilution or waste.",
+          text: "100% of your donation goes directly to creator commissions. Not a penny is wasted on overhead or admin costs. Those are covered separately through business revenue. Every single dollar you give becomes Gospel content that reaches people. This is ministry efficiency at its finest, ensuring your generosity has the greatest possible Kingdom impact without dilution or waste.",
           icon: Target,
           align: "right"
         },
         {
           title: "Eternal Transformation",
-          text: "Behind every view is a real person encountering Jesus. Some will scroll past, but many will pause, listen, and be changed forever. Souls are saved. Hearts are transformed. Lives are redirected toward eternity. Your gift doesn't just create content—it creates opportunities for the Holy Spirit to work. From one video view can come a lifetime of faith, and from that, generations of believers.",
+          text: "Behind every view is a real person encountering Jesus. Some will scroll past, but many will pause, listen, and be changed forever. Souls are saved. Hearts are transformed. Lives are redirected toward eternity. Your gift doesn't just create content; it creates opportunities for the Holy Spirit to work. From one video view can come a lifetime of faith, and from that, generations of believers.",
           icon: Video,
           align: "left"
         }

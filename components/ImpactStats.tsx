@@ -85,7 +85,7 @@ export function ImpactStats() {
               <blockquote className="italic text-white/80 text-base md:text-lg leading-relaxed">
                 "Whoever brings back a sinner from his wandering will save his soul from death and will cover a multitude of sins."
               </blockquote>
-              <p className="text-sm text-white/60 mt-2">— James 5:20 (ESV)</p>
+              <p className="text-sm text-white/60 mt-2">James 5:20 (ESV)</p>
             </div>
           </motion.div>
 

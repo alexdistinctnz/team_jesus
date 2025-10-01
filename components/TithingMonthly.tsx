@@ -42,7 +42,7 @@ export function TithingMonthly() {
           <div className="relative z-10">
             <div className="text-lg text-slate-700 space-y-6 mb-8">
               <p className="leading-relaxed">
-                <strong className="text-emerald-800">Tithing</strong>—giving the first 10% of your income—is a biblical principle that honors God and
+                <strong className="text-emerald-800">Tithing</strong>, giving the first 10% of your income, is a biblical principle that honors God and
                 advances His kingdom. Monthly giving provides <strong className="text-emerald-800">consistent support</strong> for ongoing Gospel outreach.
               </p>
               <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border-2 border-emerald-200">

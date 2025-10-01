@@ -320,7 +320,7 @@ export function DonateWidget() {
               Processing...
             </span>
           ) : (
-            `NEXT — $${amountNum}`
+            `NEXT: $${amountNum}`
           )}
         </button>
 

@@ -51,7 +51,7 @@ export function ImpactCounter({ value, label, isLoading, large = false }: Impact
           opacity: isLoading ? 0.5 : 1,
         }}
       >
-        {isLoading ? '—' : formatNumber(Math.floor(displayValue))}
+        {isLoading ? '...' : formatNumber(Math.floor(displayValue))}
       </div>
       {label && <div className="text-sm text-slate-600 mt-1">{label}</div>}
     </div>
