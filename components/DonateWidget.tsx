@@ -138,7 +138,12 @@ export function DonateWidget() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="relative bg-white rounded-3xl shadow-card-hover p-8 md:p-10"
+      className={cn(
+        "relative rounded-3xl shadow-card-hover p-8 md:p-10 transition-colors duration-500",
+        isMonthly
+          ? "bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100"
+          : "bg-white"
+      )}
     >
       <h3 className="text-2xl md:text-3xl font-display font-bold text-slate-900 text-center mb-6">
         DONATE TO #TEAMJESUS
