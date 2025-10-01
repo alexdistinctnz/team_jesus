@@ -142,7 +142,7 @@ export function DonateWidget() {
         "relative rounded-3xl shadow-card-hover p-8 md:p-10 transition-colors duration-500 overflow-hidden",
         isMonthly ? "" : "bg-white"
       )}
-      style={isMonthly ? { backgroundColor: '#FFCC33' } : {}}
+      style={isMonthly ? { backgroundColor: '#B79347' } : {}}
     >
       {isMonthly && (
         <motion.div
@@ -198,10 +198,11 @@ export function DonateWidget() {
                 isMonthly ? "focus:ring-amber-700" : "focus:ring-primary-500",
                 amountNum === quickAmount
                   ? isMonthly
-                    ? "bg-amber-800 text-white shadow-lg"
+                    ? "text-slate-900 shadow-lg"
                     : "bg-primary-600 text-white shadow-lg"
                   : "bg-white text-slate-700 hover:bg-slate-50 border-2 border-slate-300"
               )}
+              style={amountNum === quickAmount && isMonthly ? { backgroundColor: '#E9DBBD' } : {}}
               disabled={state === 'processing'}
             >
               ${quickAmount}
@@ -221,10 +222,11 @@ export function DonateWidget() {
                 isMonthly ? "focus:ring-amber-700" : "focus:ring-primary-500",
                 amountNum === quickAmount
                   ? isMonthly
-                    ? "bg-amber-800 text-white shadow-lg"
+                    ? "text-slate-900 shadow-lg"
                     : "bg-primary-600 text-white shadow-lg"
                   : "bg-white text-slate-700 hover:bg-slate-50 border-2 border-slate-300"
               )}
+              style={amountNum === quickAmount && isMonthly ? { backgroundColor: '#E9DBBD' } : {}}
               disabled={state === 'processing'}
             >
               ${quickAmount}
@@ -258,21 +260,27 @@ export function DonateWidget() {
         <motion.div
           id="impact-preview"
           layout
-          className="relative p-6 bg-gradient-to-br from-amber-50 to-yellow-50 border-2 border-amber-200 rounded-2xl overflow-hidden"
+          className="relative p-6 rounded-2xl overflow-hidden"
+          style={{
+            backgroundColor: '#F5EFE0',
+            borderWidth: '2px',
+            borderColor: '#E9DBBD'
+          }}
         >
           <div className="absolute top-2 right-2">
-            <Sparkles className="w-5 h-5 text-amber-600" />
+            <Sparkles className="w-5 h-5" style={{ color: '#B79347' }} />
           </div>
-          <div className="text-sm font-semibold text-amber-800 mb-2 uppercase tracking-wide">Your Impact</div>
+          <div className="text-sm font-semibold mb-2 uppercase tracking-wide" style={{ color: '#8B6F3E' }}>Your Impact</div>
           <motion.div
             key={impactPeople}
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="text-3xl md:text-4xl font-display font-bold text-amber-900 mb-1"
+            className="text-3xl md:text-4xl font-display font-bold mb-1"
+            style={{ color: '#6B5530' }}
           >
             {formatNumber(impactPeople)} people
           </motion.div>
-          <div className="text-sm text-amber-700 font-medium">will hear about Jesus</div>
+          <div className="text-sm font-medium" style={{ color: '#8B6F3E' }}>will hear about Jesus</div>
         </motion.div>
 
         {/* Error Message */}
@@ -301,9 +309,10 @@ export function DonateWidget() {
             state === 'processing' || amountNum < 1
               ? "bg-slate-300 text-slate-500 cursor-not-allowed"
               : isMonthly
-                ? "bg-amber-800 text-white shadow-lg hover:bg-amber-900 hover:shadow-xl"
+                ? "text-slate-900 shadow-lg hover:shadow-xl"
                 : "bg-primary-600 text-white shadow-lg hover:bg-primary-700 hover:shadow-xl"
           )}
+          style={!(state === 'processing' || amountNum < 1) && isMonthly ? { backgroundColor: '#E9DBBD' } : {}}
         >
           {state === 'processing' ? (
             <span className="flex items-center justify-center gap-2">
