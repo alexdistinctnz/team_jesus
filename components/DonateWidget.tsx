@@ -258,21 +258,21 @@ export function DonateWidget() {
         <motion.div
           id="impact-preview"
           layout
-          className="relative p-6 bg-gradient-to-br from-accent-50 to-emerald-50 border-2 border-accent-200 rounded-2xl overflow-hidden"
+          className="relative p-6 bg-gradient-to-br from-amber-50 to-yellow-50 border-2 border-amber-200 rounded-2xl overflow-hidden"
         >
           <div className="absolute top-2 right-2">
-            <Sparkles className="w-5 h-5 text-accent-600" />
+            <Sparkles className="w-5 h-5 text-amber-600" />
           </div>
-          <div className="text-sm font-semibold text-accent-800 mb-2 uppercase tracking-wide">Your Impact</div>
+          <div className="text-sm font-semibold text-amber-800 mb-2 uppercase tracking-wide">Your Impact</div>
           <motion.div
             key={impactPeople}
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="text-3xl md:text-4xl font-display font-bold text-accent-900 mb-1"
+            className="text-3xl md:text-4xl font-display font-bold text-amber-900 mb-1"
           >
             {formatNumber(impactPeople)} people
           </motion.div>
-          <div className="text-sm text-accent-700 font-medium">will hear about Jesus</div>
+          <div className="text-sm text-amber-700 font-medium">will hear about Jesus</div>
         </motion.div>
 
         {/* Error Message */}
