@@ -42,7 +42,7 @@ export function ImpactCounter({ value, label, isLoading, large = false }: Impact
       <div
         className={
           large
-            ? "text-4xl md:text-8xl font-display font-black text-white tabular-nums transition-opacity duration-300"
+            ? "text-4xl md:text-8xl font-display font-black text-primary-900 tabular-nums transition-opacity duration-300"
             : "text-3xl md:text-4xl font-bold text-primary-700 tabular-nums transition-opacity duration-300"
         }
         aria-live="polite"

@@ -43,11 +43,11 @@ export function Hero() {
             />
           </div>
 
-          <h1 className="text-4xl md:text-8xl font-display text-white mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-8xl font-display text-primary-900 mb-6 tracking-tight">
             <span className="font-extralight">#TEAM</span>
             <span className="font-black">JESUS</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white font-black">
+          <p className="text-xl md:text-2xl text-primary-900 font-black">
             Raising $8M to tell 8 billion people about Jesus
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ export function Hero() {
               isLoading={isLoading}
               large
             />
-            <p className="text-white text-xl md:text-4xl font-black mt-2 uppercase tracking-wide">
+            <p className="text-primary-900 text-xl md:text-4xl font-black mt-2 uppercase tracking-wide">
               People told about Jesus
             </p>
           </div>
