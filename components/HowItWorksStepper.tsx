@@ -99,16 +99,73 @@ export function HowItWorksStepper() {
             <path d="M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z" fill="#1e3a8a" />
           </svg>
 
-          <div className="bg-primary-900 rounded-b-3xl p-8 md:p-12 -mt-1">
+          <div className="bg-primary-900 p-8 md:p-12 -mt-1">
             <motion.p
               key={activeTab}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="text-lg text-white/90 leading-relaxed"
+              className="text-lg text-white/90 leading-relaxed mb-12"
             >
               {tabContent[activeTab as keyof typeof tabContent]}
             </motion.p>
+
+            {/* Grid sections */}
+            <div className="space-y-12">
+              {/* Gospel Creators - Text Left, Image Right */}
+              <div className="grid md:grid-cols-2 gap-8 items-center border-l-4 border-primary-500 pl-8">
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Gospel Creators</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    When creators share the Gospel through short-form video, lives are transformed. They no longer just entertain—they point people to Jesus.
+                    By creating compelling content about Christ, they're reaching millions who might never enter a church, giving them the opportunity to hear
+                    about salvation, find hope, and discover eternal life. With the Gospel in video form, they can spread the message with greater reach,
+                    impact, and authenticity.
+                  </p>
+                </div>
+                <div className="rounded-2xl overflow-hidden">
+                  <div className="aspect-video bg-primary-800 flex items-center justify-center">
+                    <Video className="w-16 h-16 text-primary-400" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Global Reach - Image Left, Text Right */}
+              <div className="grid md:grid-cols-2 gap-8 items-center border-r-4 border-primary-500 pr-8">
+                <div className="rounded-2xl overflow-hidden order-2 md:order-1">
+                  <div className="aspect-video bg-primary-800 flex items-center justify-center">
+                    <Target className="w-16 h-16 text-primary-400" />
+                  </div>
+                </div>
+                <div className="order-1 md:order-2">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Global Reach</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Short-form Gospel content is essential for reaching the world—without it, billions remain unreached through traditional methods.
+                    When clean, compelling videos about Jesus are readily available, people encounter the Gospel organically, through platforms they already use.
+                    By flooding social media with Christ-centered content, we're breaking down barriers to the Gospel. Reliable, viral Jesus content can transform
+                    lives in communities around the world, one view at a time.
+                  </p>
+                </div>
+              </div>
+
+              {/* Verified Results - Text Left, Image Right */}
+              <div className="grid md:grid-cols-2 gap-8 items-center border-l-4 border-primary-500 pl-8">
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Verified Results</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Results-based funding ensures maximum accountability. We only pay creators for verified views, meaning every donation directly translates
+                    to people hearing about Jesus. This puts already fragile ministry budgets to their best use—reaching as many souls as possible.
+                    Providing transparent, verifiable metrics helps donors stay confident, support the mission effectively, and see real Kingdom impact.
+                    It gives supporters—especially younger generations—the accountability they need to trust and invest in a changing world.
+                  </p>
+                </div>
+                <div className="rounded-2xl overflow-hidden">
+                  <div className="aspect-video bg-primary-800 flex items-center justify-center">
+                    <Heart className="w-16 h-16 text-primary-400" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
