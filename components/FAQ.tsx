@@ -53,7 +53,7 @@ export function FAQ() {
           </h2>
         </motion.div>
 
-        <Accordion.Root type="single" collapsible className="space-y-4 mb-12">
+        <Accordion.Root type="single" collapsible className="space-y-4">
           {faqItems.map((item, index) => (
             <motion.div
               key={index}
@@ -90,31 +90,6 @@ export function FAQ() {
             </motion.div>
           ))}
         </Accordion.Root>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center bg-gradient-to-br from-primary-50 to-accent-50 rounded-3xl shadow-card p-10 border-2 border-primary-200"
-        >
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-full mb-6">
-            <Mail className="w-8 h-8 text-white" />
-          </div>
-          <h3 className="text-2xl font-display font-bold text-slate-900 mb-4">Still Have Questions?</h3>
-          <p className="text-lg text-slate-700 mb-6 max-w-md mx-auto">
-            We'd love to hear from you. Reach out anytime.
-          </p>
-          <motion.a
-            href="mailto:hello@postclips.com"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary-700 text-white font-bold rounded-2xl hover:bg-primary-800 shadow-lg hover:shadow-xl transition-all"
-          >
-            <Mail className="w-5 h-5" />
-            Contact Us
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   );
