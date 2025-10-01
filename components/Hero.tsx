@@ -4,37 +4,45 @@ import { motion } from 'framer-motion';
 import { useMetrics } from '@/hooks/useMetrics';
 import { ImpactCounter } from './ImpactCounter';
 import { DonateWidget } from './DonateWidget';
+import Image from 'next/image';
 
 export function Hero() {
   const { metrics, isLoading } = useMetrics();
 
   return (
-    <section className="relative bg-primary-600 py-20 md:py-32 overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full">
-          {/* Subtle circular patterns similar to TeamWater */}
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="circles" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-                <circle cx="100" cy="100" r="80" fill="none" stroke="white" strokeWidth="1" />
-                <circle cx="100" cy="100" r="60" fill="none" stroke="white" strokeWidth="1" />
-                <circle cx="100" cy="100" r="40" fill="none" stroke="white" strokeWidth="1" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#circles)" />
-          </svg>
-        </div>
+    <section className="relative py-20 md:py-32 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/background.jpeg"
+          alt="Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Gradient overlay - fade to white */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/60 to-white" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Main heading - centered and bold like TeamWater */}
+        {/* Logo and Main heading - centered */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/images/logo.png"
+              alt="PostClips Logo"
+              width={200}
+              height={200}
+              className="w-32 md:w-48 h-auto"
+            />
+          </div>
+
           <h1 className="text-4xl md:text-8xl font-display text-white mb-6 tracking-tight">
             <span className="font-extralight">#TEAM</span>
             <span className="font-black">JESUS</span>
