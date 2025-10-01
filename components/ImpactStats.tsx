@@ -51,7 +51,7 @@ export function ImpactStats() {
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ transform: 'scale(0.75)', transformOrigin: 'center' }}>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Impact stats */}
           <motion.div
@@ -129,8 +129,8 @@ export function ImpactStats() {
                   />
 
                   {/* Progress labels */}
-                  <div className="absolute top-2 left-1/2 -translate-x-1/2 text-center">
-                    <p className="text-xs font-bold text-white">10M/25M</p>
+                  <div className="absolute top-6 left-1/2 -translate-x-1/2 text-center">
+                    <p className="text-xs font-bold text-white px-2 py-1">10M/25M</p>
                   </div>
                 </div>
 
