@@ -125,7 +125,7 @@ export function DonateWidget() {
             onClick={handleReset}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-accent-700 text-white font-bold rounded-2xl hover:bg-accent-800 shadow-lg hover:shadow-xl transition-all"
+            className="px-8 py-4 bg-accent-700 text-white font-bungee text-sm rounded-2xl hover:bg-accent-800 shadow-lg hover:shadow-xl transition-all"
           >
             Make Another Donation
           </motion.button>
@@ -193,7 +193,7 @@ export function DonateWidget() {
               type="button"
               onClick={() => handleQuickAmount(quickAmount)}
               className={cn(
-                "py-4 rounded-xl font-bold text-lg transition-all",
+                "py-4 rounded-xl font-bungee text-base transition-all",
                 "focus:outline-none focus:ring-2",
                 isMonthly ? "focus:ring-amber-700" : "focus:ring-primary-500",
                 amountNum === quickAmount
@@ -216,7 +216,7 @@ export function DonateWidget() {
               type="button"
               onClick={() => handleQuickAmount(quickAmount)}
               className={cn(
-                "py-4 rounded-xl font-bold text-lg transition-all",
+                "py-4 rounded-xl font-bungee text-base transition-all",
                 "focus:outline-none focus:ring-2",
                 isMonthly ? "focus:ring-amber-700" : "focus:ring-primary-500",
                 amountNum === quickAmount
@@ -295,7 +295,7 @@ export function DonateWidget() {
           type="submit"
           disabled={state === 'processing' || amountNum < 1}
           className={cn(
-            "w-full py-5 font-bold text-xl rounded-2xl transition-all duration-300",
+            "w-full py-5 font-bungee text-lg rounded-2xl transition-all duration-300",
             "focus:outline-none focus:ring-4",
             isMonthly ? "focus:ring-amber-300" : "focus:ring-primary-300",
             state === 'processing' || amountNum < 1

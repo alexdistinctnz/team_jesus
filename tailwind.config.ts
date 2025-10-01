@@ -40,6 +40,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
         display: ['var(--font-poppins)', 'var(--font-inter)', ...fontFamily.sans],
+        bungee: ['var(--font-bungee)', ...fontFamily.sans],
       },
       backgroundImage: {
         'hero-gradient': 'linear-gradient(135deg, #0080FF 0%, #0091ff 100%)',

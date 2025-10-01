@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Inter, Poppins, Bungee } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({
@@ -12,6 +12,13 @@ const poppins = Poppins({
   weight: ['600', '700', '800', '900'],
   subsets: ['latin'],
   variable: '--font-poppins',
+  display: 'swap',
+});
+
+const bungee = Bungee({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-bungee',
   display: 'swap',
 });
 
@@ -46,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable} ${bungee.variable}`}>
       <body className={inter.className}>{children}</body>
     </html>
   );
