@@ -47,7 +47,7 @@ export function Hero() {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-8xl font-display text-white mb-6 tracking-tight">
-            <span className="font-normal">#TEAM</span>
+            <span className="font-light">#TEAM</span>
             <span className="font-black">JESUS</span>
           </h1>
           <p className="text-xl md:text-2xl text-white font-black">
@@ -69,7 +69,7 @@ export function Hero() {
               isLoading={isLoading}
               large
             />
-            <p className="text-white/90 text-lg font-semibold mt-2 uppercase tracking-wide">
+            <p className="text-white text-2xl md:text-6xl font-black mt-2 uppercase tracking-wide">
               People told about Jesus
             </p>
           </div>
