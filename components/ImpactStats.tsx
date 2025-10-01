@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ImpactCounter } from './ImpactCounter';
 import { Crown, Star, Sparkles, Heart, HelpCircle, Fish } from 'lucide-react';
 
 export function ImpactStats() {
@@ -63,8 +62,8 @@ export function ImpactStats() {
           >
             <div>
               <p className="text-2xl md:text-4xl font-heading mb-4">You told</p>
-              <div className="mb-4">
-                <ImpactCounter targetValue={10029090} large={true} />
+              <div className="text-4xl md:text-7xl font-display font-black text-white tabular-nums mb-4">
+                10,029,090
               </div>
               <p className="text-2xl md:text-4xl font-heading font-bold">people about Jesus!</p>
             </div>
