@@ -102,7 +102,7 @@ export function HowItWorksStepper() {
           {/* PostClips Logo */}
           <div className="mb-8">
             <Image
-              src="/images/logo_transparent.png"
+              src="/images/Team_Jesus_Logo.png"
               alt="PostClips"
               width={200}
               height={80}

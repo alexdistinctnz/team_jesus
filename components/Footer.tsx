@@ -43,7 +43,7 @@ export function Footer() {
           <div className="flex items-center justify-center">
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center p-2">
               <Image
-                src="/images/logo_transparent.png"
+                src="/images/Team_Jesus_Logo.png"
                 alt="PostClips"
                 width={80}
                 height={80}
