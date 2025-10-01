@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Heart, Search } from 'lucide-react';
+import { Heart, Search, Star, Crown, Sparkles } from 'lucide-react';
 import { useState } from 'react';
 
 interface Donor {
@@ -34,6 +34,18 @@ const mostImpactDonors: Donor[] = [
   { name: 'David K.', amount: 40, peopleReached: 40000, timestamp: '10/1/2025, 4:13 PM' },
   { name: 'Alex R.', message: 'With love, sharing Jesus <3', amount: 30, peopleReached: 30000, timestamp: '10/1/2025, 2:34 PM' },
 ];
+
+const getDonorIcon = (peopleReached: number) => {
+  if (peopleReached >= 250000) {
+    return <Crown className="w-8 h-8 text-white" />;
+  } else if (peopleReached >= 100000) {
+    return <Star className="w-8 h-8 text-white fill-white" />;
+  } else if (peopleReached >= 50000) {
+    return <Sparkles className="w-8 h-8 text-white" />;
+  } else {
+    return <Heart className="w-8 h-8 text-white fill-white" />;
+  }
+};
 
 export function RecentDonors() {
   const [activeTab, setActiveTab] = useState('recent');
@@ -92,7 +104,7 @@ export function RecentDonors() {
               >
                 {/* Avatar */}
                 <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Heart className="w-8 h-8 text-white fill-white" />
+                  {getDonorIcon(donor.peopleReached)}
                 </div>
 
                 {/* Content */}
