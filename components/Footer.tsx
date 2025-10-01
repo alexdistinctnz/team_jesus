@@ -18,13 +18,13 @@ export function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Main navigation and logo */}
+        {/* All content in one line */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12"
+          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12"
         >
           {/* Navigation links */}
           <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-8 font-heading text-sm">
@@ -41,29 +41,31 @@ export function Footer() {
 
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center p-2">
+            <div className="w-28 h-28 bg-white rounded-full flex items-center justify-center p-2">
               <Image
                 src="/images/Team_Jesus_Logo.png"
                 alt="PostClips"
-                width={80}
-                height={80}
+                width={112}
+                height={112}
                 className="w-full h-full object-contain"
               />
             </div>
           </div>
+
+          {/* Hashtags */}
+          <div className="font-heading text-lg">
+            #TEAMJESUS #POSTCLIPS
+          </div>
         </motion.div>
 
-        {/* Hashtags and legal links */}
+        {/* Legal links */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-center space-y-4"
+          className="text-center mt-8"
         >
-          <div className="font-heading text-lg">
-            #TEAMJESUS #POSTCLIPS
-          </div>
           <div className="flex items-center justify-center gap-6 text-sm text-white/70">
             <a href="/privacy" className="hover:text-white transition-colors">
               Privacy Policy
