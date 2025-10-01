@@ -88,7 +88,7 @@ export function RecentDonors() {
           </div>
 
           {/* Donor list */}
-          <div className="space-y-0 divide-y divide-slate-200">
+          <div className="space-y-0">
             {displayedDonors.map((donor, index) => (
               <motion.div
                 key={index}
@@ -97,6 +97,10 @@ export function RecentDonors() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
                 className="py-6 flex items-start gap-4"
+                style={{
+                  borderBottom: index < displayedDonors.length - 1 ? '3px solid rgb(203 213 225)' : 'none',
+                  borderRadius: '2px'
+                }}
               >
                 {/* Avatar */}
                 <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0">
