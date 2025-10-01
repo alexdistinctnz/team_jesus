@@ -46,14 +46,12 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-8xl font-display font-black text-white mb-6 tracking-tight">
-            #TEAMJESUS
+          <h1 className="text-4xl md:text-8xl font-display text-white mb-6 tracking-tight">
+            <span className="font-normal">#TEAM</span>
+            <span className="font-black">JESUS</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-semibold mb-2">
-            Raising $8.142M to share Jesus with
-          </p>
-          <p className="text-2xl md:text-3xl text-white font-bold">
-            8.142 billion people
+          <p className="text-xl md:text-2xl text-white font-black">
+            Raising $8M to tell 8 billion people about Jesus
           </p>
         </motion.div>
 
@@ -72,7 +70,7 @@ export function Hero() {
               large
             />
             <p className="text-white/90 text-lg font-semibold mt-2 uppercase tracking-wide">
-              People Reached with the Gospel
+              People told about Jesus
             </p>
           </div>
         </motion.div>
