@@ -139,17 +139,24 @@ export function DonateWidget() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       className={cn(
-        "relative rounded-3xl shadow-card-hover p-8 md:p-10 transition-colors duration-500",
-        isMonthly
-          ? "bg-gradient-to-br from-amber-50 via-yellow-50 to-amber-100"
-          : "bg-white"
+        "relative rounded-3xl shadow-card-hover p-8 md:p-10 transition-colors duration-500 overflow-hidden",
+        isMonthly ? "" : "bg-white"
       )}
+      style={isMonthly ? { backgroundColor: '#FFCC33' } : {}}
     >
-      <h3 className="text-2xl md:text-3xl font-display font-bold text-slate-900 text-center mb-6">
+      {isMonthly && (
+        <motion.div
+          className="absolute inset-0 bg-shine opacity-30"
+          animate={{ backgroundPosition: ['200% 0', '-200% 0'] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+          style={{ backgroundSize: '200% 100%' }}
+        />
+      )}
+      <h3 className="relative z-10 text-2xl md:text-3xl font-display font-bold text-slate-900 text-center mb-6">
         DONATE TO #TEAMJESUS
       </h3>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="relative z-10 space-y-6">
         {/* Frequency Tabs */}
         <Tabs.Root value={isMonthly ? 'monthly' : 'onetime'} onValueChange={handleMonthlyToggle}>
           <Tabs.List className="grid grid-cols-2 gap-2 p-1.5 bg-slate-100 rounded-2xl">

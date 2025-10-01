@@ -36,7 +36,7 @@ export function Hero() {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-8xl font-display text-white mb-6 tracking-tight">
-            <span className="font-light">#TEAM</span>
+            <span className="font-extralight">#TEAM</span>
             <span className="font-black">JESUS</span>
           </h1>
           <p className="text-xl md:text-2xl text-white font-black">
