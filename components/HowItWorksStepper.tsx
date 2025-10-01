@@ -181,7 +181,7 @@ export function HowItWorksStepper() {
           >
             <motion.path
               d="M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z"
-              fill="#1e3a8a"
+              fill="#003366"
               animate={{
                 d: [
                   "M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z",
