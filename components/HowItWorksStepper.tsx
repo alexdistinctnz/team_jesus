@@ -200,7 +200,7 @@ export function HowItWorksStepper() {
               className="relative"
             >
               {/* Vertical center line */}
-              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/30 -translate-x-1/2 hidden md:block" />
+              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-primary-900 -translate-x-1/2 hidden md:block" />
 
               {tabContent[activeTab as keyof typeof tabContent].sections.map((section, index) => {
                 const Icon = section.icon;
@@ -217,11 +217,14 @@ export function HowItWorksStepper() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="relative"
                   >
-                    {/* Top horizontal line */}
-                    <div className="absolute top-0 left-0 right-0 h-0.5 bg-white/30" />
-
-                    {/* Intersection dot at top */}
-                    <div className="absolute top-0 left-1/2 w-3 h-3 bg-white rounded-full -translate-x-1/2 -translate-y-1/2 hidden md:block" />
+                    {/* Top horizontal line (skip for first item) */}
+                    {!isFirst && (
+                      <>
+                        <div className="absolute top-0 left-0 right-0 h-1 bg-primary-900" />
+                        {/* Intersection dot at top */}
+                        <div className="absolute top-0 left-1/2 w-4 h-4 bg-primary-900 rounded-full -translate-x-1/2 -translate-y-1/2 hidden md:block" />
+                      </>
+                    )}
 
                     {/* Content grid */}
                     <div className="grid md:grid-cols-2 gap-8 items-center py-12 px-4">
@@ -251,14 +254,6 @@ export function HowItWorksStepper() {
                         </>
                       )}
                     </div>
-
-                    {/* Bottom horizontal line for last item */}
-                    {isLast && (
-                      <>
-                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/30" />
-                        <div className="absolute bottom-0 left-1/2 w-3 h-3 bg-white rounded-full -translate-x-1/2 translate-y-1/2 hidden md:block" />
-                      </>
-                    )}
                   </motion.div>
                 );
               })}
