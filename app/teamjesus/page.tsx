@@ -18,9 +18,10 @@ export default function TeamJesusPage() {
       className="min-h-screen relative"
       style={{
         backgroundImage: 'url(/images/background.jpeg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'scroll'
+        backgroundSize: '100% auto',
+        backgroundPosition: 'top center',
+        backgroundAttachment: 'scroll',
+        backgroundRepeat: 'no-repeat'
       }}
     >
       <HamburgerMenu onClick={() => setIsModalOpen(true)} />
