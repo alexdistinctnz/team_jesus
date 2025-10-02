@@ -17,7 +17,7 @@ export default function TeamJesusPage() {
   return (
     <main className="min-h-screen relative">
       {/* Background Image */}
-      <div className="fixed inset-0 -z-10">
+      <div className="absolute inset-0 -z-10">
         <Image
           src="/images/background.jpeg"
           alt="Background"
