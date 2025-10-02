@@ -139,7 +139,7 @@ export function DonateWidget() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       className={cn(
-        "relative rounded-3xl shadow-card-hover p-6 md:p-8 transition-colors duration-500 overflow-hidden",
+        "relative rounded-3xl shadow-card-hover px-4 py-6 md:px-5 md:py-8 transition-colors duration-500 overflow-hidden",
         isMonthly ? "" : "bg-white"
       )}
       style={isMonthly ? { backgroundColor: '#B79347' } : {}}
@@ -186,7 +186,7 @@ export function DonateWidget() {
         </Tabs.Root>
 
         {/* Quick Amount Buttons - TeamWater style */}
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-2">
           {quickAmounts.slice(0, 3).map((quickAmount) => (
             <button
               key={quickAmount}
@@ -210,7 +210,7 @@ export function DonateWidget() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2">
           {quickAmounts.slice(3).map((quickAmount) => (
             <button
               key={quickAmount}
