@@ -115,23 +115,23 @@ export function HowItWorksStepper() {
             <Image
               src="/images/partner_postclips_logo.svg"
               alt="PostClips"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
+              width={72}
+              height={24}
+              className="h-6 w-auto"
             />
             <Image
               src="/images/partner_Elevation_Church_logo.svg"
               alt="Elevation Church"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
+              width={72}
+              height={24}
+              className="h-6 w-auto"
             />
             <Image
               src="/images/partner_Bryce_Crawford_Logo.svg"
               alt="Bryce Crawford"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
+              width={72}
+              height={24}
+              className="h-6 w-auto"
             />
           </div>
 
