@@ -27,10 +27,10 @@ export default function TeamJesusPage() {
 
       if (isMobileView) {
         // Mobile: full viewport height, cover (fixed/sticky is OK)
-        setImageStyle({ width: '100%', height: '100vh', objectFit: 'cover' });
+        setImageStyle({ width: '100%', height: '100vh', objectFit: 'cover', objectPosition: 'top center' });
       } else {
-        // Desktop: always anchor top and bottom (full height, auto width maintains aspect ratio)
-        setImageStyle({ width: 'auto', height: '100%', minHeight: '100%' });
+        // Desktop: always anchor top and bottom, maintain aspect ratio with cover
+        setImageStyle({ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' });
       }
     };
 
