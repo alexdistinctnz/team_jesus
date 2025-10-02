@@ -9,20 +9,108 @@ import Image from 'next/image';
 export function Hero() {
   const { metrics, isLoading } = useMetrics();
 
+  // Cloud configurations with random properties
+  const clouds = [
+    {
+      src: '/images/cloud_white.svg',
+      top: '10%',
+      left: '-10%',
+      width: 200,
+      opacity: 0.7,
+      blur: 1,
+      duration: 80,
+      delay: 0
+    },
+    {
+      src: '/images/cloud_eccf89.svg',
+      top: '20%',
+      left: '20%',
+      width: 150,
+      opacity: 0.8,
+      blur: 0.5,
+      duration: 100,
+      delay: 5
+    },
+    {
+      src: '/images/cloud_f5e9cb.svg',
+      top: '35%',
+      left: '60%',
+      width: 180,
+      opacity: 0.75,
+      blur: 1,
+      duration: 90,
+      delay: 10
+    },
+    {
+      src: '/images/cloud_d8c688.svg',
+      top: '15%',
+      left: '70%',
+      width: 160,
+      opacity: 0.85,
+      blur: 0.5,
+      duration: 95,
+      delay: 15
+    },
+    {
+      src: '/images/cloud_white.svg',
+      top: '5%',
+      left: '40%',
+      width: 140,
+      opacity: 0.7,
+      blur: 1.5,
+      duration: 110,
+      delay: 20
+    },
+    {
+      src: '/images/cloud_eccf89.svg',
+      top: '30%',
+      left: '-5%',
+      width: 170,
+      opacity: 0.8,
+      blur: 1,
+      duration: 85,
+      delay: 25
+    },
+  ];
+
   return (
     <section className="relative pt-10 md:pt-16 pb-20 md:pb-32 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/background.jpeg"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Gradient overlay - fade to white */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/60 to-white" />
-      </div>
+      {/* Sunrise Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-sky-400 via-orange-200 to-yellow-100" />
+
+      {/* Floating Clouds */}
+      {clouds.map((cloud, index) => (
+        <motion.div
+          key={index}
+          className="absolute"
+          style={{
+            top: cloud.top,
+            left: cloud.left,
+            filter: `blur(${cloud.blur}px)`,
+            opacity: cloud.opacity,
+          }}
+          animate={{
+            x: ['0%', '100vw'],
+          }}
+          transition={{
+            duration: cloud.duration,
+            repeat: Infinity,
+            ease: 'linear',
+            delay: cloud.delay,
+          }}
+        >
+          <Image
+            src={cloud.src}
+            alt=""
+            width={cloud.width}
+            height={cloud.width * 0.6}
+            className="w-auto h-auto"
+          />
+        </motion.div>
+      ))}
+
+      {/* Gradient overlay - fade to white at bottom */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Logo and Main heading - centered */}
