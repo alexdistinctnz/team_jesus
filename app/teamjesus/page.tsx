@@ -26,24 +26,27 @@ export default function TeamJesusPage() {
       setIsMobile(isMobileView);
 
       if (isMobileView) {
-        // Mobile: full viewport height, cover
+        // Mobile: full viewport height, cover (fixed/sticky is OK)
         setImageStyle({ width: '100%', height: '100vh', objectFit: 'cover' });
       } else {
-        // Desktop: calculate based on content height
+        // Desktop: maintain aspect ratio, choose anchor based on content height
         const img = new window.Image();
         img.src = '/images/background.jpeg';
         img.onload = () => {
           const contentHeight = mainRef.current?.scrollHeight || window.innerHeight;
 
-          // Calculate what the image height would be at 100% width
+          // Calculate what the image height would be at 100% width (maintaining aspect ratio)
           const imageAspectRatio = img.width / img.height;
           const imageHeightAtFullWidth = viewportWidth / imageAspectRatio;
 
-          // If content is taller than the image would be at full width, switch to height-based sizing
-          if (contentHeight > imageHeightAtFullWidth) {
-            setImageStyle({ width: 'auto', height: '100%', minWidth: '100%', objectFit: 'cover' });
-          } else {
+          if (imageHeightAtFullWidth >= contentHeight) {
+            // Image is taller than or equal to content at full width
+            // Anchor left and right (full width)
             setImageStyle({ width: '100%', height: 'auto' });
+          } else {
+            // Image is shorter than content at full width
+            // Anchor top and bottom (full height) - this will crop the sides
+            setImageStyle({ width: 'auto', height: '100%', minHeight: '100%' });
           }
         };
       }
