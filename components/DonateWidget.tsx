@@ -139,7 +139,7 @@ export function DonateWidget() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       className={cn(
-        "relative rounded-3xl shadow-card-hover p-8 md:p-10 transition-colors duration-500 overflow-hidden",
+        "relative rounded-3xl shadow-card-hover p-6 md:p-8 transition-colors duration-500 overflow-hidden",
         isMonthly ? "" : "bg-white"
       )}
       style={isMonthly ? { backgroundColor: '#B79347' } : {}}
@@ -152,7 +152,7 @@ export function DonateWidget() {
           style={{ backgroundSize: '200% 100%' }}
         />
       )}
-      <h3 className="relative z-10 text-lg md:text-xl font-heading font-bold text-slate-900 text-center mb-6">
+      <h3 className="relative z-10 text-xl md:text-2xl font-heading font-bold text-slate-900 text-center mb-6">
         DONATE TO #TEAMJESUS
       </h3>
 
