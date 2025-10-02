@@ -5,16 +5,39 @@ import { useMetrics } from '@/hooks/useMetrics';
 import { ImpactCounter } from './ImpactCounter';
 import { DonateWidget } from './DonateWidget';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export function Hero() {
   const { metrics, isLoading } = useMetrics();
+  const [cloudCount, setCloudCount] = useState(6);
 
-  // Cloud configurations with random properties
-  const clouds = [
+  // Adjust cloud count based on screen size
+  useEffect(() => {
+    const updateCloudCount = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setCloudCount(3); // Mobile: 3 clouds
+      } else if (width < 1024) {
+        setCloudCount(5); // Tablet: 5 clouds
+      } else if (width < 1536) {
+        setCloudCount(8); // Desktop: 8 clouds
+      } else {
+        setCloudCount(10); // Large screens: 10 clouds
+      }
+    };
+
+    updateCloudCount();
+    window.addEventListener('resize', updateCloudCount);
+    return () => window.removeEventListener('resize', updateCloudCount);
+  }, []);
+
+  // All possible clouds - we'll slice based on cloudCount
+  const allClouds = [
     {
       src: '/images/cloud_white.svg',
       top: '10%',
-      left: '-10%',
+      startX: '-15%',
+      endX: '100%',
       width: 200,
       opacity: 0.7,
       blur: 1,
@@ -24,7 +47,8 @@ export function Hero() {
     {
       src: '/images/cloud_eccf89.svg',
       top: '20%',
-      left: '20%',
+      startX: '10%',
+      endX: '115%',
       width: 150,
       opacity: 0.8,
       blur: 0.5,
@@ -34,7 +58,8 @@ export function Hero() {
     {
       src: '/images/cloud_f5e9cb.svg',
       top: '35%',
-      left: '60%',
+      startX: '60%',
+      endX: '125%',
       width: 180,
       opacity: 0.75,
       blur: 1,
@@ -44,7 +69,8 @@ export function Hero() {
     {
       src: '/images/cloud_d8c688.svg',
       top: '15%',
-      left: '70%',
+      startX: '70%',
+      endX: '130%',
       width: 160,
       opacity: 0.85,
       blur: 0.5,
@@ -54,7 +80,8 @@ export function Hero() {
     {
       src: '/images/cloud_white.svg',
       top: '5%',
-      left: '40%',
+      startX: '40%',
+      endX: '120%',
       width: 140,
       opacity: 0.7,
       blur: 1.5,
@@ -64,14 +91,61 @@ export function Hero() {
     {
       src: '/images/cloud_eccf89.svg',
       top: '30%',
-      left: '-5%',
+      startX: '-10%',
+      endX: '105%',
       width: 170,
       opacity: 0.8,
       blur: 1,
       duration: 85,
       delay: 25
     },
+    {
+      src: '/images/cloud_d8c688.svg',
+      top: '8%',
+      startX: '25%',
+      endX: '110%',
+      width: 155,
+      opacity: 0.75,
+      blur: 0.8,
+      duration: 92,
+      delay: 30
+    },
+    {
+      src: '/images/cloud_f5e9cb.svg',
+      top: '28%',
+      startX: '50%',
+      endX: '140%',
+      width: 165,
+      opacity: 0.8,
+      blur: 1.2,
+      duration: 88,
+      delay: 35
+    },
+    {
+      src: '/images/cloud_white.svg',
+      top: '18%',
+      startX: '-5%',
+      endX: '95%',
+      width: 145,
+      opacity: 0.7,
+      blur: 1,
+      duration: 105,
+      delay: 40
+    },
+    {
+      src: '/images/cloud_eccf89.svg',
+      top: '12%',
+      startX: '80%',
+      endX: '135%',
+      width: 175,
+      opacity: 0.85,
+      blur: 0.6,
+      duration: 98,
+      delay: 45
+    },
   ];
+
+  const clouds = allClouds.slice(0, cloudCount);
 
   return (
     <section className="relative pt-10 md:pt-16 pb-20 md:pb-32 overflow-hidden">
@@ -85,12 +159,11 @@ export function Hero() {
           className="absolute"
           style={{
             top: cloud.top,
-            left: cloud.left,
             filter: `blur(${cloud.blur}px)`,
             opacity: cloud.opacity,
           }}
           animate={{
-            x: ['0%', '100vw'],
+            left: [cloud.startX, cloud.endX],
           }}
           transition={{
             duration: cloud.duration,
