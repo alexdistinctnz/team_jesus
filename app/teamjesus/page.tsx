@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { Hero } from '@/components/Hero';
 import { RecentDonors } from '@/components/RecentDonors';
 import { HowItWorksStepper } from '@/components/HowItWorksStepper';
@@ -12,14 +13,14 @@ import { ImpactStats } from '@/components/ImpactStats';
 
 export default function TeamJesusPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [backgroundSize, setBackgroundSize] = useState('100% auto');
+  const [objectFit, setObjectFit] = useState<'cover' | 'contain'>('contain');
   const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const updateBackgroundSize = () => {
+    const updateObjectFit = () => {
       if (!mainRef.current) return;
 
-      const img = new Image();
+      const img = new window.Image();
       img.src = '/images/background.jpeg';
       img.onload = () => {
         const contentHeight = mainRef.current?.scrollHeight || window.innerHeight;
@@ -31,22 +32,22 @@ export default function TeamJesusPage() {
 
         // If content is taller than the image would be at full width, use cover to fill
         if (contentHeight > imageHeightAtFullWidth) {
-          setBackgroundSize('cover');
+          setObjectFit('cover');
         } else {
-          setBackgroundSize('100% auto');
+          setObjectFit('contain');
         }
       };
     };
 
     // Initial calculation with a delay to ensure content is rendered
-    const timer = setTimeout(updateBackgroundSize, 100);
+    const timer = setTimeout(updateObjectFit, 100);
 
-    updateBackgroundSize();
-    window.addEventListener('resize', updateBackgroundSize);
+    updateObjectFit();
+    window.addEventListener('resize', updateObjectFit);
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', updateBackgroundSize);
+      window.removeEventListener('resize', updateObjectFit);
     };
   }, []);
 
@@ -54,14 +55,19 @@ export default function TeamJesusPage() {
     <main
       ref={mainRef}
       className="min-h-screen relative"
-      style={{
-        backgroundImage: 'url(/images/background.jpeg)',
-        backgroundSize: backgroundSize,
-        backgroundPosition: 'top center',
-        backgroundAttachment: 'scroll',
-        backgroundRepeat: 'no-repeat'
-      }}
     >
+      {/* Background Image using Next.js Image component for better mobile support */}
+      <div className="fixed inset-0 -z-10">
+        <Image
+          src="/images/background.jpeg"
+          alt="Background"
+          fill
+          className="object-top"
+          style={{ objectFit }}
+          priority
+          quality={100}
+        />
+      </div>
       <HamburgerMenu onClick={() => setIsModalOpen(true)} />
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
