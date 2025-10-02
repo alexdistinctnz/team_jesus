@@ -22,26 +22,32 @@ export default function TeamJesusPage() {
       const img = new Image();
       img.src = '/images/background.jpeg';
       img.onload = () => {
-        const viewportHeight = mainRef.current?.scrollHeight || window.innerHeight;
+        const contentHeight = mainRef.current?.scrollHeight || window.innerHeight;
         const viewportWidth = window.innerWidth;
 
         // Calculate what the image height would be at 100% width
         const imageAspectRatio = img.width / img.height;
         const imageHeightAtFullWidth = viewportWidth / imageAspectRatio;
 
-        // If viewport is taller than the image would be at full width, switch to height-based sizing
-        if (viewportHeight > imageHeightAtFullWidth) {
-          setBackgroundSize('auto 100%');
+        // If content is taller than the image would be at full width, use cover to fill
+        if (contentHeight > imageHeightAtFullWidth) {
+          setBackgroundSize('cover');
         } else {
           setBackgroundSize('100% auto');
         }
       };
     };
 
+    // Initial calculation with a delay to ensure content is rendered
+    const timer = setTimeout(updateBackgroundSize, 100);
+
     updateBackgroundSize();
     window.addEventListener('resize', updateBackgroundSize);
 
-    return () => window.removeEventListener('resize', updateBackgroundSize);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', updateBackgroundSize);
+    };
   }, []);
 
   return (
