@@ -32,6 +32,7 @@ export function Hero() {
   }, []);
 
   // All possible clouds - we'll slice based on cloudCount
+  // Random scale between 1.0 and 2.0 for each cloud
   const allClouds = [
     {
       src: '/images/cloud_white.svg',
@@ -42,7 +43,8 @@ export function Hero() {
       opacity: 0.7,
       blur: 1,
       duration: 80,
-      delay: 0
+      delay: 0,
+      scale: 1 + Math.random()
     },
     {
       src: '/images/cloud_eccf89.svg',
@@ -53,7 +55,8 @@ export function Hero() {
       opacity: 0.8,
       blur: 0.5,
       duration: 100,
-      delay: 5
+      delay: 5,
+      scale: 1 + Math.random()
     },
     {
       src: '/images/cloud_f5e9cb.svg',
@@ -64,7 +67,8 @@ export function Hero() {
       opacity: 0.75,
       blur: 1,
       duration: 90,
-      delay: 10
+      delay: 10,
+      scale: 1 + Math.random()
     },
     {
       src: '/images/cloud_d8c688.svg',
@@ -75,7 +79,8 @@ export function Hero() {
       opacity: 0.85,
       blur: 0.5,
       duration: 95,
-      delay: 15
+      delay: 15,
+      scale: 1 + Math.random()
     },
     {
       src: '/images/cloud_white.svg',
@@ -86,7 +91,8 @@ export function Hero() {
       opacity: 0.7,
       blur: 1.5,
       duration: 110,
-      delay: 20
+      delay: 20,
+      scale: 1 + Math.random()
     },
     {
       src: '/images/cloud_eccf89.svg',
@@ -97,7 +103,8 @@ export function Hero() {
       opacity: 0.8,
       blur: 1,
       duration: 85,
-      delay: 25
+      delay: 25,
+      scale: 1 + Math.random()
     },
     {
       src: '/images/cloud_d8c688.svg',
@@ -108,7 +115,8 @@ export function Hero() {
       opacity: 0.75,
       blur: 0.8,
       duration: 92,
-      delay: 30
+      delay: 30,
+      scale: 1 + Math.random()
     },
     {
       src: '/images/cloud_f5e9cb.svg',
@@ -119,7 +127,8 @@ export function Hero() {
       opacity: 0.8,
       blur: 1.2,
       duration: 88,
-      delay: 35
+      delay: 35,
+      scale: 1 + Math.random()
     },
     {
       src: '/images/cloud_white.svg',
@@ -130,7 +139,8 @@ export function Hero() {
       opacity: 0.7,
       blur: 1,
       duration: 105,
-      delay: 40
+      delay: 40,
+      scale: 1 + Math.random()
     },
     {
       src: '/images/cloud_eccf89.svg',
@@ -141,7 +151,8 @@ export function Hero() {
       opacity: 0.85,
       blur: 0.6,
       duration: 98,
-      delay: 45
+      delay: 45,
+      scale: 1 + Math.random()
     },
   ];
 
@@ -161,7 +172,7 @@ export function Hero() {
             top: cloud.top,
             filter: `blur(${cloud.blur}px)`,
             opacity: cloud.opacity,
-            width: `${cloud.width}px`,
+            width: `${cloud.width * cloud.scale}px`,
           }}
           animate={{
             left: [cloud.startX, cloud.endX],
