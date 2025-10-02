@@ -160,11 +160,6 @@ export function ImpactStats() {
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-        <p className="text-xs text-white/40 italic">scroll down for full report</p>
-      </div>
     </section>
   );
 }
