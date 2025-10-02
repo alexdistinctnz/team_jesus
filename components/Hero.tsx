@@ -77,8 +77,8 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-2xl mx-auto"
-          style={{ transform: 'scale(0.6)', transformOrigin: 'top center' }}
+          className="mx-auto"
+          style={{ maxWidth: '864px' }}
         >
           <DonateWidget />
         </motion.div>
