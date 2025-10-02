@@ -48,7 +48,7 @@ export function FAQ() {
             <HelpCircle className="w-4 h-4 text-white" />
             <span className="text-sm font-semibold text-white uppercase tracking-wide">Have Questions?</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-primary-900 mb-4">
             Frequently Asked Questions
           </h2>
         </motion.div>

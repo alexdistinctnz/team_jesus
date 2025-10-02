@@ -90,10 +90,10 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-6xl md:text-8xl font-heading font-bold text-white mb-6">
+          <h2 className="text-6xl md:text-8xl font-heading font-bold text-primary-900 mb-6">
             HOW IT WORKS
           </h2>
-          <p className="text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-12">
+          <p className="text-lg md:text-xl text-primary-900 max-w-4xl mx-auto leading-relaxed mb-12">
             #TeamJesus will be the biggest and most impactful campaign for sharing the Gospel in history.
             Scroll down to see how raising $8 million will share Jesus with 8 billion people.
             With thousands of the world's top Creators talking about Jesus, we're changing the world, one view at a time.
@@ -143,7 +143,7 @@ export function HowItWorksStepper() {
                 className={`px-5 py-2.5 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'why'
                     ? 'bg-primary-500 text-white'
-                    : 'text-white/70 hover:text-white'
+                    : 'text-primary-900/70 hover:text-primary-900'
                 }`}
               >
                 Why
@@ -153,7 +153,7 @@ export function HowItWorksStepper() {
                 className={`px-5 py-2.5 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'how'
                     ? 'bg-primary-500 text-white'
-                    : 'text-white/70 hover:text-white'
+                    : 'text-primary-900/70 hover:text-primary-900'
                 }`}
               >
                 How
@@ -163,7 +163,7 @@ export function HowItWorksStepper() {
                 className={`px-5 py-2.5 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'impact'
                     ? 'bg-primary-500 text-white'
-                    : 'text-white/70 hover:text-white'
+                    : 'text-primary-900/70 hover:text-primary-900'
                 }`}
               >
                 Impact
@@ -186,7 +186,7 @@ export function HowItWorksStepper() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className="text-lg text-white/90 leading-relaxed mb-12"
+              className="text-lg text-primary-900 leading-relaxed mb-12"
             >
               {tabContent[activeTab as keyof typeof tabContent].description}
             </motion.p>
@@ -231,8 +231,8 @@ export function HowItWorksStepper() {
                       {isLeft ? (
                         <>
                           <div>
-                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{section.title}</h3>
-                            <p className="text-white/80 leading-relaxed">{section.text}</p>
+                            <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">{section.title}</h3>
+                            <p className="text-primary-900 leading-relaxed">{section.text}</p>
                           </div>
                           <div className="hidden md:block rounded-2xl overflow-hidden">
                             <div className="aspect-video bg-white/10 flex items-center justify-center">
@@ -248,8 +248,8 @@ export function HowItWorksStepper() {
                             </div>
                           </div>
                           <div className="order-1 md:order-2">
-                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{section.title}</h3>
-                            <p className="text-white/80 leading-relaxed">{section.text}</p>
+                            <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">{section.title}</h3>
+                            <p className="text-primary-900 leading-relaxed">{section.text}</p>
                           </div>
                         </>
                       )}
