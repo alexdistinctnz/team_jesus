@@ -16,18 +16,21 @@ export function HowItWorksStepper() {
           title: "Gospel Creators",
           text: "When creators share the Gospel through video, lives are changed. Their work is more than entertainment, it points people to Jesus. By making content about Christ, they reach millions who may never enter a church, giving them the chance to hear about salvation, find hope, and discover eternal life. With the Gospel in video form, the message spreads with greater reach, impact, and authenticity.",
           icon: Video,
+          image: "/images/gospel_creators.jpg",
           align: "left"
         },
         {
           title: "Global Reach",
           text: "Short-form Gospel content is vital for reaching the world. Without it, billions remain unreached through traditional methods. When compelling videos about Jesus appear on platforms people already use, the Gospel spreads naturally. By filling social media with Christ-centered content, we break down barriers and bring transformation one view at a time.",
           icon: Target,
+          image: "/images/global_reach.jpg",
           align: "right"
         },
         {
           title: "Verified Results",
           text: "Results-based funding ensures full accountability. We only pay creators for verified views, so every donation directly leads to people hearing about Jesus. This makes fragile ministry budgets go further, reaching more souls with fewer resources. Transparent, verifiable metrics give donors confidence, showing real Kingdom impact and inspiring lasting trust.",
           icon: Heart,
+          image: "/images/verified_results.jpg",
           align: "left"
         }
       ]
@@ -37,20 +40,23 @@ export function HowItWorksStepper() {
       sections: [
         {
           title: "Step 1: You Donate",
-          text: "Your gift directly funds the mission of reaching people with the Gospel. Every dollar becomes content that shares Jesus with thousands. When you give, you invest in eternal impact. Your contribution immediately supports creators who spread Christ’s message across the world through compelling short-form video.",
+          text: "Your gift directly funds the mission of reaching people with the Gospel. Every dollar becomes content that shares Jesus with thousands. When you give, you invest in eternal impact. Your contribution immediately supports creators who spread Christ's message across the world through compelling short-form video.",
           icon: Heart,
+          image: "/images/step_1_you_donate.jpg",
           align: "left"
         },
         {
           title: "Step 2: Creators Share Jesus",
           text: "PostClips pays talented creators to share Gospel content. They take sermons, testimonies, and teachings and turn them into engaging short videos for TikTok, Instagram, and YouTube. Each clip is designed to capture attention, communicate truth, and point people to Jesus where they already spend their time.",
           icon: Video,
+          image: "/images/step_2_creators_share_jesus.jpg",
           align: "right"
         },
         {
           title: "Step 3: Results-Based Payment",
           text: "We pay creators $0.01 per 10 verified views, tying every penny to real results. No views means no payment. This performance model ensures maximum impact and efficiency, so your donation funds true reach rather than unused content. It is transparent, accountable, and effective for modern ministry.",
           icon: Target,
+          image: "/images/step_3_results_based_payment.jpg",
           align: "left"
         }
       ]
@@ -62,18 +68,21 @@ export function HowItWorksStepper() {
           title: "$1 = 1,000 People",
           text: "Every dollar you give reaches 1,000 people with the Gospel. At $0.01 per 10 views, your $1 gift funds 100 creator payments, producing 1,000 verified views of Christ-centered content. A $25 gift shares Jesus with 25,000 people. A $100 gift reaches 100,000. The math is clear, the impact eternal.",
           icon: Heart,
+          image: "/images/1_dollar_1000_people.jpg",
           align: "left"
         },
         {
           title: "Maximum Efficiency",
           text: "100% of your donation goes directly to creators. Not a cent is wasted on overhead or admin costs, which are covered separately. Every dollar funds Gospel content that reaches people, ensuring your generosity delivers the greatest possible Kingdom impact without dilution or waste.",
           icon: Target,
+          image: "/images/maximum_efficiency.jpg",
           align: "right"
         },
         {
           title: "Eternal Transformation",
           text: "Behind every view is a real person encountering Jesus. Some will scroll past, but many will pause, listen, and be changed forever. Souls are saved, hearts are transformed, and lives are redirected toward eternity. Your gift does more than create content, it creates space for the Spirit to work.",
           icon: Video,
+          image: "/images/eternal_transformation.jpg",
           align: "left"
         }
       ]
@@ -235,16 +244,26 @@ export function HowItWorksStepper() {
                             <p className="text-primary-900 leading-relaxed">{section.text}</p>
                           </div>
                           <div className="hidden md:block rounded-2xl overflow-hidden">
-                            <div className="aspect-video bg-white/10 flex items-center justify-center">
-                              <Icon className="w-16 h-16 text-white/50" />
+                            <div className="aspect-video relative">
+                              <Image
+                                src={section.image}
+                                alt={section.title}
+                                fill
+                                className="object-cover"
+                              />
                             </div>
                           </div>
                         </>
                       ) : (
                         <>
                           <div className="hidden md:block rounded-2xl overflow-hidden order-2 md:order-1">
-                            <div className="aspect-video bg-white/10 flex items-center justify-center">
-                              <Icon className="w-16 h-16 text-white/50" />
+                            <div className="aspect-video relative">
+                              <Image
+                                src={section.image}
+                                alt={section.title}
+                                fill
+                                className="object-cover"
+                              />
                             </div>
                           </div>
                           <div className="order-1 md:order-2">
