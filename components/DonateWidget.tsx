@@ -152,7 +152,7 @@ export function DonateWidget() {
           style={{ backgroundSize: '200% 100%' }}
         />
       )}
-      <h3 className="relative z-10 text-2xl md:text-3xl font-display font-bold text-slate-900 text-center mb-6">
+      <h3 className="relative z-10 text-xl md:text-2xl font-heading font-bold text-slate-900 text-center mb-6">
         DONATE TO #TEAMJESUS
       </h3>
 
