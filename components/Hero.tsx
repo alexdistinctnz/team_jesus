@@ -37,13 +37,13 @@ export function Hero() {
             <Image
               src="/images/Team_Jesus_Logo.png"
               alt="PostClips Logo"
-              width={180}
-              height={180}
-              className="w-28 md:w-44 h-auto"
+              width={144}
+              height={144}
+              className="w-22 md:w-36 h-auto"
             />
           </div>
 
-          <h1 className="text-2xl md:text-6xl font-display text-primary-900 mb-4 tracking-tight">
+          <h1 className="text-3xl md:text-7xl font-display text-primary-900 mb-4 tracking-tight">
             <span className="font-extralight">#TEAM</span>
             <span className="font-black">JESUS</span>
           </h1>
