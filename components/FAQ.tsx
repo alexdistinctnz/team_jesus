@@ -35,7 +35,7 @@ const faqItems: FAQItem[] = [
 
 export function FAQ() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-white">
+    <section className="py-20 bg-primary-600">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,11 +44,11 @@ export function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full mb-4">
-            <HelpCircle className="w-4 h-4 text-primary-700" />
-            <span className="text-sm font-semibold text-primary-700 uppercase tracking-wide">Have Questions?</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-900 rounded-full mb-4">
+            <HelpCircle className="w-4 h-4 text-white" />
+            <span className="text-sm font-semibold text-white uppercase tracking-wide">Have Questions?</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
             Frequently Asked Questions
           </h2>
         </motion.div>
