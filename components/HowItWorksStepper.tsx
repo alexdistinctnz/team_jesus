@@ -180,7 +180,7 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          <div className="p-8 md:p-12">
+          <div className="p-8 md:p-12 max-w-5xl mx-auto">
             <motion.p
               key={activeTab}
               initial={{ opacity: 0, y: 10 }}
