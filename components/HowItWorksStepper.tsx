@@ -143,7 +143,7 @@ export function HowItWorksStepper() {
                 className={`px-5 py-2.5 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'why'
                     ? 'bg-primary-500 text-white'
-                    : 'text-primary-900/70 hover:text-primary-900'
+                    : 'text-white/70 hover:text-white'
                 }`}
               >
                 Why
@@ -153,7 +153,7 @@ export function HowItWorksStepper() {
                 className={`px-5 py-2.5 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'how'
                     ? 'bg-primary-500 text-white'
-                    : 'text-primary-900/70 hover:text-primary-900'
+                    : 'text-white/70 hover:text-white'
                 }`}
               >
                 How
@@ -163,7 +163,7 @@ export function HowItWorksStepper() {
                 className={`px-5 py-2.5 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'impact'
                     ? 'bg-primary-500 text-white'
-                    : 'text-primary-900/70 hover:text-primary-900'
+                    : 'text-white/70 hover:text-white'
                 }`}
               >
                 Impact
