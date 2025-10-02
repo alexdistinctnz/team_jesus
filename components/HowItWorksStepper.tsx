@@ -181,23 +181,11 @@ export function HowItWorksStepper() {
           className="relative mt-0"
         >
           {/* Wavy top border with animation */}
-          <motion.svg
+          <svg
             className="w-full"
             height="40"
             viewBox="0 0 1200 40"
             preserveAspectRatio="none"
-            animate={{
-              d: [
-                "M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z",
-                "M0,20 Q300,40 600,20 T1200,20 L1200,40 L0,40 Z",
-                "M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z"
-              ]
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
           >
             <motion.path
               d="M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z"
@@ -215,7 +203,7 @@ export function HowItWorksStepper() {
                 ease: "easeInOut"
               }}
             />
-          </motion.svg>
+          </svg>
 
           <div className="bg-primary-900 p-8 md:p-12 -mt-1">
             <motion.p
