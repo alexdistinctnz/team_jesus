@@ -13,6 +13,7 @@ import { ImpactStats } from '@/components/ImpactStats';
 
 export default function TeamJesusPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [imageStyle, setImageStyle] = useState<React.CSSProperties>({ width: '100%', height: 'auto' });
   const mainRef = useRef<HTMLElement>(null);
 
@@ -20,23 +21,32 @@ export default function TeamJesusPage() {
     const updateImageStyle = () => {
       if (!mainRef.current) return;
 
-      const img = new window.Image();
-      img.src = '/images/background.jpeg';
-      img.onload = () => {
-        const contentHeight = mainRef.current?.scrollHeight || window.innerHeight;
-        const viewportWidth = window.innerWidth;
+      const viewportWidth = window.innerWidth;
+      const isMobileView = viewportWidth < 768; // md breakpoint
+      setIsMobile(isMobileView);
 
-        // Calculate what the image height would be at 100% width
-        const imageAspectRatio = img.width / img.height;
-        const imageHeightAtFullWidth = viewportWidth / imageAspectRatio;
+      if (isMobileView) {
+        // Mobile: full viewport height, cover
+        setImageStyle({ width: '100%', height: '100vh', objectFit: 'cover' });
+      } else {
+        // Desktop: calculate based on content height
+        const img = new window.Image();
+        img.src = '/images/background.jpeg';
+        img.onload = () => {
+          const contentHeight = mainRef.current?.scrollHeight || window.innerHeight;
 
-        // If content is taller than the image would be at full width, switch to height-based sizing
-        if (contentHeight > imageHeightAtFullWidth) {
-          setImageStyle({ width: 'auto', height: '100%', minWidth: '100%', objectFit: 'cover' });
-        } else {
-          setImageStyle({ width: '100%', height: 'auto' });
-        }
-      };
+          // Calculate what the image height would be at 100% width
+          const imageAspectRatio = img.width / img.height;
+          const imageHeightAtFullWidth = viewportWidth / imageAspectRatio;
+
+          // If content is taller than the image would be at full width, switch to height-based sizing
+          if (contentHeight > imageHeightAtFullWidth) {
+            setImageStyle({ width: 'auto', height: '100%', minWidth: '100%', objectFit: 'cover' });
+          } else {
+            setImageStyle({ width: '100%', height: 'auto' });
+          }
+        };
+      }
     };
 
     // Initial calculation with a delay to ensure content is rendered
@@ -57,7 +67,7 @@ export default function TeamJesusPage() {
       className="min-h-screen relative"
     >
       {/* Background Image using Next.js Image component for better mobile support */}
-      <div className="absolute top-0 left-0 w-full min-h-full -z-10 flex justify-center">
+      <div className={`top-0 left-0 w-full min-h-full -z-10 flex justify-center ${isMobile ? 'fixed' : 'absolute'}`}>
         <Image
           src="/images/background.jpeg"
           alt="Background"
