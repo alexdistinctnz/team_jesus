@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { useMetrics } from '@/hooks/useMetrics';
 import { ImpactCounter } from './ImpactCounter';
 import { DonateWidget } from './DonateWidget';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export function Hero() {
   const { metrics, isLoading } = useMetrics();
@@ -156,11 +156,12 @@ export function Hero() {
       {clouds.map((cloud, index) => (
         <motion.div
           key={index}
-          className="absolute"
+          className="absolute z-10"
           style={{
             top: cloud.top,
             filter: `blur(${cloud.blur}px)`,
             opacity: cloud.opacity,
+            width: `${cloud.width}px`,
           }}
           animate={{
             left: [cloud.startX, cloud.endX],
@@ -172,20 +173,18 @@ export function Hero() {
             delay: cloud.delay,
           }}
         >
-          <Image
+          <img
             src={cloud.src}
             alt=""
-            width={cloud.width}
-            height={cloud.width * 0.6}
-            className="w-auto h-auto"
+            style={{ width: '100%', height: 'auto' }}
           />
         </motion.div>
       ))}
 
       {/* Gradient overlay - fade to white at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-white pointer-events-none z-20" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
         {/* Logo and Main heading - centered */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
