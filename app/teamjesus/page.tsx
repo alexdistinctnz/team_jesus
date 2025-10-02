@@ -9,24 +9,20 @@ import { Footer } from '@/components/Footer';
 import { HamburgerMenu } from '@/components/HamburgerMenu';
 import { Modal } from '@/components/Modal';
 import { ImpactStats } from '@/components/ImpactStats';
-import Image from 'next/image';
 
 export default function TeamJesusPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <main className="min-h-screen relative">
-      {/* Background Image */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/images/background.jpeg"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
+    <main
+      className="min-h-screen relative"
+      style={{
+        backgroundImage: 'url(/images/background.jpeg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'scroll'
+      }}
+    >
       <HamburgerMenu onClick={() => setIsModalOpen(true)} />
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
