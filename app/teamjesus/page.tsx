@@ -13,11 +13,11 @@ import { ImpactStats } from '@/components/ImpactStats';
 
 export default function TeamJesusPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [objectFit, setObjectFit] = useState<'cover' | 'contain'>('contain');
+  const [imageStyle, setImageStyle] = useState<React.CSSProperties>({ width: '100%', height: 'auto' });
   const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const updateObjectFit = () => {
+    const updateImageStyle = () => {
       if (!mainRef.current) return;
 
       const img = new window.Image();
@@ -30,24 +30,24 @@ export default function TeamJesusPage() {
         const imageAspectRatio = img.width / img.height;
         const imageHeightAtFullWidth = viewportWidth / imageAspectRatio;
 
-        // If content is taller than the image would be at full width, use cover to fill
+        // If content is taller than the image would be at full width, switch to height-based sizing
         if (contentHeight > imageHeightAtFullWidth) {
-          setObjectFit('cover');
+          setImageStyle({ width: 'auto', height: '100%', minWidth: '100%', objectFit: 'cover' });
         } else {
-          setObjectFit('contain');
+          setImageStyle({ width: '100%', height: 'auto' });
         }
       };
     };
 
     // Initial calculation with a delay to ensure content is rendered
-    const timer = setTimeout(updateObjectFit, 100);
+    const timer = setTimeout(updateImageStyle, 100);
 
-    updateObjectFit();
-    window.addEventListener('resize', updateObjectFit);
+    updateImageStyle();
+    window.addEventListener('resize', updateImageStyle);
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', updateObjectFit);
+      window.removeEventListener('resize', updateImageStyle);
     };
   }, []);
 
@@ -57,13 +57,13 @@ export default function TeamJesusPage() {
       className="min-h-screen relative"
     >
       {/* Background Image using Next.js Image component for better mobile support */}
-      <div className="fixed inset-0 -z-10">
+      <div className="absolute top-0 left-0 w-full min-h-full -z-10 flex justify-center">
         <Image
           src="/images/background.jpeg"
           alt="Background"
-          fill
-          className="object-top"
-          style={{ objectFit }}
+          width={3000}
+          height={3000}
+          style={imageStyle}
           priority
           quality={100}
         />
