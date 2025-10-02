@@ -11,18 +11,6 @@ export function Hero() {
 
   return (
     <section className="relative pt-10 md:pt-16 pb-20 md:pb-32 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/background.jpeg"
-          alt="Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Gradient overlay - fade to white */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/60 to-white" />
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Logo and Main heading - centered */}

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <div className="relative bg-primary-600 text-white py-12 overflow-hidden">
+    <div className="relative text-white py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top row - Navigation links with logo on right */}
         <motion.div

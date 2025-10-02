@@ -81,7 +81,7 @@ export function HowItWorksStepper() {
   };
 
   return (
-    <section id="how-it-works" className="py-20 bg-primary-600 relative overflow-hidden">
+    <section id="how-it-works" className="py-20 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -227,7 +227,7 @@ export function HowItWorksStepper() {
                     )}
 
                     {/* Content grid */}
-                    <div className="grid md:grid-cols-2 gap-8 items-center py-12 px-4">
+                    <div className="grid md:grid-cols-2 gap-8 items-center py-14 px-6">
                       {isLeft ? (
                         <>
                           <div>
