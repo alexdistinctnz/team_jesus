@@ -110,9 +110,29 @@ export function HowItWorksStepper() {
             />
           </div>
 
-          {/* Partner logos placeholder */}
-          <div className="flex items-center justify-center gap-8 mb-12 opacity-60">
-            <div className="text-white font-bold text-sm">PARTNER MINISTRIES</div>
+          {/* Partner logos */}
+          <div className="flex items-center justify-center gap-8 mb-12 opacity-80">
+            <Image
+              src="/images/partner_postclips_logo.svg"
+              alt="PostClips"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
+            <Image
+              src="/images/partner_Elevation_Church_logo.svg"
+              alt="Elevation Church"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
+            <Image
+              src="/images/partner_Bryce_Crawford_Logo.svg"
+              alt="Bryce Crawford"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Tab Navigation */}
