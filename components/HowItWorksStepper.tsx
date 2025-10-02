@@ -172,40 +172,15 @@ export function HowItWorksStepper() {
           </div>
         </motion.div>
 
-        {/* Content Panel with wavy border */}
+        {/* Content Panel */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative mt-0"
+          className="relative mt-8"
         >
-          {/* Wavy top border with animation */}
-          <svg
-            className="w-full"
-            height="40"
-            viewBox="0 0 1200 40"
-            preserveAspectRatio="none"
-          >
-            <motion.path
-              d="M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z"
-              fill="#003366"
-              animate={{
-                d: [
-                  "M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z",
-                  "M0,20 Q300,40 600,20 T1200,20 L1200,40 L0,40 Z",
-                  "M0,20 Q300,0 600,20 T1200,20 L1200,40 L0,40 Z"
-                ]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-          </svg>
-
-          <div className="bg-primary-900 p-8 md:p-12 -mt-1">
+          <div className="p-8 md:p-12">
             <motion.p
               key={activeTab}
               initial={{ opacity: 0, y: 10 }}
