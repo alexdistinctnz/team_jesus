@@ -32,7 +32,7 @@ export function Hero() {
   }, []);
 
   // All possible clouds - we'll slice based on cloudCount
-  // Random scale between 1.0 and 2.0 for each cloud
+  // Random scale between 1.0 and 2.0, blur 0.3-2px, rotation -10 to +10 degrees
   const allClouds = [
     {
       src: '/images/cloud_white.svg',
@@ -41,10 +41,11 @@ export function Hero() {
       endX: '100%',
       width: 200,
       opacity: 0.7,
-      blur: 1,
+      blur: 0.3 + Math.random() * 1.7,
       duration: 80,
       delay: 0,
-      scale: 1 + Math.random()
+      scale: 1 + Math.random(),
+      rotation: (Math.random() - 0.5) * 20
     },
     {
       src: '/images/cloud_eccf89.svg',
@@ -53,10 +54,11 @@ export function Hero() {
       endX: '115%',
       width: 150,
       opacity: 0.8,
-      blur: 0.5,
+      blur: 0.3 + Math.random() * 1.7,
       duration: 100,
       delay: 5,
-      scale: 1 + Math.random()
+      scale: 1 + Math.random(),
+      rotation: (Math.random() - 0.5) * 20
     },
     {
       src: '/images/cloud_f5e9cb.svg',
@@ -65,10 +67,11 @@ export function Hero() {
       endX: '125%',
       width: 180,
       opacity: 0.75,
-      blur: 1,
+      blur: 0.3 + Math.random() * 1.7,
       duration: 90,
       delay: 10,
-      scale: 1 + Math.random()
+      scale: 1 + Math.random(),
+      rotation: (Math.random() - 0.5) * 20
     },
     {
       src: '/images/cloud_d8c688.svg',
@@ -77,10 +80,11 @@ export function Hero() {
       endX: '130%',
       width: 160,
       opacity: 0.85,
-      blur: 0.5,
+      blur: 0.3 + Math.random() * 1.7,
       duration: 95,
       delay: 15,
-      scale: 1 + Math.random()
+      scale: 1 + Math.random(),
+      rotation: (Math.random() - 0.5) * 20
     },
     {
       src: '/images/cloud_white.svg',
@@ -89,10 +93,11 @@ export function Hero() {
       endX: '120%',
       width: 140,
       opacity: 0.7,
-      blur: 1.5,
+      blur: 0.3 + Math.random() * 1.7,
       duration: 110,
       delay: 20,
-      scale: 1 + Math.random()
+      scale: 1 + Math.random(),
+      rotation: (Math.random() - 0.5) * 20
     },
     {
       src: '/images/cloud_eccf89.svg',
@@ -101,10 +106,11 @@ export function Hero() {
       endX: '105%',
       width: 170,
       opacity: 0.8,
-      blur: 1,
+      blur: 0.3 + Math.random() * 1.7,
       duration: 85,
       delay: 25,
-      scale: 1 + Math.random()
+      scale: 1 + Math.random(),
+      rotation: (Math.random() - 0.5) * 20
     },
     {
       src: '/images/cloud_d8c688.svg',
@@ -113,10 +119,11 @@ export function Hero() {
       endX: '110%',
       width: 155,
       opacity: 0.75,
-      blur: 0.8,
+      blur: 0.3 + Math.random() * 1.7,
       duration: 92,
       delay: 30,
-      scale: 1 + Math.random()
+      scale: 1 + Math.random(),
+      rotation: (Math.random() - 0.5) * 20
     },
     {
       src: '/images/cloud_f5e9cb.svg',
@@ -125,10 +132,11 @@ export function Hero() {
       endX: '140%',
       width: 165,
       opacity: 0.8,
-      blur: 1.2,
+      blur: 0.3 + Math.random() * 1.7,
       duration: 88,
       delay: 35,
-      scale: 1 + Math.random()
+      scale: 1 + Math.random(),
+      rotation: (Math.random() - 0.5) * 20
     },
     {
       src: '/images/cloud_white.svg',
@@ -137,10 +145,11 @@ export function Hero() {
       endX: '95%',
       width: 145,
       opacity: 0.7,
-      blur: 1,
+      blur: 0.3 + Math.random() * 1.7,
       duration: 105,
       delay: 40,
-      scale: 1 + Math.random()
+      scale: 1 + Math.random(),
+      rotation: (Math.random() - 0.5) * 20
     },
     {
       src: '/images/cloud_eccf89.svg',
@@ -149,10 +158,11 @@ export function Hero() {
       endX: '135%',
       width: 175,
       opacity: 0.85,
-      blur: 0.6,
+      blur: 0.3 + Math.random() * 1.7,
       duration: 98,
       delay: 45,
-      scale: 1 + Math.random()
+      scale: 1 + Math.random(),
+      rotation: (Math.random() - 0.5) * 20
     },
   ];
 
@@ -173,6 +183,7 @@ export function Hero() {
             filter: `blur(${cloud.blur}px)`,
             opacity: cloud.opacity,
             width: `${cloud.width * cloud.scale}px`,
+            transform: `rotate(${cloud.rotation}deg)`,
           }}
           animate={{
             left: [cloud.startX, cloud.endX],
