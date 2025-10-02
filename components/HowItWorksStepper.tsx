@@ -191,17 +191,22 @@ export function HowItWorksStepper() {
               {tabContent[activeTab as keyof typeof tabContent].description}
             </motion.p>
 
-            {/* Grid sections */}
+            {/* Grid sections with decorative lines */}
             <motion.div
               key={`${activeTab}-sections`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.1 }}
-              className="space-y-12"
+              className="relative"
             >
+              {/* Vertical center line */}
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/30 -translate-x-1/2 hidden md:block" />
+
               {tabContent[activeTab as keyof typeof tabContent].sections.map((section, index) => {
                 const Icon = section.icon;
                 const isLeft = section.align === 'left';
+                const isFirst = index === 0;
+                const isLast = index === tabContent[activeTab as keyof typeof tabContent].sections.length - 1;
 
                 return (
                   <motion.div
@@ -210,40 +215,48 @@ export function HowItWorksStepper() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="grid md:grid-cols-2 gap-8 items-center relative"
+                    className="relative"
                   >
-                    {/* Animated border line */}
-                    <motion.div
-                      initial={{ scaleY: 0 }}
-                      whileInView={{ scaleY: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.8, delay: index * 0.1 }}
-                      className={`absolute top-0 ${isLeft ? 'left-0' : 'right-0'} w-1 h-full bg-primary-500 origin-top`}
-                    />
+                    {/* Top horizontal line */}
+                    <div className="absolute top-0 left-0 right-0 h-0.5 bg-white/30" />
 
-                    {isLeft ? (
-                      <>
-                        <div className="pl-8">
-                          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{section.title}</h3>
-                          <p className="text-white/80 leading-relaxed">{section.text}</p>
-                        </div>
-                        <div className="hidden md:block rounded-2xl overflow-hidden">
-                          <div className="aspect-video bg-primary-800 flex items-center justify-center">
-                            <Icon className="w-16 h-16 text-primary-400" />
+                    {/* Intersection dot at top */}
+                    <div className="absolute top-0 left-1/2 w-3 h-3 bg-white rounded-full -translate-x-1/2 -translate-y-1/2 hidden md:block" />
+
+                    {/* Content grid */}
+                    <div className="grid md:grid-cols-2 gap-8 items-center py-12 px-4">
+                      {isLeft ? (
+                        <>
+                          <div>
+                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{section.title}</h3>
+                            <p className="text-white/80 leading-relaxed">{section.text}</p>
                           </div>
-                        </div>
-                      </>
-                    ) : (
-                      <>
-                        <div className="hidden md:block rounded-2xl overflow-hidden order-2 md:order-1">
-                          <div className="aspect-video bg-primary-800 flex items-center justify-center">
-                            <Icon className="w-16 h-16 text-primary-400" />
+                          <div className="hidden md:block rounded-2xl overflow-hidden">
+                            <div className="aspect-video bg-white/10 flex items-center justify-center">
+                              <Icon className="w-16 h-16 text-white/50" />
+                            </div>
                           </div>
-                        </div>
-                        <div className="order-1 md:order-2 pr-8">
-                          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{section.title}</h3>
-                          <p className="text-white/80 leading-relaxed">{section.text}</p>
-                        </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="hidden md:block rounded-2xl overflow-hidden order-2 md:order-1">
+                            <div className="aspect-video bg-white/10 flex items-center justify-center">
+                              <Icon className="w-16 h-16 text-white/50" />
+                            </div>
+                          </div>
+                          <div className="order-1 md:order-2">
+                            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{section.title}</h3>
+                            <p className="text-white/80 leading-relaxed">{section.text}</p>
+                          </div>
+                        </>
+                      )}
+                    </div>
+
+                    {/* Bottom horizontal line for last item */}
+                    {isLast && (
+                      <>
+                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/30" />
+                        <div className="absolute bottom-0 left-1/2 w-3 h-3 bg-white rounded-full -translate-x-1/2 translate-y-1/2 hidden md:block" />
                       </>
                     )}
                   </motion.div>
