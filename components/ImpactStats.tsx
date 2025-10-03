@@ -23,13 +23,13 @@ export function ImpactStats() {
   const getDonorIcon = (iconType: string) => {
     switch (iconType) {
       case 'sandals':
-        return <Image src="/images/1_sandals_icon.svg" alt="Sandals" width={32} height={32} />;
+        return <Image src="/images/1_sandals_icon.svg" alt="Sandals" width={52} height={52} />;
       case 'fish-loaves':
-        return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Fish and Loaves" width={32} height={32} />;
+        return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Fish and Loaves" width={52} height={52} />;
       case 'staff':
-        return <Image src="/images/3_staff_icon.svg" alt="Staff" width={32} height={32} />;
+        return <Image src="/images/3_staff_icon.svg" alt="Staff" width={52} height={52} />;
       case 'fish-net':
-        return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={32} height={32} />;
+        return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={52} height={52} />;
       default:
         return <HelpCircle className="w-8 h-8 text-white" />;
     }
