@@ -16,55 +16,62 @@ export function HowItWorksStepper() {
           title: "The Great Commission",
           text: "God's command is clear: 'Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you.' (Matthew 28:19-20). Jesus declares, 'Follow me, and I will make you fishers of men' (Matthew 4:19). God requires you to obey His word: 'If you love me, you will keep my commandments' (John 14:15) and 'Obey my voice, and I will be your God' (Jeremiah 7:23).",
           icon: Video,
-          image: "/images/gospel_creators.jpg",
+          image: "/images/how_it_works/why_great_commission.jpg",
           align: "left"
         },
         {
           title: "The Necessity of Hearing",
           text: "Romans 10:14 asks the essential question: 'How then will they call on him in whom they have not believed? And how are they to believe in him of whom they have never heard? And how are they to hear without someone preaching?' They cannot be saved without hearing. If no one spreads the gospel, people stay lost. The message must be proclaimed so that people can hear, believe, and be saved.",
           icon: Target,
-          image: "/images/global_reach.jpg",
+          image: "/images/how_it_works/why_necessity_of_hearing.jpg",
           align: "right"
         },
         {
           title: "The Cost of Silence",
           text: "God warns in Ezekiel 3:18: 'If I say to the wicked, \"You shall surely die,\" and you give him no warning... that wicked person shall die for his iniquity, but his blood I will require at your hand.' If you don't listen and warn others, two things happen: the wicked still die in their sin, and God holds you accountable for staying silent. Without the Gospel, people face 'eternal fire prepared for the devil and his angels' (Matthew 25:41) and 'the fiery furnace... weeping and gnashing of teeth' (Matthew 13:50). Without Jesus, people die lost and spend eternity in hell, fire, darkness, and separation from God.",
           icon: Heart,
-          image: "/images/verified_results.jpg",
+          image: "/images/how_it_works/why_cost_of_silence.jpg",
           align: "left"
         },
         {
           title: "Eternal Rewards",
           text: "God rewards those who obey Him. There is a reward system in Heaven. Jesus says: 'Do not lay up for yourselves treasures on earth... but lay up for yourselves treasures in heaven' (Matthew 6:19-20). Scripture promises crowns of righteousness (2 Timothy 4:8), life (James 1:12), and glory (1 Peter 5:4). Faithful servants receive authority over cities (Luke 19:17). The ultimate honor: 'The one who conquers, I will grant him to sit with me on my throne' (Revelation 3:21). 'From the Lord you will receive the inheritance as your reward. You are serving the Lord Christ' (Colossians 3:23-24).",
           icon: Video,
-          image: "/images/step_2_creators_share_jesus.jpg",
+          image: "/images/how_it_works/why_eternal_rewards.jpg",
           align: "right"
         }
       ]
     },
     how: {
-      description: "You donate, PostClips pays creators to cut and post compelling short Gospel videos, and we pay $0.01 per 10 views, ensuring every dollar drives real impact. 100% of donations go directly to creator commissions, with operations funded separately through business revenue.",
+      description: "Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime. PostClips runs as a real business, generating revenue by providing posting and distribution services to traditional media companies. This allows us to fund development, operations, and business costs—so 100% of your donation goes directly as commission to those posting content about Jesus.",
       sections: [
         {
-          title: "Step 1: You Donate",
-          text: "Your gift directly funds the mission of reaching people with the Gospel. Every dollar becomes content that shares Jesus with thousands. When you give, you invest in eternal impact. Your contribution immediately supports creators who spread Christ's message across the world through compelling short-form video.",
-          icon: Heart,
-          image: "/images/step_1_you_donate.jpg",
+          title: "PostClips Business Model",
+          text: "PostClips runs as a real business. We generate revenue by providing the same posting and distribution service for traditional media companies. This allows us to fund the development, operations, and costs of owning a business like this. That way you, the donor, are not paying for anything in connection to operations. 100% of your donation is given directly as a commission to the people posting the content, so they can make a living distributing content about Jesus.",
+          icon: Video,
+          image: "/images/how_it_works/how_business_model.jpg",
           align: "left"
         },
         {
-          title: "Step 2: Creators Share Jesus",
-          text: "PostClips pays talented creators to share Gospel content. They take sermons, testimonies, and teachings and turn them into engaging short videos for TikTok, Instagram, and YouTube. Each clip is designed to capture attention, communicate truth, and point people to Jesus where they already spend their time.",
-          icon: Video,
-          image: "/images/step_2_creators_share_jesus.jpg",
+          title: "100% to Clippers",
+          text: "100% of your donation is given directly as a commission to the people posting the content. This ensures that every dollar you give goes straight to supporting those who create and share Gospel videos. They can make a living distributing content about Jesus, fulfilling the biblical principle: 'In the same way, the Lord commanded that those who proclaim the gospel should get their living by the gospel' (1 Corinthians 9:14).",
+          icon: Heart,
+          image: "/images/how_it_works/how_100_percent_clippers.jpg",
           align: "right"
         },
         {
-          title: "Step 3: Results-Based Payment",
-          text: "We pay creators $0.01 per 10 verified views, tying every penny to real results. No views means no payment. This performance model ensures maximum impact and efficiency, so your donation funds true reach rather than unused content. It is transparent, accountable, and effective for modern ministry.",
+          title: "God Calls Us to Tithe",
+          text: "The word 'tithe' literally means 'a tenth' or 10%. 'Bring the full tithe into the storehouse, that there may be food in my house. And thereby put me to the test, says the Lord of hosts, if I will not open the windows of heaven for you and pour down for you a blessing until there is no more need' (Malachi 3:10). Translation: Bring the whole 10% of your income into My house, so there will be enough to provide for My work and My people. If you do this, test Me and see—I'll throw open Heaven's windows and bless you so much you won't be able to contain it.",
           icon: Target,
-          image: "/images/step_3_results_based_payment.jpg",
+          image: "/images/how_it_works/how_god_calls_tithe.jpg",
           align: "left"
+        },
+        {
+          title: "PostClips' Action",
+          text: "Because of this, PostClips allocates 10% of its monthly profits to Team Jesus. These funds are used to support the production of more non-denominational Christian content (we need a lot!) and pay clippers directly as a commission for posting the content, so they can make a living distributing content about Jesus. We'd be honored for you to join us in making this part of your monthly tithe, as we believe it's one of the most effective ways to share Jesus with the world.",
+          icon: Video,
+          image: "/images/how_it_works/how_postclips_action.jpg",
+          align: "right"
         }
       ]
     }
