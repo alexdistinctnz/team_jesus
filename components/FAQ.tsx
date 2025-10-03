@@ -35,8 +35,11 @@ const faqItems: FAQItem[] = [
 
 export function FAQ() {
   return (
-    <section className="py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 relative">
+      {/* Gradient background from transparent to white */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white pointer-events-none" />
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,11 +47,11 @@ export function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-900 rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-black rounded-full mb-4">
             <HelpCircle className="w-4 h-4 text-white" />
             <span className="text-sm font-semibold text-white uppercase tracking-wide">Have Questions?</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-primary-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-4">
             Frequently Asked Questions
           </h2>
         </motion.div>
@@ -64,26 +67,26 @@ export function FAQ() {
             >
               <Accordion.Item
                 value={`item-${index}`}
-                className="group bg-white rounded-2xl shadow-md hover:shadow-lg transition-all border-2 border-slate-100 hover:border-primary-200 overflow-hidden"
+                className="group bg-black rounded-2xl shadow-md hover:shadow-lg transition-all border-2 border-slate-800 hover:border-slate-600 overflow-hidden"
               >
                 <Accordion.Header>
                   <Accordion.Trigger
                     className={cn(
                       "w-full px-6 py-5 text-left flex items-center justify-between",
-                      "hover:bg-slate-50 transition-colors",
-                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-400/50 focus-visible:ring-inset"
+                      "hover:bg-slate-900 transition-colors",
+                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400/50 focus-visible:ring-inset"
                     )}
                   >
-                    <span className="font-semibold text-lg text-slate-900 pr-4 group-hover:text-primary-700 transition-colors">
+                    <span className="font-semibold text-lg text-white pr-4 group-hover:text-slate-200 transition-colors">
                       {item.question}
                     </span>
-                    <ChevronDown className="w-5 h-5 text-primary-700 flex-shrink-0 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+                    <ChevronDown className="w-5 h-5 text-white flex-shrink-0 transition-transform duration-300 group-data-[state=open]:rotate-180" />
                   </Accordion.Trigger>
                 </Accordion.Header>
 
                 <Accordion.Content className="overflow-hidden transition-all duration-300 ease-in-out data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
                   <div className="px-6 pb-5 pt-2">
-                    <p className="text-slate-700 leading-relaxed">{item.answer}</p>
+                    <p className="text-slate-300 leading-relaxed">{item.answer}</p>
                   </div>
                 </Accordion.Content>
               </Accordion.Item>
