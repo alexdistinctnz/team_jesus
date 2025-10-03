@@ -128,37 +128,16 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          {/* Cloud-shaped container */}
+          {/* Cloud-shaped container using cloud_solid.svg */}
           <div className="relative mx-auto" style={{ maxWidth: '800px' }}>
-            <svg className="w-full h-auto" viewBox="0 0 1000 300" preserveAspectRatio="none">
-              {/* Cloud shape based on Cloud_1_outline_instructions.svg design */}
-              <path
-                d="M 50,250
-                   L 50,120
-                   C 50,100 60,90 75,90
-                   A 35,35 0 0 1 110,80
-                   A 40,40 0 0 1 160,70
-                   A 35,35 0 0 1 210,60
-                   A 40,40 0 0 1 270,55
-                   A 35,35 0 0 1 330,50
-                   A 40,40 0 0 1 400,50
-                   A 35,35 0 0 1 470,50
-                   A 40,40 0 0 1 540,55
-                   A 35,35 0 0 1 600,60
-                   A 40,40 0 0 1 670,70
-                   A 35,35 0 0 1 730,80
-                   A 40,40 0 0 1 790,85
-                   A 35,35 0 0 1 840,90
-                   A 40,40 0 0 1 890,95
-                   C 910,95 925,105 925,120
-                   L 925,250
-                   C 925,265 915,275 900,275
-                   L 75,275
-                   C 60,275 50,265 50,250 Z"
-                fill="white"
-                stroke="none"
-              />
-            </svg>
+            {/* Cloud background image */}
+            <Image
+              src="/images/cloud_solid.svg"
+              alt=""
+              width={800}
+              height={300}
+              className="w-full h-auto"
+            />
 
             {/* Content positioned absolutely over the cloud */}
             <div className="absolute inset-0 flex items-center justify-center px-16 py-20">
