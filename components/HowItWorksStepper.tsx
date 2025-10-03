@@ -128,18 +128,38 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          {/* White box container */}
-          <div className="relative mx-auto bg-white rounded-3xl py-12 px-16" style={{ maxWidth: '900px' }}>
-            {/* Content centered in the box */}
-            <motion.p
-              key={activeTab}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="text-base md:text-lg text-black leading-relaxed text-center"
-            >
-              {tabContent[activeTab as keyof typeof tabContent].description}
-            </motion.p>
+          {/* Cloud-like white box */}
+          <div className="relative mx-auto" style={{ maxWidth: '900px' }}>
+            <svg className="w-full" viewBox="0 0 900 300" preserveAspectRatio="none">
+              <path
+                d="M 50,250
+                   L 50,80
+                   C 50,50 100,30 150,30
+                   C 200,30 250,50 300,50
+                   C 350,50 400,30 450,30
+                   C 500,30 550,50 600,50
+                   C 650,50 700,30 750,30
+                   C 800,30 850,50 850,80
+                   L 850,250
+                   C 850,270 830,280 810,280
+                   L 90,280
+                   C 70,280 50,270 50,250 Z"
+                fill="white"
+              />
+            </svg>
+
+            {/* Content centered in the cloud box */}
+            <div className="absolute inset-0 flex items-center justify-center px-16">
+              <motion.p
+                key={activeTab}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="text-base md:text-lg text-black leading-relaxed text-center max-w-3xl"
+              >
+                {tabContent[activeTab as keyof typeof tabContent].description}
+              </motion.p>
+            </div>
           </div>
 
           <div className="max-w-4xl mx-auto">
