@@ -130,39 +130,31 @@ export function HowItWorksStepper() {
         >
           {/* Cloud-shaped container */}
           <div className="relative mx-auto" style={{ maxWidth: '800px' }}>
-            <svg className="w-full h-auto" viewBox="0 0 1000 350" preserveAspectRatio="none">
-              {/* Cloud shape - solid white fill with rounded bumps on top */}
+            <svg className="w-full h-auto" viewBox="0 0 1000 300" preserveAspectRatio="none">
+              {/* Cloud shape based on Cloud_1_outline_instructions.svg design */}
               <path
-                d="M 50,280
+                d="M 50,250
                    L 50,120
-                   Q 50,100 70,100
-                   Q 90,100 100,80
-                   Q 110,60 130,60
-                   Q 150,60 160,70
-                   Q 170,50 200,50
-                   Q 230,50 240,70
-                   Q 250,50 280,50
-                   Q 310,50 320,70
-                   Q 330,50 360,50
-                   Q 390,50 400,70
-                   Q 410,50 440,50
-                   Q 470,50 480,70
-                   Q 490,50 520,50
-                   Q 550,50 560,70
-                   Q 570,50 600,50
-                   Q 630,50 640,70
-                   Q 650,50 680,50
-                   Q 710,50 720,70
-                   Q 730,50 760,50
-                   Q 790,50 800,70
-                   Q 810,50 840,60
-                   Q 860,60 870,80
-                   Q 880,100 900,100
-                   Q 920,100 920,120
-                   L 920,280
-                   Q 920,300 900,300
-                   L 70,300
-                   Q 50,300 50,280 Z"
+                   C 50,100 60,90 75,90
+                   A 35,35 0 0 1 110,80
+                   A 40,40 0 0 1 160,70
+                   A 35,35 0 0 1 210,60
+                   A 40,40 0 0 1 270,55
+                   A 35,35 0 0 1 330,50
+                   A 40,40 0 0 1 400,50
+                   A 35,35 0 0 1 470,50
+                   A 40,40 0 0 1 540,55
+                   A 35,35 0 0 1 600,60
+                   A 40,40 0 0 1 670,70
+                   A 35,35 0 0 1 730,80
+                   A 40,40 0 0 1 790,85
+                   A 35,35 0 0 1 840,90
+                   A 40,40 0 0 1 890,95
+                   C 910,95 925,105 925,120
+                   L 925,250
+                   C 925,265 915,275 900,275
+                   L 75,275
+                   C 60,275 50,265 50,250 Z"
                 fill="white"
                 stroke="none"
               />
