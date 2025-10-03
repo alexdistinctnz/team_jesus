@@ -36,8 +36,8 @@ const faqItems: FAQItem[] = [
 export function FAQ() {
   return (
     <section className="py-20 relative">
-      {/* Gradient background from transparent to white */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white pointer-events-none" />
+      {/* Gradient background from transparent to light gold */}
+      <div className="absolute inset-0 -top-32 bg-gradient-to-b from-transparent via-[#F5E6D3]/50 to-[#F5E6D3] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
