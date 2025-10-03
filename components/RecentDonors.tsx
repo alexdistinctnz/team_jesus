@@ -65,7 +65,7 @@ export function RecentDonors() {
                 onClick={() => setActiveTab('recent')}
                 className={`px-6 py-2 rounded-full font-heading text-xs transition-all ${
                   activeTab === 'recent'
-                    ? 'bg-primary-600 text-white'
+                    ? 'bg-slate-900 text-white'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -75,11 +75,11 @@ export function RecentDonors() {
                 onClick={() => setActiveTab('impact')}
                 className={`px-6 py-2 rounded-full font-heading text-xs transition-all ${
                   activeTab === 'impact'
-                    ? 'bg-primary-600 text-white'
+                    ? 'bg-slate-900 text-white'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
-                MOST IMPACT
+                MOST PEOPLE
               </button>
             </div>
             <button className="p-2 hover:bg-slate-100 rounded-full transition-colors">

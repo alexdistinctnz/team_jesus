@@ -138,11 +138,8 @@ export function DonateWidget() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={cn(
-        "relative rounded-3xl shadow-card-hover px-4 py-6 md:px-5 md:py-8 transition-all duration-500 overflow-hidden bg-white",
-        isMonthly ? "border-4" : "border-0"
-      )}
-      style={isMonthly ? { borderColor: '#D4AF76' } : {}}
+      className="relative rounded-3xl shadow-card-hover px-4 py-6 md:px-5 md:py-8 transition-all duration-500 overflow-hidden bg-white border-4"
+      style={isMonthly ? { borderColor: '#D4AF76' } : { borderColor: '#ffffff' }}
     >
       {isMonthly && (
         <motion.div
