@@ -236,7 +236,7 @@ export function HowItWorksStepper() {
               </svg>
             </div>
 
-            <div className="mx-auto px-8 md:px-12 relative z-10" style={{ maxWidth: '692px' }}>
+            <div className="mx-auto px-8 md:px-12 relative z-10" style={{ maxWidth: '432px' }}>
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
