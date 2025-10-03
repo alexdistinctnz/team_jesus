@@ -129,7 +129,7 @@ export function HowItWorksStepper() {
           className="relative mt-8"
         >
           {/* Cloud-shaped container using cloud_solid.svg */}
-          <div className="relative mx-auto -my-16" style={{ maxWidth: '900px' }}>
+          <div className="relative mx-auto -my-12" style={{ maxWidth: '900px' }}>
             {/* Cloud background image */}
             <Image
               src="/images/cloud_solid.svg"
@@ -140,8 +140,8 @@ export function HowItWorksStepper() {
               priority
             />
 
-            {/* Content positioned absolutely over the cloud - aligned to bottom */}
-            <div className="absolute inset-0 flex items-end justify-center px-20 pb-16">
+            {/* Content positioned absolutely inside the cloud */}
+            <div className="absolute bottom-[15%] left-0 right-0 flex justify-center px-20">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
