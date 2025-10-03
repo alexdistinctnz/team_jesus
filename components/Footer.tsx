@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <div className="relative text-primary-900 py-12 overflow-hidden">
+    <div className="relative text-primary-900 py-12 overflow-hidden bg-[#F5E6D3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top row - Navigation links with logo on right */}
         <motion.div
@@ -17,13 +17,13 @@ export function Footer() {
         >
           {/* Navigation links */}
           <nav className="flex flex-wrap items-center justify-center gap-6 md:gap-12 font-heading text-base font-bold">
-            <a href="#faq" className="hover:text-primary-700 transition-colors">
+            <a href="#faq" className="hover:text-[#D4AF76] transition-colors">
               FAQ
             </a>
-            <a href="mailto:hello@postclips.com" className="hover:text-primary-700 transition-colors">
+            <a href="mailto:hello@postclips.com" className="hover:text-[#D4AF76] transition-colors">
               CONTACT US
             </a>
-            <a href="#how-it-works" className="hover:text-primary-700 transition-colors">
+            <a href="#how-it-works" className="hover:text-[#D4AF76] transition-colors">
               RESOURCES
             </a>
           </nav>
@@ -64,10 +64,10 @@ export function Footer() {
           className="text-center"
         >
           <div className="flex items-center justify-center gap-8 text-sm">
-            <a href="/privacy" className="hover:text-primary-700 transition-colors">
+            <a href="/privacy" className="hover:text-[#D4AF76] transition-colors">
               Privacy Policy
             </a>
-            <a href="/terms" className="hover:text-primary-700 transition-colors">
+            <a href="/terms" className="hover:text-[#D4AF76] transition-colors">
               Terms of Service
             </a>
           </div>
