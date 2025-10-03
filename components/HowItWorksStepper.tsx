@@ -198,7 +198,7 @@ export function HowItWorksStepper() {
           className="relative mt-8"
         >
           {/* Animated wave above container */}
-          <div className="relative h-16 overflow-hidden -mb-px">
+          <div className="relative h-16 overflow-hidden -mb-px mx-auto" style={{ maxWidth: '432px' }}>
             <svg className="absolute w-full bottom-0" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <motion.path
                 d="M0,120 L0,80 C300,20 600,20 900,80 C1050,50 1200,80 1200,80 L1200,120 Z"
@@ -221,7 +221,7 @@ export function HowItWorksStepper() {
           </div>
 
           {/* Dark blue container with wave effect */}
-          <div className="relative bg-primary-900 py-12 mb-0 overflow-hidden -mt-px">
+          <div className="relative bg-primary-900 py-12 mb-0 overflow-hidden -mt-px mx-auto" style={{ maxWidth: '432px' }}>
             {/* Wave/ripple decoration */}
             <div className="absolute inset-0 opacity-10">
               <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -236,7 +236,7 @@ export function HowItWorksStepper() {
               </svg>
             </div>
 
-            <div className="mx-auto px-8 md:px-12 relative z-10" style={{ maxWidth: '432px' }}>
+            <div className="px-8 md:px-12 relative z-10">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
