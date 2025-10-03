@@ -52,7 +52,7 @@ export default function TeamJesusPage() {
       className="min-h-screen relative"
     >
       {/* Background Image using Next.js Image component for better mobile support */}
-      <div className={`top-0 left-0 w-full h-full -z-10 flex justify-center ${isMobile ? 'fixed' : 'absolute'}`}>
+      <div className="absolute top-0 left-0 w-full h-full -z-10 flex justify-center">
         <Image
           src="/images/background.jpeg"
           alt="Background"
