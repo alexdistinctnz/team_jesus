@@ -34,13 +34,13 @@ const mostImpactDonors: Donor[] = [
 
 const getDonorIcon = (peopleReached: number) => {
   if (peopleReached >= 250000) {
-    return <Image src="/images/4_fish_and_net_icon.svg" alt="Top Donor" width={48} height={48} />;
+    return <Image src="/images/4_fish_and_net_icon.svg" alt="Top Donor" width={64} height={64} />;
   } else if (peopleReached >= 100000) {
-    return <Image src="/images/3_staff_icon.svg" alt="High Impact Donor" width={48} height={48} />;
+    return <Image src="/images/3_staff_icon.svg" alt="High Impact Donor" width={64} height={64} />;
   } else if (peopleReached >= 50000) {
-    return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Impact Donor" width={48} height={48} />;
+    return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Impact Donor" width={64} height={64} />;
   } else {
-    return <Image src="/images/1_sandals_icon.svg" alt="Donor" width={48} height={48} />;
+    return <Image src="/images/1_sandals_icon.svg" alt="Donor" width={64} height={64} />;
   }
 };
 
@@ -104,7 +104,7 @@ export function RecentDonors() {
                 }}
               >
                 {/* Avatar */}
-                <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
                   {getDonorIcon(donor.peopleReached)}
                 </div>
 

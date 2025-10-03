@@ -109,47 +109,14 @@ export function HowItWorksStepper() {
           </p>
 
           {/* PostClips Logo */}
-          <div className="mb-8">
+          <div className="mb-12">
             <Image
-              src="/images/Team_Jesus_Logo.png"
+              src="/images/partner_postclips_logo.svg"
               alt="PostClips"
-              width={200}
-              height={80}
-              className="mx-auto h-16 w-auto"
+              width={288}
+              height={96}
+              className="mx-auto h-32 w-auto"
             />
-          </div>
-
-          {/* Partner logos */}
-          <div className="flex justify-center mb-12">
-            <div className="grid grid-cols-3 gap-8 opacity-80">
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/images/partner_postclips_logo.svg"
-                  alt="PostClips"
-                  width={72}
-                  height={24}
-                  className="h-6 w-auto"
-                />
-              </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/images/partner_Elevation_Church_logo.svg"
-                  alt="Elevation Church"
-                  width={72}
-                  height={24}
-                  className="h-6 w-auto"
-                />
-              </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/images/partner_Bryce_Crawford_Logo.svg"
-                  alt="Bryce Crawford"
-                  width={72}
-                  height={24}
-                  className="h-6 w-auto"
-                />
-              </div>
-            </div>
           </div>
 
           {/* Tab Navigation */}
