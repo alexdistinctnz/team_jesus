@@ -139,14 +139,14 @@ export function DonateWidget() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       className={cn(
-        "relative rounded-3xl shadow-card-hover px-4 py-6 md:px-5 md:py-8 transition-colors duration-500 overflow-hidden",
-        isMonthly ? "" : "bg-white"
+        "relative rounded-3xl shadow-card-hover px-4 py-6 md:px-5 md:py-8 transition-all duration-500 overflow-hidden bg-white",
+        isMonthly ? "border-4" : "border-0"
       )}
-      style={isMonthly ? { backgroundColor: '#B79347' } : {}}
+      style={isMonthly ? { borderColor: '#D4AF76' } : {}}
     >
       {isMonthly && (
         <motion.div
-          className="absolute inset-0 bg-shine opacity-30"
+          className="absolute inset-0 bg-shine opacity-10"
           animate={{ backgroundPosition: ['200% 0', '-200% 0'] }}
           transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
           style={{ backgroundSize: '200% 100%' }}
