@@ -128,33 +128,47 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          {/* Cloud-shaped container using cloud_solid.svg */}
-          <div className="relative mx-auto -my-12" style={{ maxWidth: '900px' }}>
-            {/* Cloud background image */}
-            <Image
-              src="/images/cloud_solid.svg"
-              alt=""
-              width={900}
-              height={400}
-              className="w-full h-auto block"
-              priority
-            />
+          {/* Cloud-shaped container - runtime generated */}
+          <div className="relative mx-auto" style={{ maxWidth: '900px' }}>
+            <svg className="w-full" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet">
+              {/* Simple cloud shape with rounded bumps on top */}
+              <path
+                d="M 100,450
+                   L 100,200
+                   C 100,150 150,120 200,120
+                   C 200,80 240,50 290,50
+                   C 340,50 380,80 380,120
+                   C 430,120 470,80 520,50
+                   C 570,50 610,80 610,120
+                   C 660,120 700,80 750,50
+                   C 800,50 840,80 840,120
+                   C 890,120 930,80 980,50
+                   C 1030,50 1070,80 1070,120
+                   C 1070,150 1100,180 1100,200
+                   L 1100,450
+                   C 1100,470 1080,480 1060,480
+                   L 140,480
+                   C 120,480 100,470 100,450 Z"
+                fill="white"
+                stroke="none"
+              />
+            </svg>
 
             {/* Content positioned absolutely inside the cloud */}
-            <div className="absolute bottom-[15%] left-0 right-0 flex justify-center px-20">
+            <div className="absolute inset-0 flex items-center justify-center px-16 py-12">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-base md:text-lg text-black leading-relaxed text-center max-w-2xl"
+                className="text-base md:text-lg text-black leading-relaxed text-center max-w-3xl mt-8"
               >
                 {tabContent[activeTab as keyof typeof tabContent].description}
               </motion.p>
             </div>
 
             {/* Extension to intersect with vertical divider */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white h-16 z-20" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white h-24 z-20" />
           </div>
 
           <div className="max-w-4xl mx-auto">
