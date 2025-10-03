@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Heart, Search, Star, Crown, Sparkles } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface Donor {
   name: string;
@@ -33,13 +34,13 @@ const mostImpactDonors: Donor[] = [
 
 const getDonorIcon = (peopleReached: number) => {
   if (peopleReached >= 250000) {
-    return <Crown className="w-8 h-8 text-white" />;
+    return <Image src="/images/4_fish_and_net_icon.svg" alt="Top Donor" width={48} height={48} />;
   } else if (peopleReached >= 100000) {
-    return <Star className="w-8 h-8 text-white fill-white" />;
+    return <Image src="/images/3_staff_icon.svg" alt="High Impact Donor" width={48} height={48} />;
   } else if (peopleReached >= 50000) {
-    return <Sparkles className="w-8 h-8 text-white" />;
+    return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Impact Donor" width={48} height={48} />;
   } else {
-    return <Heart className="w-8 h-8 text-white fill-white" />;
+    return <Image src="/images/1_sandals_icon.svg" alt="Donor" width={48} height={48} />;
   }
 };
 
@@ -122,8 +123,9 @@ export function RecentDonors() {
                     <div className="bg-primary-900 text-white font-bold text-2xl px-4 py-2 rounded-lg mb-1">
                       {(donor.peopleReached / 1000).toLocaleString()}
                     </div>
-                    <div className="text-xs text-slate-500 font-semibold uppercase tracking-wide">
-                      PEOPLE REACHED
+                    <div className="text-xs text-slate-500 font-semibold uppercase tracking-wide text-right">
+                      <div>PEOPLE TOLD</div>
+                      <div>ABOUT JESUS</div>
                     </div>
                   </div>
                 </div>
