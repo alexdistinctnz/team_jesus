@@ -21,7 +21,7 @@ export function Footer() {
 
           {/* Logo on right */}
           <div className="absolute right-0 flex items-center justify-center">
-            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-1">
+            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.5">
               <Image
                 src="/images/Team_Jesus_Logo.png"
                 alt="Team Jesus"
