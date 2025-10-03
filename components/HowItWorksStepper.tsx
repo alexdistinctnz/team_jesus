@@ -60,32 +60,6 @@ export function HowItWorksStepper() {
           align: "left"
         }
       ]
-    },
-    impact: {
-      description: "$1 reaches 1,000 people with the Gospel message. Your gift directly funds results-based content creation, paying clippers only for verified views. This ensures maximum accountability and impact: every donation translates to thousands hearing about Jesus.",
-      sections: [
-        {
-          title: "$1 = 1,000 People",
-          text: "Every dollar you give reaches 1,000 people with the Gospel. At $0.01 per 10 views, your $1 gift funds 100 creator payments, producing 1,000 verified views of Christ-centered content. A $25 gift shares Jesus with 25,000 people. A $100 gift reaches 100,000. The math is clear, the impact eternal.",
-          icon: Heart,
-          image: "/images/1_dollar_1000_people.jpg",
-          align: "left"
-        },
-        {
-          title: "Maximum Efficiency",
-          text: "100% of your donation goes directly to creators. Not a cent is wasted on overhead or admin costs, which are covered separately. Every dollar funds Gospel content that reaches people, ensuring your generosity delivers the greatest possible Kingdom impact without dilution or waste.",
-          icon: Target,
-          image: "/images/maximum_efficiency.jpg",
-          align: "right"
-        },
-        {
-          title: "Eternal Transformation",
-          text: "Behind every view is a real person encountering Jesus. Some will scroll past, but many will pause, listen, and be changed forever. Souls are saved, hearts are transformed, and lives are redirected toward eternity. Your gift does more than create content, it creates space for the Spirit to work.",
-          icon: Video,
-          image: "/images/eternal_transformation.jpg",
-          align: "left"
-        }
-      ]
     }
   };
 
@@ -113,21 +87,21 @@ export function HowItWorksStepper() {
             <Image
               src="/images/partner_postclips_logo.svg"
               alt="PostClips"
-              width={288}
-              height={96}
-              className="mx-auto h-32 w-auto"
+              width={300}
+              height={100}
+              className="mx-auto w-[300px] h-auto"
             />
           </div>
 
           {/* Tab Navigation */}
           <div className="flex justify-center mb-0">
-            <div className="inline-flex items-center bg-primary-900 rounded-full p-1.5 gap-2">
+            <div className="inline-flex items-center bg-slate-100 rounded-full p-1.5 gap-2">
               <button
                 onClick={() => setActiveTab('why')}
                 className={`px-8 py-1.5 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'why'
-                    ? 'bg-primary-500 text-white'
-                    : 'text-white/70 hover:text-white'
+                    ? 'bg-slate-900 text-white'
+                    : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 Why
@@ -136,21 +110,11 @@ export function HowItWorksStepper() {
                 onClick={() => setActiveTab('how')}
                 className={`px-8 py-1.5 rounded-full font-heading font-bold text-sm transition-all ${
                   activeTab === 'how'
-                    ? 'bg-primary-500 text-white'
-                    : 'text-white/70 hover:text-white'
+                    ? 'bg-slate-900 text-white'
+                    : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 How
-              </button>
-              <button
-                onClick={() => setActiveTab('impact')}
-                className={`px-8 py-1.5 rounded-full font-heading font-bold text-sm transition-all ${
-                  activeTab === 'impact'
-                    ? 'bg-primary-500 text-white'
-                    : 'text-white/70 hover:text-white'
-                }`}
-              >
-                Impact
               </button>
             </div>
           </div>
@@ -164,46 +128,32 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          {/* Static wave border above container */}
-          <div className="relative h-12 overflow-hidden mx-auto -mb-px" style={{ maxWidth: '732px' }}>
-            <svg className="absolute w-full bottom-0" viewBox="0 0 1200 80" preserveAspectRatio="none">
+          {/* Cloud shape above container */}
+          <div className="relative h-16 overflow-hidden mx-auto -mb-px" style={{ maxWidth: '732px' }}>
+            <svg className="absolute w-full bottom-0" viewBox="0 0 1200 100" preserveAspectRatio="none">
               <path
-                d="M0,80 Q100,20 200,40 T400,40 T600,40 T800,40 T1000,40 T1200,40 L1200,80 Z"
-                fill="#003366"
+                d="M0,100 L0,60 Q100,20 200,30 Q250,10 300,30 Q400,15 500,30 Q600,20 700,30 Q800,15 900,30 Q950,10 1000,30 Q1100,20 1200,60 L1200,100 Z"
+                fill="white"
               />
             </svg>
           </div>
 
-          {/* Dark blue container with wave effect */}
-          <div className="relative bg-primary-900 py-12 mb-0 overflow-hidden mx-auto" style={{ maxWidth: '732px' }}>
-            {/* Wave/ripple decoration */}
-            <div className="absolute inset-0 opacity-10">
-              <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id="wave-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
-                    <circle cx="100" cy="100" r="80" fill="none" stroke="white" strokeWidth="1" opacity="0.3"/>
-                    <circle cx="100" cy="100" r="60" fill="none" stroke="white" strokeWidth="1" opacity="0.2"/>
-                    <circle cx="100" cy="100" r="40" fill="none" stroke="white" strokeWidth="1" opacity="0.1"/>
-                  </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#wave-pattern)"/>
-              </svg>
-            </div>
-
+          {/* White container with cloud effect */}
+          <div className="relative bg-white py-12 mb-0 overflow-hidden mx-auto shadow-md" style={{ maxWidth: '732px' }}>
             <div className="px-8 md:px-12 relative z-10">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-lg text-white leading-relaxed"
+                className="text-lg text-black leading-relaxed"
               >
                 {tabContent[activeTab as keyof typeof tabContent].description}
               </motion.p>
             </div>
 
             {/* Extension to intersect with vertical divider */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-primary-900 h-24" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white h-24" />
           </div>
 
           <div className="max-w-4xl mx-auto">
