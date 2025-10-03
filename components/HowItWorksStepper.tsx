@@ -76,11 +76,31 @@ export function HowItWorksStepper() {
           <h2 className="text-6xl md:text-8xl font-sans font-extrabold text-black mb-6">
             HOW IT WORKS
           </h2>
-          <p className="text-lg md:text-xl text-black max-w-4xl mx-auto leading-relaxed mb-12">
-            #TeamJesus will be the biggest and most impactful campaign for sharing the Gospel in history.
-            Scroll down to see how raising $8 million will share Jesus with 8 billion people.
-            With thousands of the world's top Creators talking about Jesus, we're changing the world, one view at a time.
-          </p>
+          <div className="text-lg md:text-xl text-black max-w-4xl mx-auto leading-relaxed mb-12">
+            <p className="mb-4">
+              You give us $1. We then pay someone to create a short video out of Gospel content we provide
+              them (Elevation Church, Bryce Crawfrod, etc…) & then for them to post it on Instagram, Tik Tok,
+              Twitter, Facebook, & YouTube.
+            </p>
+            <p className="mb-4">
+              Here's the catch, we only pay the person if their video gets views. We pay them 1 cent per 10
+              views they get.
+            </p>
+            <p className="mb-4">
+              100% of your donation is given directly to a "Clipper" (Someone who cuts up clips & posts them)
+              as a commission. So they can make a living distributing content about Jesus.
+            </p>
+            <p className="italic mb-2">
+              "In the same way, the Lord commanded that those who proclaim the gospel should get
+              their living by the gospel."
+            </p>
+            <p className="text-base">
+              1 Corinthians 9:14
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              *Any scripture references are from the English Standard Version of the Bible.
+            </p>
+          </div>
 
           {/* PostClips Logo */}
           <div className="mb-12">
