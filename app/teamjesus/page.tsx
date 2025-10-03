@@ -26,8 +26,8 @@ export default function TeamJesusPage() {
       setIsMobile(isMobileView);
 
       if (isMobileView) {
-        // Mobile: full viewport height, cover (fixed/sticky is OK)
-        setImageStyle({ width: '100%', height: '100vh', objectFit: 'cover', objectPosition: 'top center' });
+        // Mobile: full page height, cover entire scrollable content
+        setImageStyle({ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' });
       } else {
         // Desktop: always anchor top and bottom, maintain aspect ratio with cover
         setImageStyle({ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' });

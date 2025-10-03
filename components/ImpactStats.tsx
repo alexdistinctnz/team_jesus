@@ -1,16 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Crown, Star, Sparkles, Heart, HelpCircle, Fish } from 'lucide-react';
+import { HelpCircle, Fish } from 'lucide-react';
 import { DonateWidget } from './DonateWidget';
+import Image from 'next/image';
 
 export function ImpactStats() {
   // Mock data for donor circles
   const topDonors = [
-    { id: 1, icon: 'crown', amount: 500000 },
-    { id: 2, icon: 'star', amount: 250000 },
-    { id: 3, icon: 'sparkles', amount: 100000 },
-    { id: 4, icon: 'star', amount: 75000 },
+    { id: 1, icon: 'sandals', amount: 500000 },
+    { id: 2, icon: 'fish-loaves', amount: 250000 },
+    { id: 3, icon: 'staff', amount: 100000 },
+    { id: 4, icon: 'fish-net', amount: 75000 },
     { id: 5, icon: 'question', amount: 50000 },
     { id: 6, icon: 'question', amount: 25000 },
     { id: 7, icon: 'question', amount: 10000 },
@@ -21,14 +22,14 @@ export function ImpactStats() {
 
   const getDonorIcon = (iconType: string) => {
     switch (iconType) {
-      case 'crown':
-        return <Crown className="w-8 h-8 text-white" />;
-      case 'star':
-        return <Star className="w-8 h-8 text-white fill-white" />;
-      case 'sparkles':
-        return <Sparkles className="w-8 h-8 text-white" />;
-      case 'heart':
-        return <Heart className="w-8 h-8 text-white fill-white" />;
+      case 'sandals':
+        return <Image src="/images/1_sandals_icon.svg" alt="Sandals" width={32} height={32} />;
+      case 'fish-loaves':
+        return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Fish and Loaves" width={32} height={32} />;
+      case 'staff':
+        return <Image src="/images/3_staff_icon.svg" alt="Staff" width={32} height={32} />;
+      case 'fish-net':
+        return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={32} height={32} />;
       default:
         return <HelpCircle className="w-8 h-8 text-white" />;
     }
@@ -36,14 +37,14 @@ export function ImpactStats() {
 
   const getDonorColor = (iconType: string) => {
     switch (iconType) {
-      case 'crown':
+      case 'sandals':
         return 'from-yellow-600 to-yellow-500';
-      case 'star':
+      case 'fish-loaves':
         return 'from-amber-600 to-amber-400';
-      case 'sparkles':
+      case 'staff':
         return 'from-blue-600 to-blue-400';
-      case 'heart':
-        return 'from-red-600 to-red-400';
+      case 'fish-net':
+        return 'from-cyan-600 to-cyan-400';
       default:
         return 'from-slate-400 to-slate-300';
     }
