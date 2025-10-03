@@ -13,14 +13,14 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6"
+          className="relative flex items-center justify-center mb-6"
         >
           <div className="font-heading text-2xl font-bold">
             #TEAMJESUS
           </div>
 
           {/* Logo on right */}
-          <div className="flex items-center justify-center">
+          <div className="absolute right-0 flex items-center justify-center">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-1">
               <Image
                 src="/images/Team_Jesus_Logo.png"
