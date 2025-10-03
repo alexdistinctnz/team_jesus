@@ -128,32 +128,59 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          {/* Cloud shape above container */}
-          <div className="relative h-16 overflow-hidden mx-auto -mb-px" style={{ maxWidth: '732px' }}>
-            <svg className="absolute w-full bottom-0" viewBox="0 0 1200 100" preserveAspectRatio="none">
+          {/* Cloud-shaped container */}
+          <div className="relative mx-auto" style={{ maxWidth: '800px' }}>
+            <svg className="w-full h-auto" viewBox="0 0 800 280" preserveAspectRatio="none">
+              {/* Cloud shape - solid white fill */}
               <path
-                d="M0,100 L0,60 Q100,20 200,30 Q250,10 300,30 Q400,15 500,30 Q600,20 700,30 Q800,15 900,30 Q950,10 1000,30 Q1100,20 1200,60 L1200,100 Z"
+                d="M100,50
+                   C80,50 60,60 50,80
+                   C40,70 25,65 15,75
+                   C5,85 5,100 15,110
+                   C10,115 8,125 10,135
+                   C12,145 20,152 30,155
+                   L30,240
+                   C30,250 35,255 45,255
+                   L755,255
+                   C765,255 770,250 770,240
+                   L770,155
+                   C780,152 788,145 790,135
+                   C792,125 790,115 785,110
+                   C795,100 795,85 785,75
+                   C775,65 760,70 750,80
+                   C740,60 720,50 700,50
+                   C680,50 665,58 655,72
+                   C645,55 625,45 600,45
+                   C575,45 555,55 545,72
+                   C535,58 515,48 490,48
+                   C465,48 445,58 435,72
+                   C425,55 405,45 380,45
+                   C355,45 335,55 325,72
+                   C315,58 295,48 270,48
+                   C245,48 225,58 215,72
+                   C205,55 185,45 160,45
+                   C135,45 118,56 110,72
+                   C105,58 95,50 100,50 Z"
                 fill="white"
+                stroke="none"
               />
             </svg>
-          </div>
 
-          {/* White container with cloud effect */}
-          <div className="relative bg-white py-12 mb-0 overflow-hidden mx-auto shadow-md" style={{ maxWidth: '732px' }}>
-            <div className="px-8 md:px-12 relative z-10">
+            {/* Content positioned absolutely over the cloud */}
+            <div className="absolute inset-0 flex items-center justify-center px-12 py-16">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-lg text-black leading-relaxed"
+                className="text-lg text-black leading-relaxed text-center max-w-2xl"
               >
                 {tabContent[activeTab as keyof typeof tabContent].description}
               </motion.p>
             </div>
 
             {/* Extension to intersect with vertical divider */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white h-24" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white h-24 z-20" />
           </div>
 
           <div className="max-w-4xl mx-auto">
