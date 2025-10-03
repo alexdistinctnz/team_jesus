@@ -197,17 +197,39 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          <div className="p-8 md:p-12 max-w-4xl mx-auto">
-            <motion.p
-              key={activeTab}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="text-lg text-primary-900 leading-relaxed mb-12"
-            >
-              {tabContent[activeTab as keyof typeof tabContent].description}
-            </motion.p>
+          {/* Dark blue container with wave effect */}
+          <div className="relative bg-primary-900 py-12 mb-12 overflow-hidden">
+            {/* Wave/ripple decoration */}
+            <div className="absolute inset-0 opacity-10">
+              <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern id="wave-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="white" strokeWidth="1" opacity="0.3"/>
+                    <circle cx="100" cy="100" r="60" fill="none" stroke="white" strokeWidth="1" opacity="0.2"/>
+                    <circle cx="100" cy="100" r="40" fill="none" stroke="white" strokeWidth="1" opacity="0.1"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#wave-pattern)"/>
+              </svg>
+            </div>
 
+            <div className="max-w-4xl mx-auto px-8 md:px-12 relative z-10">
+              <motion.p
+                key={activeTab}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="text-lg text-white leading-relaxed"
+              >
+                {tabContent[activeTab as keyof typeof tabContent].description}
+              </motion.p>
+            </div>
+
+            {/* Extension to intersect with vertical divider */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-primary-900 h-16" />
+          </div>
+
+          <div className="max-w-4xl mx-auto">
             {/* Grid sections with decorative lines */}
             <motion.div
               key={`${activeTab}-sections`}
