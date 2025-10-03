@@ -129,31 +129,33 @@ export function HowItWorksStepper() {
           className="relative mt-8"
         >
           {/* Cloud-shaped container using cloud_solid.svg */}
-          <div className="relative mx-auto" style={{ maxWidth: '800px' }}>
+          <div className="relative mx-auto -my-8" style={{ maxWidth: '900px' }}>
             {/* Cloud background image */}
             <Image
               src="/images/cloud_solid.svg"
               alt=""
-              width={800}
-              height={300}
+              width={900}
+              height={400}
               className="w-full h-auto"
+              priority
             />
 
             {/* Content positioned absolutely over the cloud */}
-            <div className="absolute inset-0 flex items-center justify-center px-16 py-20">
+            <div className="absolute inset-0 flex items-center justify-center px-20 py-8">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-lg text-black leading-relaxed text-center max-w-3xl"
+                className="text-base md:text-lg text-black leading-relaxed text-center max-w-2xl"
+                style={{ marginTop: '1rem' }}
               >
                 {tabContent[activeTab as keyof typeof tabContent].description}
               </motion.p>
             </div>
 
             {/* Extension to intersect with vertical divider */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white h-24 z-20" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white h-16 z-20" />
           </div>
 
           <div className="max-w-4xl mx-auto">
