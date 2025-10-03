@@ -130,50 +130,52 @@ export function HowItWorksStepper() {
         >
           {/* Cloud-shaped container */}
           <div className="relative mx-auto" style={{ maxWidth: '800px' }}>
-            <svg className="w-full h-auto" viewBox="0 0 800 280" preserveAspectRatio="none">
-              {/* Cloud shape - solid white fill */}
+            <svg className="w-full h-auto" viewBox="0 0 1000 350" preserveAspectRatio="none">
+              {/* Cloud shape - solid white fill with rounded bumps on top */}
               <path
-                d="M100,50
-                   C80,50 60,60 50,80
-                   C40,70 25,65 15,75
-                   C5,85 5,100 15,110
-                   C10,115 8,125 10,135
-                   C12,145 20,152 30,155
-                   L30,240
-                   C30,250 35,255 45,255
-                   L755,255
-                   C765,255 770,250 770,240
-                   L770,155
-                   C780,152 788,145 790,135
-                   C792,125 790,115 785,110
-                   C795,100 795,85 785,75
-                   C775,65 760,70 750,80
-                   C740,60 720,50 700,50
-                   C680,50 665,58 655,72
-                   C645,55 625,45 600,45
-                   C575,45 555,55 545,72
-                   C535,58 515,48 490,48
-                   C465,48 445,58 435,72
-                   C425,55 405,45 380,45
-                   C355,45 335,55 325,72
-                   C315,58 295,48 270,48
-                   C245,48 225,58 215,72
-                   C205,55 185,45 160,45
-                   C135,45 118,56 110,72
-                   C105,58 95,50 100,50 Z"
+                d="M 50,280
+                   L 50,120
+                   Q 50,100 70,100
+                   Q 90,100 100,80
+                   Q 110,60 130,60
+                   Q 150,60 160,70
+                   Q 170,50 200,50
+                   Q 230,50 240,70
+                   Q 250,50 280,50
+                   Q 310,50 320,70
+                   Q 330,50 360,50
+                   Q 390,50 400,70
+                   Q 410,50 440,50
+                   Q 470,50 480,70
+                   Q 490,50 520,50
+                   Q 550,50 560,70
+                   Q 570,50 600,50
+                   Q 630,50 640,70
+                   Q 650,50 680,50
+                   Q 710,50 720,70
+                   Q 730,50 760,50
+                   Q 790,50 800,70
+                   Q 810,50 840,60
+                   Q 860,60 870,80
+                   Q 880,100 900,100
+                   Q 920,100 920,120
+                   L 920,280
+                   Q 920,300 900,300
+                   L 70,300
+                   Q 50,300 50,280 Z"
                 fill="white"
                 stroke="none"
               />
             </svg>
 
             {/* Content positioned absolutely over the cloud */}
-            <div className="absolute inset-0 flex items-center justify-center px-12 py-16">
+            <div className="absolute inset-0 flex items-center justify-center px-16 py-20">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-lg text-black leading-relaxed text-center max-w-2xl"
+                className="text-lg text-black leading-relaxed text-center max-w-3xl"
               >
                 {tabContent[activeTab as keyof typeof tabContent].description}
               </motion.p>
