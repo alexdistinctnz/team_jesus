@@ -164,9 +164,9 @@ export function HowItWorksStepper() {
         >
           {/* Cloud-like white box */}
           <div className="relative mx-auto" style={{ maxWidth: '900px' }}>
-            <svg className="w-full" viewBox="0 0 900 300" preserveAspectRatio="none">
+            <svg className="w-full h-auto" viewBox="0 0 900 400" preserveAspectRatio="none">
               <path
-                d="M 50,250
+                d="M 50,350
                    L 50,80
                    C 50,50 100,30 150,30
                    C 200,30 250,50 300,50
@@ -174,25 +174,25 @@ export function HowItWorksStepper() {
                    C 500,30 550,50 600,50
                    C 650,50 700,30 750,30
                    C 800,30 850,50 850,80
-                   L 850,220
-                   C 850,250 800,270 750,270
-                   C 700,270 650,250 600,250
-                   C 550,250 500,270 450,270
-                   C 400,270 350,250 300,250
-                   C 250,250 200,270 150,270
-                   C 100,270 50,250 50,220 Z"
+                   L 850,320
+                   C 850,350 800,370 750,370
+                   C 700,370 650,350 600,350
+                   C 550,350 500,370 450,370
+                   C 400,370 350,350 300,350
+                   C 250,350 200,370 150,370
+                   C 100,370 50,350 50,320 Z"
                 fill="white"
               />
             </svg>
 
             {/* Content centered in the cloud box */}
-            <div className="absolute inset-0 flex items-center justify-center px-16">
+            <div className="absolute inset-0 flex items-center justify-center px-4 md:px-16">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-base md:text-lg text-black leading-relaxed text-center max-w-3xl"
+                className="text-sm md:text-lg text-black leading-relaxed text-center max-w-3xl"
               >
                 {tabContent[activeTab as keyof typeof tabContent].description}
               </motion.p>
@@ -209,7 +209,7 @@ export function HowItWorksStepper() {
               className="relative"
             >
               {/* Vertical center line */}
-              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-primary-900 -translate-x-1/2 hidden md:block" />
+              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-black -translate-x-1/2 hidden md:block" />
 
               {tabContent[activeTab as keyof typeof tabContent].sections.map((section, index) => {
                 const Icon = section.icon;
@@ -229,9 +229,9 @@ export function HowItWorksStepper() {
                     {/* Top horizontal line (skip for first item) */}
                     {!isFirst && (
                       <>
-                        <div className="absolute top-0 left-0 right-0 h-1 bg-primary-900" />
+                        <div className="absolute top-0 left-0 right-0 h-1 bg-black" />
                         {/* Intersection dot at top */}
-                        <div className="absolute top-0 left-1/2 w-4 h-4 bg-primary-900 rounded-full -translate-x-1/2 -translate-y-1/2 hidden md:block" />
+                        <div className="absolute top-0 left-1/2 w-4 h-4 bg-black rounded-full -translate-x-1/2 -translate-y-1/2 hidden md:block" />
                       </>
                     )}
 
@@ -240,8 +240,8 @@ export function HowItWorksStepper() {
                       {isLeft ? (
                         <>
                           <div>
-                            <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">{section.title}</h3>
-                            <p className="text-primary-900 leading-relaxed">{section.text}</p>
+                            <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">{section.title}</h3>
+                            <p className="text-black leading-relaxed">{section.text}</p>
                           </div>
                           <div className="hidden md:block rounded-2xl overflow-hidden">
                             <div className="aspect-video relative">
@@ -267,8 +267,8 @@ export function HowItWorksStepper() {
                             </div>
                           </div>
                           <div className="order-1 md:order-2">
-                            <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">{section.title}</h3>
-                            <p className="text-primary-900 leading-relaxed">{section.text}</p>
+                            <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">{section.title}</h3>
+                            <p className="text-black leading-relaxed">{section.text}</p>
                           </div>
                         </>
                       )}

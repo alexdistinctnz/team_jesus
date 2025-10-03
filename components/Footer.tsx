@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <div className="relative text-primary-900 py-12 overflow-hidden bg-[#F5E6D3]">
+    <div className="relative text-black py-12 overflow-hidden bg-[#F5E6D3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Top row - Hashtag with logo on right */}
         <motion.div
