@@ -99,10 +99,10 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-6xl md:text-8xl font-heading font-bold text-primary-900 mb-6">
+          <h2 className="text-6xl md:text-8xl font-sans font-extrabold text-black mb-6">
             HOW IT WORKS
           </h2>
-          <p className="text-lg md:text-xl text-primary-900 max-w-4xl mx-auto leading-relaxed mb-12">
+          <p className="text-lg md:text-xl text-black max-w-4xl mx-auto leading-relaxed mb-12">
             #TeamJesus will be the biggest and most impactful campaign for sharing the Gospel in history.
             Scroll down to see how raising $8 million will share Jesus with 8 billion people.
             With thousands of the world's top Creators talking about Jesus, we're changing the world, one view at a time.
