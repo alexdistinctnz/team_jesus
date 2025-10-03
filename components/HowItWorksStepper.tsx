@@ -140,9 +140,6 @@ export function HowItWorksStepper() {
             >
               {tabContent[activeTab as keyof typeof tabContent].description}
             </motion.p>
-
-            {/* Extension to intersect with vertical divider */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white h-24 z-20" />
           </div>
 
           <div className="max-w-4xl mx-auto">
