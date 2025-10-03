@@ -198,7 +198,30 @@ export function HowItWorksStepper() {
           className="relative mt-8"
         >
           {/* Dark blue container with wave effect */}
-          <div className="relative bg-primary-900 py-12 mb-12 overflow-hidden">
+          <div className="relative bg-primary-900 py-12 mb-0 overflow-hidden">
+            {/* Animated wave at top */}
+            <div className="absolute top-0 left-0 right-0 h-16 overflow-hidden">
+              <svg className="absolute w-full" style={{ top: '-1px' }} viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <motion.path
+                  d="M0,0 C300,60 600,60 900,0 C1050,30 1200,0 1200,0 L1200,120 L0,120 Z"
+                  fill="white"
+                  initial={{ d: "M0,0 C300,60 600,60 900,0 C1050,30 1200,0 1200,0 L1200,120 L0,120 Z" }}
+                  animate={{
+                    d: [
+                      "M0,0 C300,60 600,60 900,0 C1050,30 1200,0 1200,0 L1200,120 L0,120 Z",
+                      "M0,30 C300,0 600,0 900,30 C1050,0 1200,30 1200,30 L1200,120 L0,120 Z",
+                      "M0,0 C300,60 600,60 900,0 C1050,30 1200,0 1200,0 L1200,120 L0,120 Z"
+                    ]
+                  }}
+                  transition={{
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+              </svg>
+            </div>
+
             {/* Wave/ripple decoration */}
             <div className="absolute inset-0 opacity-10">
               <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -213,7 +236,7 @@ export function HowItWorksStepper() {
               </svg>
             </div>
 
-            <div className="max-w-4xl mx-auto px-8 md:px-12 relative z-10">
+            <div className="mx-auto px-8 md:px-12 relative z-10" style={{ maxWidth: '692px' }}>
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
@@ -226,7 +249,7 @@ export function HowItWorksStepper() {
             </div>
 
             {/* Extension to intersect with vertical divider */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-primary-900 h-16" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 bg-primary-900 h-24" />
           </div>
 
           <div className="max-w-4xl mx-auto">
