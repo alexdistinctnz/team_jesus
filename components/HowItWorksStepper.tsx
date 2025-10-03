@@ -142,7 +142,7 @@ export function HowItWorksStepper() {
             </svg>
 
             {/* Content positioned absolutely inside the cloud */}
-            <div className="absolute top-[40%] left-0 right-0 flex items-start justify-center px-16">
+            <div className="absolute top-[80%] left-0 right-0 flex items-start justify-center px-16">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
