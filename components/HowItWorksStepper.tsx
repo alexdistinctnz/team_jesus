@@ -10,28 +10,35 @@ export function HowItWorksStepper() {
 
   const tabContent = {
     why: {
-      description: "Join #TeamJesus in raising $8M to tell 8 billion people about Jesus through PostClips. Every dollar funds Gospel content that reaches 1,000 people with the message of Jesus. With thousands of creators sharing Christ globally, we're changing the world, one view at a time.",
+      description: "Jesus makes it clear that your purpose on earth is to build the kingdom of Heaven. God commands us: 'Go therefore and make disciples of all nations' (Matthew 28:19-20) and 'Follow me, and I will make you fishers of men' (Matthew 4:19). If no one spreads the gospel, people stay lost. God requires you to obey His word and share the Good News.",
       sections: [
         {
-          title: "Gospel Creators",
-          text: "When creators share the Gospel through video, lives are changed. Their work is more than entertainment, it points people to Jesus. By making content about Christ, they reach millions who may never enter a church, giving them the chance to hear about salvation, find hope, and discover eternal life. With the Gospel in video form, the message spreads with greater reach, impact, and authenticity.",
+          title: "The Great Commission",
+          text: "God's command is clear: 'Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you.' (Matthew 28:19-20). Jesus declares, 'Follow me, and I will make you fishers of men' (Matthew 4:19). God requires you to obey His word: 'If you love me, you will keep my commandments' (John 14:15) and 'Obey my voice, and I will be your God' (Jeremiah 7:23).",
           icon: Video,
           image: "/images/gospel_creators.jpg",
           align: "left"
         },
         {
-          title: "Global Reach",
-          text: "Short-form Gospel content is vital for reaching the world. Without it, billions remain unreached through traditional methods. When compelling videos about Jesus appear on platforms people already use, the Gospel spreads naturally. By filling social media with Christ-centered content, we break down barriers and bring transformation one view at a time.",
+          title: "The Necessity of Hearing",
+          text: "Romans 10:14 asks the essential question: 'How then will they call on him in whom they have not believed? And how are they to believe in him of whom they have never heard? And how are they to hear without someone preaching?' They cannot be saved without hearing. If no one spreads the gospel, people stay lost. The message must be proclaimed so that people can hear, believe, and be saved.",
           icon: Target,
           image: "/images/global_reach.jpg",
           align: "right"
         },
         {
-          title: "Verified Results",
-          text: "Results-based funding ensures full accountability. We only pay creators for verified views, so every donation directly leads to people hearing about Jesus. This makes fragile ministry budgets go further, reaching more souls with fewer resources. Transparent, verifiable metrics give donors confidence, showing real Kingdom impact and inspiring lasting trust.",
+          title: "The Cost of Silence",
+          text: "God warns in Ezekiel 3:18: 'If I say to the wicked, \"You shall surely die,\" and you give him no warning... that wicked person shall die for his iniquity, but his blood I will require at your hand.' If you don't listen and warn others, two things happen: the wicked still die in their sin, and God holds you accountable for staying silent. Without the Gospel, people face 'eternal fire prepared for the devil and his angels' (Matthew 25:41) and 'the fiery furnace... weeping and gnashing of teeth' (Matthew 13:50). Without Jesus, people die lost and spend eternity in hell, fire, darkness, and separation from God.",
           icon: Heart,
           image: "/images/verified_results.jpg",
           align: "left"
+        },
+        {
+          title: "Eternal Rewards",
+          text: "God rewards those who obey Him. There is a reward system in Heaven. Jesus says: 'Do not lay up for yourselves treasures on earth... but lay up for yourselves treasures in heaven' (Matthew 6:19-20). Scripture promises crowns of righteousness (2 Timothy 4:8), life (James 1:12), and glory (1 Peter 5:4). Faithful servants receive authority over cities (Luke 19:17). The ultimate honor: 'The one who conquers, I will grant him to sit with me on my throne' (Revelation 3:21). 'From the Lord you will receive the inheritance as your reward. You are serving the Lord Christ' (Colossians 3:23-24).",
+          icon: Video,
+          image: "/images/step_2_creators_share_jesus.jpg",
+          align: "right"
         }
       ]
     },
