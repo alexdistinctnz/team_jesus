@@ -186,13 +186,13 @@ export function HowItWorksStepper() {
             </svg>
 
             {/* Content centered in the cloud box */}
-            <div className="absolute inset-0 flex items-center justify-center px-4 md:px-16">
+            <div className="absolute inset-0 flex items-center justify-center px-8 md:px-16 py-8">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-sm md:text-lg text-black leading-relaxed text-center max-w-3xl"
+                className="text-xs md:text-lg text-black leading-relaxed text-center max-w-3xl"
               >
                 {tabContent[activeTab as keyof typeof tabContent].description}
               </motion.p>
