@@ -120,28 +120,36 @@ export function HowItWorksStepper() {
           </div>
 
           {/* Partner logos */}
-          <div className="flex items-center justify-center gap-8 mb-12 opacity-80">
-            <Image
-              src="/images/partner_postclips_logo.svg"
-              alt="PostClips"
-              width={72}
-              height={24}
-              className="h-6 w-auto"
-            />
-            <Image
-              src="/images/partner_Elevation_Church_logo.svg"
-              alt="Elevation Church"
-              width={72}
-              height={24}
-              className="h-6 w-auto"
-            />
-            <Image
-              src="/images/partner_Bryce_Crawford_Logo.svg"
-              alt="Bryce Crawford"
-              width={72}
-              height={24}
-              className="h-6 w-auto"
-            />
+          <div className="flex justify-center mb-12">
+            <div className="grid grid-cols-3 gap-8 opacity-80">
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/images/partner_postclips_logo.svg"
+                  alt="PostClips"
+                  width={72}
+                  height={24}
+                  className="h-6 w-auto"
+                />
+              </div>
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/images/partner_Elevation_Church_logo.svg"
+                  alt="Elevation Church"
+                  width={72}
+                  height={24}
+                  className="h-6 w-auto"
+                />
+              </div>
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/images/partner_Bryce_Crawford_Logo.svg"
+                  alt="Bryce Crawford"
+                  width={72}
+                  height={24}
+                  className="h-6 w-auto"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Tab Navigation */}
