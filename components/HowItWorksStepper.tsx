@@ -142,13 +142,13 @@ export function HowItWorksStepper() {
             </svg>
 
             {/* Content positioned absolutely inside the cloud */}
-            <div className="absolute inset-0 flex items-center justify-center px-16 py-12">
+            <div className="absolute top-[25%] left-0 right-0 flex items-start justify-center px-16">
               <motion.p
                 key={activeTab}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-base md:text-lg text-black leading-relaxed text-center max-w-3xl mt-8"
+                className="text-base md:text-lg text-black leading-relaxed text-center max-w-3xl"
               >
                 {tabContent[activeTab as keyof typeof tabContent].description}
               </motion.p>
