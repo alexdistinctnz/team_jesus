@@ -197,31 +197,18 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          {/* Animated wave above container */}
-          <div className="relative h-16 overflow-hidden -mb-px mx-auto" style={{ maxWidth: '732px' }}>
-            <svg className="absolute w-full bottom-0" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <motion.path
-                d="M0,120 L0,80 C300,20 600,20 900,80 C1050,50 1200,80 1200,80 L1200,120 Z"
+          {/* Static wave border above container */}
+          <div className="relative h-12 overflow-hidden mx-auto -mb-px" style={{ maxWidth: '732px' }}>
+            <svg className="absolute w-full bottom-0" viewBox="0 0 1200 80" preserveAspectRatio="none">
+              <path
+                d="M0,80 Q100,20 200,40 T400,40 T600,40 T800,40 T1000,40 T1200,40 L1200,80 Z"
                 fill="#003366"
-                initial={{ d: "M0,120 L0,80 C300,20 600,20 900,80 C1050,50 1200,80 1200,80 L1200,120 Z" }}
-                animate={{
-                  d: [
-                    "M0,120 L0,80 C300,20 600,20 900,80 C1050,50 1200,80 1200,80 L1200,120 Z",
-                    "M0,120 L0,50 C300,80 600,80 900,50 C1050,80 1200,50 1200,50 L1200,120 Z",
-                    "M0,120 L0,80 C300,20 600,20 900,80 C1050,50 1200,80 1200,80 L1200,120 Z"
-                  ]
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
               />
             </svg>
           </div>
 
           {/* Dark blue container with wave effect */}
-          <div className="relative bg-primary-900 py-12 mb-0 overflow-hidden -mt-px mx-auto" style={{ maxWidth: '732px' }}>
+          <div className="relative bg-primary-900 py-12 mb-0 overflow-hidden mx-auto" style={{ maxWidth: '732px' }}>
             {/* Wave/ripple decoration */}
             <div className="absolute inset-0 opacity-10">
               <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
