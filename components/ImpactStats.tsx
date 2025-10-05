@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { HelpCircle, Fish } from 'lucide-react';
-import { DonateWidget } from './DonateWidget';
+import { DonateWidgetPopup } from './DonateWidgetPopup';
 import Image from 'next/image';
 
 export function ImpactStats() {
@@ -102,7 +102,7 @@ export function ImpactStats() {
             <div className="flex items-stretch gap-6 mb-8">
               {/* Donate Widget Container */}
               <div className="flex flex-col">
-                <DonateWidget />
+                <DonateWidgetPopup />
               </div>
 
               {/* Progress Bar Section - matches donate panel height */}
