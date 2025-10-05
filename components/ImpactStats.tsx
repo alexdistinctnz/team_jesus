@@ -78,13 +78,13 @@ export function ImpactStats() {
               <p className="text-3xl md:text-5xl font-sans font-extrabold text-white relative z-10">people about Jesus!</p>
             </div>
 
-            <p className="text-xl md:text-2xl font-extrabold text-white leading-relaxed max-w-xl relative z-10">
+            <p className="text-xl md:text-2xl font-extrabold text-white leading-relaxed max-w-xl relative z-10 mt-10">
               These people might have never heard the word without YOU.
             </p>
 
-            <div className="pt-6 border-t border-white/20 relative z-10">
+            <div className="pt-6 relative z-10">
               <blockquote className="text-white font-semibold text-base md:text-lg leading-relaxed">
-                "Whoever brings back a sinner from his wandering will save his soul from death and will cover a multitude of sins."
+                "Whoever brings back a sinner from his wandering<br />will save his soul from death and will cover a multitude of sins."
               </blockquote>
               <p className="text-sm text-white font-semibold mt-2 text-right">James 5:20 (ESV)</p>
             </div>
