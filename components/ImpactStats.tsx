@@ -51,7 +51,7 @@ export function ImpactStats() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
+    <section className="py-20 text-white relative overflow-hidden" style={{ backgroundColor: '#161616' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ transform: 'scale(0.75)', transformOrigin: 'center' }}>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Impact stats */}
