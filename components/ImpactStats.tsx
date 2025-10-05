@@ -149,10 +149,16 @@ export function ImpactStats() {
                     className="absolute bottom-0 w-full bg-gradient-to-t from-primary-500 to-primary-400"
                   />
 
-                  {/* Progress label above gradient */}
-                  <div className="absolute bottom-[41%] left-1/2 -translate-x-1/2 text-center z-10">
+                  {/* Progress label above gradient - animates with gradient */}
+                  <motion.div
+                    initial={{ bottom: '0%' }}
+                    whileInView={{ bottom: '41%' }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.4 }}
+                    className="absolute left-1/2 -translate-x-1/2 text-center z-10"
+                  >
                     <p className="text-xs font-bold text-black">10M/25M</p>
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* Fisherman Badge Label */}
