@@ -164,38 +164,27 @@ export function HowItWorksStepper() {
         >
           {/* Cloud-like white box */}
           <div className="relative mx-auto" style={{ maxWidth: '900px' }}>
-            <svg className="w-full h-auto" viewBox="0 0 900 500" preserveAspectRatio="none">
-              <path
-                d="M 50,450
-                   L 50,80
-                   C 50,50 100,30 150,30
-                   C 200,30 250,50 300,50
-                   C 350,50 400,30 450,30
-                   C 500,30 550,50 600,50
-                   C 650,50 700,30 750,30
-                   C 800,30 850,50 850,80
-                   L 850,420
-                   C 850,450 800,470 750,470
-                   C 700,470 650,450 600,450
-                   C 550,450 500,470 450,470
-                   C 400,470 350,450 300,450
-                   C 250,450 200,470 150,470
-                   C 100,470 50,450 50,420 Z"
-                fill="white"
+            <div className="relative w-full" style={{ aspectRatio: '900 / 500' }}>
+              <Image
+                src="/images/cloud.svg"
+                alt="Cloud background"
+                fill
+                className="object-contain"
+                style={{ filter: 'invert(1)' }}
               />
-            </svg>
 
-            {/* Content centered in the cloud box */}
-            <div className="absolute inset-0 flex items-center justify-center px-8 md:px-16 py-8">
-              <motion.p
-                key={activeTab}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                className="text-sm md:text-lg text-black leading-relaxed text-center max-w-3xl"
-              >
-                {tabContent[activeTab as keyof typeof tabContent].description}
-              </motion.p>
+              {/* Content centered in the cloud box */}
+              <div className="absolute inset-0 flex items-center justify-center px-8 md:px-16 py-8">
+                <motion.p
+                  key={activeTab}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-sm md:text-lg text-black leading-relaxed text-center max-w-3xl"
+                >
+                  {tabContent[activeTab as keyof typeof tabContent].description}
+                </motion.p>
+              </div>
             </div>
           </div>
 
