@@ -32,7 +32,7 @@ export function ImpactStats() {
         return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={80} height={80} />;
       default:
         return (
-          <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
+          <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center">
             <span className="text-6xl font-bold text-black">?</span>
           </div>
         );
@@ -118,7 +118,7 @@ export function ImpactStats() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
                       whileHover={{ scale: 1.1 }}
-                      className="w-16 h-16 flex items-center justify-center"
+                      className="w-20 h-20 flex items-center justify-center"
                     >
                       {getDonorIcon(donor.icon)}
                     </motion.div>
