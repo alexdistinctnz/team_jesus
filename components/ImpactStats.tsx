@@ -23,13 +23,13 @@ export function ImpactStats() {
   const getDonorIcon = (iconType: string) => {
     switch (iconType) {
       case 'sandals':
-        return <Image src="/images/1_sandals_icon.svg" alt="Sandals" width={64} height={64} />;
+        return <Image src="/images/1_sandals_icon.svg" alt="Sandals" width={72} height={72} />;
       case 'fish-loaves':
-        return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Fish and Loaves" width={64} height={64} />;
+        return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Fish and Loaves" width={72} height={72} />;
       case 'staff':
-        return <Image src="/images/3_staff_icon.svg" alt="Staff" width={64} height={64} />;
+        return <Image src="/images/3_staff_icon.svg" alt="Staff" width={72} height={72} />;
       case 'fish-net':
-        return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={64} height={64} />;
+        return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={72} height={72} />;
       default:
         return (
           <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
