@@ -140,7 +140,7 @@ export function ImpactStats() {
                 </motion.div>
 
                 {/* Vertical Progress Bar */}
-                <div className="relative w-20 h-[600px] bg-white overflow-hidden mb-2">
+                <div className="relative w-20 h-[580px] bg-white overflow-hidden mb-2">
                   {/* Progress label above gradient */}
                   <div className="absolute top-4 left-1/2 -translate-x-1/2 text-center z-10">
                     <p className="text-xs font-bold text-black">10M/25M</p>
