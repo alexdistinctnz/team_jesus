@@ -135,8 +135,9 @@ export function ImpactStats() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="mb-4"
+                  style={{ imageRendering: 'pixelated' }}
                 >
-                  <Image src="/images/5_gates_icon.svg" alt="Gates" width={80} height={80} />
+                  <Image src="/images/5_gates_icon.svg" alt="Gates" width={80} height={80} style={{ imageRendering: 'pixelated' }} />
                 </motion.div>
 
                 {/* Vertical Progress Bar */}
