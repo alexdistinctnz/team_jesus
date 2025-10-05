@@ -162,30 +162,28 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          {/* Cloud-like white box */}
-          <div className="relative mx-auto" style={{ maxWidth: '1100px' }}>
-            <div className="relative w-full" style={{ aspectRatio: '1100 / 500' }}>
-              {/* Cloud background - visible border effect */}
-              <div className="absolute inset-0">
+          {/* Text on cloud background */}
+          <div className="relative mx-auto max-w-4xl">
+            <div className="relative">
+              {/* Cloud background */}
+              <div className="absolute inset-0 flex items-center justify-center">
                 <Image
                   src="/images/cloud.svg"
                   alt="Cloud background"
-                  fill
-                  className="object-fill opacity-30"
+                  width={800}
+                  height={400}
+                  className="opacity-15"
                 />
               </div>
 
-              {/* White interior box - smaller than cloud to show cloud edges */}
-              <div className="absolute inset-[8%_5%] bg-white rounded-3xl" />
-
-              {/* Content centered in the box */}
-              <div className="absolute inset-0 flex items-center justify-center px-8 md:px-16 py-8 z-10">
+              {/* Text on top of cloud */}
+              <div className="relative py-16 px-8 md:px-16">
                 <motion.p
                   key={activeTab}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-sm md:text-lg text-black leading-relaxed text-center max-w-3xl"
+                  className="text-sm md:text-lg text-black leading-relaxed text-center max-w-3xl mx-auto"
                 >
                   {tabContent[activeTab as keyof typeof tabContent].description}
                 </motion.p>
