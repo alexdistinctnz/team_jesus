@@ -163,7 +163,7 @@ export function HowItWorksStepper() {
           className="relative mt-8"
         >
           {/* Cloud with text */}
-          <div className="relative mx-auto max-w-5xl -my-8">
+          <div className="relative mx-auto max-w-5xl -my-20">
             <div className="relative">
               {/* Cloud SVG as background */}
               <Image
