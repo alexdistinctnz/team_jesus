@@ -70,7 +70,7 @@ export function ImpactStats() {
                 <div className="absolute inset-0 flex items-center justify-start pointer-events-none -z-10">
                   <div className="w-[800px] h-[800px] translate-x-0 translate-y-[200px] bg-gradient-radial from-blue-500/40 via-blue-600/20 to-transparent rounded-full blur-3xl"></div>
                 </div>
-                <div className="relative text-4xl md:text-7xl font-display font-black text-white tabular-nums z-10">
+                <div className="relative text-4xl md:text-7xl font-heading font-black text-white tabular-nums z-10" style={{ fontWeight: 800 }}>
                   10,029,090
                 </div>
               </div>
