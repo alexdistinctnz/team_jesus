@@ -163,13 +163,17 @@ export function HowItWorksStepper() {
           className="relative mt-8"
         >
           {/* Cloud-like white box */}
-          <div className="relative mx-auto" style={{ maxWidth: '900px' }}>
-            <div className="relative w-full" style={{ aspectRatio: '900 / 500' }}>
+          <div className="relative mx-auto" style={{ maxWidth: '1100px' }}>
+            <div className="relative w-full" style={{ aspectRatio: '1100 / 500' }}>
+              {/* White background for interior */}
+              <div className="absolute inset-0 bg-white" style={{ clipPath: 'inset(8% 5% 8% 5% round 20px)' }} />
+
+              {/* Cloud outline */}
               <Image
                 src="/images/cloud.svg"
                 alt="Cloud background"
                 fill
-                className="object-contain"
+                className="object-fill"
                 style={{ filter: 'invert(1)' }}
               />
 
