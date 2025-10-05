@@ -165,18 +165,20 @@ export function HowItWorksStepper() {
           {/* Cloud-like white box */}
           <div className="relative mx-auto" style={{ maxWidth: '1100px' }}>
             <div className="relative w-full" style={{ aspectRatio: '1100 / 500' }}>
-              {/* Cloud outline background */}
-              <Image
-                src="/images/cloud.svg"
-                alt="Cloud background"
-                fill
-                className="object-fill opacity-30"
-              />
+              {/* Cloud background - visible border effect */}
+              <div className="absolute inset-0">
+                <Image
+                  src="/images/cloud.svg"
+                  alt="Cloud background"
+                  fill
+                  className="object-fill opacity-30"
+                />
+              </div>
 
-              {/* White background for interior */}
-              <div className="absolute inset-0 bg-white" style={{ clipPath: 'inset(8% 5% 8% 5% round 20px)' }} />
+              {/* White interior box - smaller than cloud to show cloud edges */}
+              <div className="absolute inset-[8%_5%] bg-white rounded-3xl" />
 
-              {/* Content centered in the cloud box */}
+              {/* Content centered in the box */}
               <div className="absolute inset-0 flex items-center justify-center px-8 md:px-16 py-8 z-10">
                 <motion.p
                   key={activeTab}
