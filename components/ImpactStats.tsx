@@ -57,7 +57,7 @@ export function ImpactStats() {
   return (
     <section className="min-h-screen py-20 text-white relative overflow-hidden" style={{ backgroundColor: '#161616' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ transform: 'scale(0.75)', transformOrigin: 'center' }}>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left side - Impact stats */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -72,7 +72,7 @@ export function ImpactStats() {
               {/* Radial gradient circle behind number - positioned around "about" */}
               <div className="relative mb-0">
                 <div className="absolute inset-0 flex items-center justify-start pointer-events-none -z-10">
-                  <div className="w-[440px] h-[440px] -translate-x-[10px] translate-y-[120px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/50 to-transparent rounded-full blur-3xl"></div>
+                  <div className="w-[572px] h-[572px] -translate-x-[10px] translate-y-[120px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/50 to-transparent rounded-full blur-3xl"></div>
                 </div>
                 <div className="relative text-[2.625rem] md:text-[5.25rem] font-sans font-extrabold text-white tabular-nums leading-tight z-10">
                   10,029,090
