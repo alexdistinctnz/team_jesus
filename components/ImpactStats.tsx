@@ -63,7 +63,7 @@ export function ImpactStats() {
             className="space-y-6"
           >
             <div className="relative">
-              <p className="text-2xl md:text-4xl font-sans font-extrabold mb-4 text-white relative z-10">You told</p>
+              <p className="text-3xl md:text-5xl font-sans font-extrabold mb-4 text-white relative z-10">You told</p>
 
               {/* Radial gradient circle behind number - positioned around "about" */}
               <div className="relative mb-0">
