@@ -126,38 +126,47 @@ export function ImpactStats() {
                 </div>
               </div>
 
-              {/* Progress Bar Section - matches donate panel height */}
-              <div className="flex flex-col items-center justify-between py-4">
-                {/* Badge Icon */}
+              {/* Progress Bar Section */}
+              <div className="flex flex-col items-center justify-between">
+                {/* Next level icon - Gates */}
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="mb-4"
+                >
+                  <Image src="/images/5_gates_icon.svg" alt="Gates" width={80} height={80} />
+                </motion.div>
+
+                {/* Vertical Progress Bar */}
+                <div className="relative w-20 flex-1 bg-white overflow-hidden mb-2">
+                  {/* Progress label above gradient */}
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 text-center z-10">
+                    <p className="text-xs font-bold text-black">10M/25M</p>
+                  </div>
+
+                  <motion.div
+                    initial={{ height: 0 }}
+                    whileInView={{ height: '40%' }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.4 }}
+                    className="absolute bottom-0 w-full bg-gradient-to-t from-primary-500 to-primary-400"
+                  />
+                </div>
+
+                {/* Fisherman Badge Label */}
+                <p className="text-xs font-bold text-white mb-2">Fisherman</p>
+
+                {/* Current level icon - Fish and Net */}
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center shadow-2xl border-4 border-white/20">
-                    <Fish className="w-8 h-8 text-white" />
-                  </div>
+                  <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={80} height={80} />
                 </motion.div>
-
-                {/* Vertical Progress Bar - full height */}
-                <div className="relative w-20 flex-1 bg-slate-700/50 rounded-full overflow-hidden border-4 border-slate-600/50 my-4">
-                  <motion.div
-                    initial={{ height: 0 }}
-                    whileInView={{ height: '40%' }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.4 }}
-                    className="absolute bottom-0 w-full bg-gradient-to-t from-primary-500 to-primary-400 rounded-full"
-                  />
-
-                  {/* Progress labels */}
-                  <div className="absolute top-6 left-1/2 -translate-x-1/2 text-center">
-                    <p className="text-xs font-bold text-white px-2 py-1">10M/25M</p>
-                  </div>
-                </div>
-
-                {/* Fisherman Badge Label */}
-                <p className="text-sm font-heading font-bold">Fisherman</p>
               </div>
             </div>
           </motion.div>
