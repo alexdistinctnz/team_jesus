@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils';
 type DonationState = 'idle' | 'processing' | 'success' | 'error';
 
 export function DonateWidgetPopup() {
-  const [amount, setAmount] = useState<string>('25');
+  const [amount, setAmount] = useState<string>('');
   const [isMonthly, setIsMonthly] = useState(false);
   const [state, setState] = useState<DonationState>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -82,7 +82,7 @@ export function DonateWidgetPopup() {
 
   const handleReset = () => {
     setState('idle');
-    setAmount('25');
+    setAmount('');
     setIsMonthly(false);
     setTransactionId('');
   };
