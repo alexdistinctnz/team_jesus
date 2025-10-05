@@ -63,30 +63,30 @@ export function ImpactStats() {
             className="space-y-6"
           >
             <div className="relative">
-              <p className="text-2xl md:text-4xl font-heading mb-4">You told</p>
+              <p className="text-2xl md:text-4xl font-heading font-bold mb-4 text-white">You told</p>
 
-              {/* Radial gradient circle behind number */}
+              {/* Radial gradient circle behind number - positioned around "about" */}
               <div className="relative mb-4">
-                <div className="absolute inset-0 flex items-center justify-start">
-                  <div className="w-[600px] h-[600px] -translate-x-1/4 -translate-y-1/4 bg-gradient-radial from-primary-500/20 via-primary-600/10 to-transparent rounded-full blur-2xl"></div>
+                <div className="absolute inset-0 flex items-center justify-start pointer-events-none">
+                  <div className="w-[800px] h-[800px] translate-x-0 translate-y-[200px] bg-gradient-radial from-blue-500/40 via-blue-600/20 to-transparent rounded-full blur-3xl"></div>
                 </div>
-                <div className="relative text-4xl md:text-7xl font-display font-black text-white tabular-nums">
+                <div className="relative text-4xl md:text-7xl font-display font-extrabold text-white tabular-nums">
                   10,029,090
                 </div>
               </div>
 
-              <p className="text-2xl md:text-4xl font-heading font-bold">people about Jesus!</p>
+              <p className="text-2xl md:text-4xl font-heading font-bold text-white">people about Jesus!</p>
             </div>
 
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
+            <p className="text-xl md:text-2xl font-bold text-white leading-relaxed max-w-xl">
               These people might have never heard the word without YOU.
             </p>
 
             <div className="pt-6 border-t border-white/20">
-              <blockquote className="italic text-white/80 text-base md:text-lg leading-relaxed">
+              <blockquote className="text-white text-base md:text-lg leading-relaxed">
                 "Whoever brings back a sinner from his wandering will save his soul from death and will cover a multitude of sins."
               </blockquote>
-              <p className="text-sm text-white/60 mt-2">James 5:20 (ESV)</p>
+              <p className="text-sm text-white mt-2 text-right">James 5:20 (ESV)</p>
             </div>
           </motion.div>
 
