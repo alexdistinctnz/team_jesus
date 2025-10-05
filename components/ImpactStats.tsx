@@ -140,11 +140,11 @@ export function ImpactStats() {
                     <Image
                       src="/images/5_gates_icon.png"
                       alt="Gates"
-                      width={12}
-                      height={12}
+                      width={8}
+                      height={8}
                       style={{
                         imageRendering: 'pixelated',
-                        transform: 'scale(6.67)',
+                        transform: 'scale(10)',
                         transformOrigin: 'center'
                       }}
                     />
