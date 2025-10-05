@@ -32,7 +32,7 @@ export function ImpactStats() {
         return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={80} height={80} />;
       default:
         return (
-          <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center">
+          <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center border-2" style={{ borderColor: '#161616' }}>
             <span className="text-6xl font-bold text-black">?</span>
           </div>
         );
