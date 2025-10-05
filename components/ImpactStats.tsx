@@ -68,14 +68,14 @@ export function ImpactStats() {
               {/* Radial gradient circle behind number - positioned around "about" */}
               <div className="relative mb-4">
                 <div className="absolute inset-0 flex items-center justify-start pointer-events-none -z-10">
-                  <div className="w-[800px] h-[800px] translate-x-0 translate-y-[200px] bg-gradient-radial from-[#0973AC]/40 via-[#0973AC]/20 to-transparent rounded-full blur-3xl"></div>
+                  <div className="w-[800px] h-[800px] translate-x-0 translate-y-[200px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/50 to-transparent rounded-full blur-3xl"></div>
                 </div>
                 <div className="relative text-4xl md:text-7xl font-sans font-extrabold text-white tabular-nums z-10">
                   10,029,090
                 </div>
               </div>
 
-              <p className="text-3xl md:text-5xl font-sans font-extrabold text-white relative z-10">people about Jesus!</p>
+              <p className="text-2xl md:text-4xl font-sans font-extrabold text-white relative z-10">people about Jesus!</p>
             </div>
 
             <p className="text-xl md:text-2xl font-extrabold text-white leading-relaxed max-w-xl relative z-10">
