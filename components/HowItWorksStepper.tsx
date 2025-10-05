@@ -170,11 +170,11 @@ export function HowItWorksStepper() {
                 src="/images/cloud.svg"
                 alt="Cloud background"
                 fill
-                className="object-fill opacity-10"
+                className="object-fill opacity-30"
               />
 
               {/* White background for interior */}
-              <div className="absolute inset-0 bg-white/95" style={{ clipPath: 'inset(8% 5% 8% 5% round 20px)' }} />
+              <div className="absolute inset-0 bg-white" style={{ clipPath: 'inset(8% 5% 8% 5% round 20px)' }} />
 
               {/* Content centered in the cloud box */}
               <div className="absolute inset-0 flex items-center justify-center px-8 md:px-16 py-8 z-10">
