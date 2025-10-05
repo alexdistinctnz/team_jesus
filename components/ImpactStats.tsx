@@ -163,7 +163,7 @@ export function ImpactStats() {
                   initial={{ scale: 0.8, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                  transition={{ duration: 0.5, delay: 1.2 }}
                 >
                   <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={80} height={80} />
                 </motion.div>
