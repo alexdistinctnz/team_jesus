@@ -23,17 +23,17 @@ export function ImpactStats() {
   const getDonorIcon = (iconType: string) => {
     switch (iconType) {
       case 'sandals':
-        return <Image src="/images/1_sandals_icon.svg" alt="Sandals" width={80} height={80} />;
+        return <Image src="/images/1_sandals_icon.svg" alt="Sandals" width={72} height={72} />;
       case 'fish-loaves':
-        return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Fish and Loaves" width={80} height={80} />;
+        return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Fish and Loaves" width={72} height={72} />;
       case 'staff':
-        return <Image src="/images/3_staff_icon.svg" alt="Staff" width={80} height={80} />;
+        return <Image src="/images/3_staff_icon.svg" alt="Staff" width={72} height={72} />;
       case 'fish-net':
-        return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={80} height={80} />;
+        return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={72} height={72} />;
       default:
         return (
-          <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center">
-            <span className="text-5xl font-bold text-black">?</span>
+          <div className="w-18 h-18 rounded-full bg-white flex items-center justify-center">
+            <span className="text-6xl font-bold text-black">?</span>
           </div>
         );
     }
@@ -118,7 +118,7 @@ export function ImpactStats() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
                       whileHover={{ scale: 1.1 }}
-                      className="w-20 h-20 flex items-center justify-center"
+                      className="w-18 h-18 flex items-center justify-center"
                     >
                       {getDonorIcon(donor.icon)}
                     </motion.div>
