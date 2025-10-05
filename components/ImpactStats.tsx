@@ -33,7 +33,7 @@ export function ImpactStats() {
       default:
         return (
           <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center">
-            <HelpCircle className="w-12 h-12 text-black" />
+            <span className="text-5xl font-bold text-black">?</span>
           </div>
         );
     }
