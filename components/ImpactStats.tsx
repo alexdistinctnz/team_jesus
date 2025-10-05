@@ -75,7 +75,7 @@ export function ImpactStats() {
                 </div>
               </div>
 
-              <p className="text-4xl md:text-7xl font-sans font-extrabold text-white relative z-10">people about Jesus!</p>
+              <p className="text-3xl md:text-5xl font-sans font-extrabold text-white relative z-10">people about Jesus!</p>
             </div>
 
             <p className="text-xl md:text-2xl font-extrabold text-white leading-relaxed max-w-xl relative z-10">
