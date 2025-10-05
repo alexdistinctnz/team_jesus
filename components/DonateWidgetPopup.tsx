@@ -242,7 +242,7 @@ export function DonateWidgetPopup() {
                 className="w-full pl-12 pr-4 py-4 border-2 border-slate-300 rounded-xl text-base font-semibold focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-500 transition-all"
                 aria-describedby="impact-preview"
                 disabled={state === 'processing'}
-                placeholder="Custom Amount"
+                placeholder="Other amount"
               />
             </div>
           </div>
