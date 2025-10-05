@@ -162,31 +162,26 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          {/* Cloud with white background and text */}
-          <div className="relative mx-auto" style={{ maxWidth: '1000px' }}>
-            <div className="relative min-h-[300px] flex items-center justify-center py-12">
-              {/* Cloud outline - visible behind */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                  src="/images/cloud.svg"
-                  alt="Cloud background"
-                  width={900}
-                  height={500}
-                  className="opacity-20"
-                />
-              </div>
+          {/* Cloud with text */}
+          <div className="relative mx-auto max-w-5xl">
+            <div className="relative">
+              {/* Cloud SVG as background */}
+              <Image
+                src="/images/cloud.svg"
+                alt="Cloud background"
+                width={1280}
+                height={1280}
+                className="w-full h-auto"
+              />
 
-              {/* White interior matching cloud shape */}
-              <div className="absolute inset-[15%_10%] bg-white rounded-[40%]" />
-
-              {/* Text on top */}
-              <div className="relative px-12 md:px-20 py-8 max-w-3xl">
+              {/* Text positioned over cloud */}
+              <div className="absolute inset-0 flex items-center justify-center px-8 md:px-16">
                 <motion.p
                   key={activeTab}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-sm md:text-lg text-black leading-relaxed text-center"
+                  className="text-sm md:text-lg text-black leading-relaxed text-center max-w-3xl"
                 >
                   {tabContent[activeTab as keyof typeof tabContent].description}
                 </motion.p>
