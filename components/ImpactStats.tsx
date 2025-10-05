@@ -127,7 +127,7 @@ export function ImpactStats() {
               </div>
 
               {/* Progress Bar Section */}
-              <div className="flex flex-col items-center justify-between">
+              <div className="flex flex-col items-center">
                 {/* Next level icon - Gates */}
                 <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -140,7 +140,7 @@ export function ImpactStats() {
                 </motion.div>
 
                 {/* Vertical Progress Bar */}
-                <div className="relative w-20 flex-1 bg-white overflow-hidden mb-2">
+                <div className="relative w-20 h-[400px] bg-white overflow-hidden mb-2">
                   {/* Progress label above gradient */}
                   <div className="absolute top-4 left-1/2 -translate-x-1/2 text-center z-10">
                     <p className="text-xs font-bold text-black">10M/25M</p>
