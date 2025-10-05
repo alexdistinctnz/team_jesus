@@ -99,10 +99,27 @@ export function ImpactStats() {
             className="flex flex-col items-center"
           >
             {/* Donate Widget and Progress Bar side by side */}
-            <div className="flex items-stretch gap-6 mb-8">
-              {/* Donate Widget Container */}
-              <div className="flex flex-col">
+            <div className="flex items-start gap-6 mb-8">
+              {/* Donate Widget Container with donor circles below */}
+              <div className="flex flex-col gap-4">
                 <DonateWidgetPopup />
+
+                {/* Donor circles below - 2 rows of 5 */}
+                <div className="grid grid-cols-5 gap-3">
+                  {topDonors.map((donor, index) => (
+                    <motion.div
+                      key={donor.id}
+                      initial={{ scale: 0, opacity: 0 }}
+                      whileInView={{ scale: 1, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
+                      whileHover={{ scale: 1.1 }}
+                      className={`w-16 h-16 rounded-full bg-gradient-to-br ${getDonorColor(donor.icon)} flex items-center justify-center shadow-lg`}
+                    >
+                      {getDonorIcon(donor.icon)}
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
               {/* Progress Bar Section - matches donate panel height */}
@@ -137,25 +154,6 @@ export function ImpactStats() {
 
                 {/* Fisherman Badge Label */}
                 <p className="text-sm font-heading font-bold">Fisherman</p>
-              </div>
-            </div>
-
-            {/* Donor circles below - centered under donate widget */}
-            <div className="w-full max-w-[440px]">
-              <div className="flex flex-wrap justify-center gap-3">
-                {topDonors.map((donor, index) => (
-                  <motion.div
-                    key={donor.id}
-                    initial={{ scale: 0, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
-                    whileHover={{ scale: 1.1 }}
-                    className={`w-14 h-14 rounded-full bg-gradient-to-br ${getDonorColor(donor.icon)} flex items-center justify-center shadow-lg border-2 border-white/20`}
-                  >
-                    {getDonorIcon(donor.icon)}
-                  </motion.div>
-                ))}
               </div>
             </div>
           </motion.div>
