@@ -23,15 +23,15 @@ export function ImpactStats() {
   const getDonorIcon = (iconType: string) => {
     switch (iconType) {
       case 'sandals':
-        return <Image src="/images/1_sandals_icon.svg" alt="Sandals" width={52} height={52} />;
+        return <Image src="/images/1_sandals_icon.svg" alt="Sandals" width={80} height={80} />;
       case 'fish-loaves':
-        return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Fish and Loaves" width={52} height={52} />;
+        return <Image src="/images/2_fish_and_loaves_icon.svg" alt="Fish and Loaves" width={80} height={80} />;
       case 'staff':
-        return <Image src="/images/3_staff_icon.svg" alt="Staff" width={52} height={52} />;
+        return <Image src="/images/3_staff_icon.svg" alt="Staff" width={80} height={80} />;
       case 'fish-net':
-        return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={52} height={52} />;
+        return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={80} height={80} />;
       default:
-        return <HelpCircle className="w-8 h-8 text-white" />;
+        return <HelpCircle className="w-12 h-12 text-white" />;
     }
   };
 
@@ -105,7 +105,7 @@ export function ImpactStats() {
                 <DonateWidgetPopup />
 
                 {/* Donor circles below - 2 rows of 5 */}
-                <div className="grid grid-cols-5 gap-3">
+                <div className="grid grid-cols-5 gap-2 justify-items-center">
                   {topDonors.map((donor, index) => (
                     <motion.div
                       key={donor.id}
@@ -114,7 +114,7 @@ export function ImpactStats() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
                       whileHover={{ scale: 1.1 }}
-                      className={`w-16 h-16 rounded-full bg-gradient-to-br ${getDonorColor(donor.icon)} flex items-center justify-center shadow-lg`}
+                      className="w-20 h-20 flex items-center justify-center"
                     >
                       {getDonorIcon(donor.icon)}
                     </motion.div>
