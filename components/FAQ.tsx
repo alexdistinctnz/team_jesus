@@ -67,17 +67,25 @@ export function FAQ() {
             >
               <Accordion.Item
                 value={`item-${index}`}
-                className="group bg-black rounded-2xl shadow-md hover:shadow-lg transition-all border-2 border-slate-800 hover:border-slate-600 overflow-hidden"
+                className="group bg-black rounded-2xl shadow-md hover:shadow-lg transition-all border-2 border-slate-800 hover:border-[#C9A961] overflow-hidden relative"
               >
+                {/* Shine animation on hover */}
+                <motion.div
+                  className="absolute inset-0 bg-shine opacity-0 group-hover:opacity-20 pointer-events-none"
+                  animate={{ backgroundPosition: ['200% 0', '-200% 0'] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  style={{ backgroundSize: '200% 100%' }}
+                />
+
                 <Accordion.Header>
                   <Accordion.Trigger
                     className={cn(
-                      "w-full px-6 py-5 text-left flex items-center justify-between",
-                      "hover:bg-slate-900 transition-colors",
-                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400/50 focus-visible:ring-inset"
+                      "w-full px-6 py-5 text-left flex items-center justify-between relative z-10",
+                      "hover:bg-[#3D3020] transition-colors",
+                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A961]/50 focus-visible:ring-inset"
                     )}
                   >
-                    <span className="font-semibold text-lg text-white pr-4 group-hover:text-slate-200 transition-colors">
+                    <span className="font-semibold text-lg text-white pr-4 transition-colors">
                       {item.question}
                     </span>
                     <ChevronDown className="w-5 h-5 text-white flex-shrink-0 transition-transform duration-300 group-data-[state=open]:rotate-180" />
@@ -85,7 +93,7 @@ export function FAQ() {
                 </Accordion.Header>
 
                 <Accordion.Content className="overflow-hidden transition-all duration-300 ease-in-out data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                  <div className="px-6 pb-5 pt-2">
+                  <div className="px-6 pb-5 pt-2 relative z-10">
                     <p className="text-slate-300 leading-relaxed">{item.answer}</p>
                   </div>
                 </Accordion.Content>

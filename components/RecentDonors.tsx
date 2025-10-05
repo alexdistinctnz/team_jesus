@@ -110,11 +110,11 @@ export function RecentDonors() {
 
                 {/* Content */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-lg text-primary-900">{donor.name}</h3>
+                  <h3 className="font-bold text-lg text-black">{donor.name}</h3>
                   {donor.message && (
-                    <p className="text-sm text-slate-600 mt-1 mb-2">{donor.message}</p>
+                    <p className="text-sm text-black mt-1 mb-2">{donor.message}</p>
                   )}
-                  <p className="text-sm text-slate-500">{donor.timestamp}</p>
+                  <p className="text-sm text-black">{donor.timestamp}</p>
                 </div>
 
                 {/* Impact badge */}
@@ -141,7 +141,7 @@ export function RecentDonors() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 text-center"
           >
-            <button className="px-8 py-3 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-heading text-sm rounded-full transition-colors uppercase tracking-wide">
+            <button className="px-8 py-3 border-2 border-black text-black hover:bg-black hover:text-white font-heading text-sm rounded-full transition-colors uppercase tracking-wide">
               SEE ALL
             </button>
           </motion.div>
