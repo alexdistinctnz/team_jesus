@@ -68,7 +68,7 @@ export function ImpactStats() {
               {/* Radial gradient circle behind number - positioned around "about" */}
               <div className="relative mb-0">
                 <div className="absolute inset-0 flex items-center justify-start pointer-events-none -z-10">
-                  <div className="w-[400px] h-[400px] -translate-x-[50px] translate-y-[120px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/50 to-transparent rounded-full blur-3xl"></div>
+                  <div className="w-[440px] h-[440px] -translate-x-[10px] translate-y-[120px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/50 to-transparent rounded-full blur-3xl"></div>
                 </div>
                 <div className="relative text-[2.625rem] md:text-[5.25rem] font-sans font-extrabold text-white tabular-nums leading-tight z-10">
                   10,029,090
