@@ -135,9 +135,20 @@ export function ImpactStats() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="mb-4"
-                  style={{ imageRendering: 'pixelated' }}
                 >
-                  <Image src="/images/5_gates_icon.png" alt="Gates" width={80} height={80} style={{ imageRendering: 'pixelated' }} />
+                  <div style={{ width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Image
+                      src="/images/5_gates_icon.png"
+                      alt="Gates"
+                      width={12}
+                      height={12}
+                      style={{
+                        imageRendering: 'pixelated',
+                        transform: 'scale(6.67)',
+                        transformOrigin: 'center'
+                      }}
+                    />
+                  </div>
                 </motion.div>
 
                 {/* Vertical Progress Bar */}
