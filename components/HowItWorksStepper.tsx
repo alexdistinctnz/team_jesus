@@ -162,28 +162,31 @@ export function HowItWorksStepper() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative mt-8"
         >
-          {/* Text on cloud background */}
-          <div className="relative mx-auto max-w-4xl">
-            <div className="relative">
-              {/* Cloud background */}
+          {/* Cloud with white background and text */}
+          <div className="relative mx-auto" style={{ maxWidth: '1000px' }}>
+            <div className="relative min-h-[300px] flex items-center justify-center py-12">
+              {/* Cloud outline - visible behind */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <Image
                   src="/images/cloud.svg"
                   alt="Cloud background"
-                  width={800}
-                  height={400}
-                  className="opacity-15"
+                  width={900}
+                  height={500}
+                  className="opacity-20"
                 />
               </div>
 
-              {/* Text on top of cloud */}
-              <div className="relative py-16 px-8 md:px-16">
+              {/* White interior matching cloud shape */}
+              <div className="absolute inset-[15%_10%] bg-white rounded-[40%]" />
+
+              {/* Text on top */}
+              <div className="relative px-12 md:px-20 py-8 max-w-3xl">
                 <motion.p
                   key={activeTab}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-sm md:text-lg text-black leading-relaxed text-center max-w-3xl mx-auto"
+                  className="text-sm md:text-lg text-black leading-relaxed text-center"
                 >
                   {tabContent[activeTab as keyof typeof tabContent].description}
                 </motion.p>
