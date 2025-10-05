@@ -137,7 +137,7 @@ export function ImpactStats() {
                   className="mb-4"
                   style={{ imageRendering: 'pixelated' }}
                 >
-                  <Image src="/images/5_gates_icon.svg" alt="Gates" width={80} height={80} style={{ imageRendering: 'pixelated' }} />
+                  <Image src="/images/5_gates_icon.png" alt="Gates" width={80} height={80} style={{ imageRendering: 'pixelated' }} />
                 </motion.div>
 
                 {/* Vertical Progress Bar */}
