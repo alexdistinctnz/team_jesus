@@ -164,9 +164,9 @@ export function HowItWorksStepper() {
         >
           {/* Cloud-like white box */}
           <div className="relative mx-auto" style={{ maxWidth: '900px' }}>
-            <svg className="w-full h-auto" viewBox="0 0 900 400" preserveAspectRatio="none">
+            <svg className="w-full h-auto" viewBox="0 0 900 500" preserveAspectRatio="none">
               <path
-                d="M 50,350
+                d="M 50,450
                    L 50,80
                    C 50,50 100,30 150,30
                    C 200,30 250,50 300,50
@@ -174,13 +174,13 @@ export function HowItWorksStepper() {
                    C 500,30 550,50 600,50
                    C 650,50 700,30 750,30
                    C 800,30 850,50 850,80
-                   L 850,320
-                   C 850,350 800,370 750,370
-                   C 700,370 650,350 600,350
-                   C 550,350 500,370 450,370
-                   C 400,370 350,350 300,350
-                   C 250,350 200,370 150,370
-                   C 100,370 50,350 50,320 Z"
+                   L 850,420
+                   C 850,450 800,470 750,470
+                   C 700,470 650,450 600,450
+                   C 550,450 500,470 450,470
+                   C 400,470 350,450 300,450
+                   C 250,450 200,470 150,470
+                   C 100,470 50,450 50,420 Z"
                 fill="white"
               />
             </svg>
@@ -192,7 +192,7 @@ export function HowItWorksStepper() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-xs md:text-lg text-black leading-relaxed text-center max-w-3xl"
+                className="text-sm md:text-lg text-black leading-relaxed text-center max-w-3xl"
               >
                 {tabContent[activeTab as keyof typeof tabContent].description}
               </motion.p>

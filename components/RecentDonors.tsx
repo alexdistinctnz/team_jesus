@@ -120,7 +120,7 @@ export function RecentDonors() {
                 {/* Impact badge */}
                 <div className="text-right flex-shrink-0">
                   <div className="inline-flex flex-col items-end">
-                    <div className="bg-primary-900 text-white font-bold text-2xl px-4 py-2 rounded-lg mb-1">
+                    <div className="bg-black text-white font-bold text-2xl px-4 py-2 rounded-lg mb-1">
                       {(donor.peopleReached / 1000).toLocaleString()}
                     </div>
                     <div className="text-xs text-slate-500 font-semibold uppercase tracking-wide text-right">
