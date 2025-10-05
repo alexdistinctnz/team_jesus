@@ -31,7 +31,11 @@ export function ImpactStats() {
       case 'fish-net':
         return <Image src="/images/4_fish_and_net_icon.svg" alt="Fish and Net" width={80} height={80} />;
       default:
-        return <HelpCircle className="w-12 h-12 text-white" />;
+        return (
+          <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center">
+            <HelpCircle className="w-12 h-12 text-black" />
+          </div>
+        );
     }
   };
 
