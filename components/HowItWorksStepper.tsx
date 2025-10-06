@@ -163,25 +163,25 @@ export function HowItWorksStepper() {
           className="relative mt-8"
         >
           {/* Cloud with text */}
-          <div className="relative mx-auto max-w-5xl -my-32">
+          <div className="relative mx-auto max-w-6xl">
             <div className="relative">
               {/* Cloud SVG as background */}
               <Image
                 src="/images/cloud.svg"
                 alt="Cloud background"
-                width={1280}
-                height={1280}
+                width={1167}
+                height={770}
                 className="w-full h-auto"
               />
 
               {/* Text positioned over cloud */}
-              <div className="absolute inset-0 flex items-center justify-center px-8 md:px-20">
+              <div className="absolute inset-0 flex items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24">
                 <motion.p
                   key={activeTab}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-sm md:text-base text-black leading-relaxed text-center max-w-2xl"
+                  className="text-xs sm:text-sm md:text-base lg:text-lg text-black leading-snug sm:leading-relaxed text-center"
                 >
                   {tabContent[activeTab as keyof typeof tabContent].description}
                 </motion.p>
