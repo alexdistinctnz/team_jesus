@@ -175,7 +175,7 @@ export function HowItWorksStepper() {
               />
 
               {/* Text positioned over cloud */}
-              <div className="absolute inset-0 flex items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24">
+              <div className="absolute inset-0 flex items-center justify-center px-9 sm:px-16 md:px-20 lg:px-28">
                 <motion.p
                   key={activeTab}
                   initial={{ opacity: 0, y: 10 }}
