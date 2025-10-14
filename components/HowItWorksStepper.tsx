@@ -80,7 +80,7 @@ export function HowItWorksStepper() {
   return (
     <section id="how-it-works" className="py-12 md:py-20 relative overflow-hidden">
       {/* Gradient background - starts here and transitions to white */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F5E6D3]/80 to-white pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F5E6D3]/60 via-30% to-white to-60% pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -99,11 +99,11 @@ export function HowItWorksStepper() {
               them (Elevation Church, Bryce Crawfrod, etc…) & then for them to post it on Instagram, Tik Tok,
               Twitter, Facebook, & YouTube.
             </p>
-            <p className="mb-4 text-left text-base md:text-lg">
+            <p className="mb-4 text-left text-sm md:text-base">
               Here's the catch, we only pay the person if their video gets views. We pay them 1 cent per 10
               views they get.
             </p>
-            <p className="mb-4 text-left text-base md:text-lg">
+            <p className="mb-4 text-left text-sm md:text-base">
               100% of your donation is given directly to a "Clipper" (Someone who cuts up clips & posts them)
               as a commission. So they can make a living distributing content about Jesus.
             </p>
@@ -236,7 +236,7 @@ export function HowItWorksStepper() {
                             <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">{section.title}</h3>
                             <p className="text-black leading-relaxed">{section.text}</p>
                           </div>
-                          <div className="hidden md:block rounded-2xl overflow-hidden shadow-lg">
+                          <div className="hidden md:block rounded-2xl overflow-hidden shadow-xl">
                             <div className="aspect-video relative">
                               <Image
                                 src={section.image}
@@ -249,7 +249,7 @@ export function HowItWorksStepper() {
                         </>
                       ) : (
                         <>
-                          <div className="hidden md:block rounded-2xl overflow-hidden shadow-lg order-2 md:order-1">
+                          <div className="hidden md:block rounded-2xl overflow-hidden shadow-xl order-2 md:order-1">
                             <div className="aspect-video relative">
                               <Image
                                 src={section.image}

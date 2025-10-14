@@ -191,8 +191,7 @@ export function DonateWidget() {
               onClick={() => handleQuickAmount(quickAmount)}
               className={cn(
                 "py-4 rounded-xl font-heading text-base transition-all",
-                "focus:outline-none focus:ring-2",
-                isMonthly ? "focus:ring-amber-700" : "focus:ring-primary-500",
+                "focus:outline-none focus:ring-2 focus:ring-primary-500",
                 amountNum === quickAmount
                   ? "bg-primary-600 text-white shadow-lg"
                   : "bg-white text-slate-700 hover:bg-slate-50 border-2 border-slate-300"
@@ -212,8 +211,7 @@ export function DonateWidget() {
               onClick={() => handleQuickAmount(quickAmount)}
               className={cn(
                 "py-4 rounded-xl font-heading text-base transition-all",
-                "focus:outline-none focus:ring-2",
-                isMonthly ? "focus:ring-amber-700" : "focus:ring-primary-500",
+                "focus:outline-none focus:ring-2 focus:ring-primary-500",
                 amountNum === quickAmount
                   ? "bg-primary-600 text-white shadow-lg"
                   : "bg-white text-slate-700 hover:bg-slate-50 border-2 border-slate-300"
@@ -289,8 +287,7 @@ export function DonateWidget() {
           disabled={state === 'processing' || amountNum < 1}
           className={cn(
             "w-full py-5 font-heading text-lg rounded-2xl transition-all duration-300",
-            "focus:outline-none focus:ring-4",
-            isMonthly ? "focus:ring-amber-300" : "focus:ring-primary-300",
+            "focus:outline-none focus:ring-4 focus:ring-primary-300",
             state === 'processing' || amountNum < 1
               ? "bg-slate-300 text-slate-500 cursor-not-allowed"
               : "bg-primary-600 text-white shadow-lg hover:bg-primary-700 hover:shadow-xl"

@@ -31,17 +31,16 @@ export function Hero() {
             />
           </div>
 
-          <h1 className="text-3xl md:text-7xl font-display text-white mb-2 md:mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-7xl font-display text-white mb-2 md:mb-4 tracking-tight">
             <span className="font-extralight">#TEAM</span>
             <span className="font-black">JESUS</span>
           </h1>
 
-          {/* Strapline - 2x size on desktop, constrained width, line break on mobile after "billion" */}
+          {/* Strapline - 2x size on desktop, constrained width, line break after "billion" */}
           <div className="flex justify-center">
-            <p className="text-base md:text-4xl text-white font-black max-w-full md:max-w-[700px]">
-              <span className="inline md:inline">Raising $8M to tell 8 billion</span>
-              <br className="md:hidden" />
-              <span className="inline md:inline"> people about Jesus</span>
+            <p className="text-base md:text-3xl text-white font-black max-w-full md:max-w-[700px]">
+              Raising $8M to tell 8 billion<br />
+              people about Jesus
             </p>
           </div>
         </motion.div>
