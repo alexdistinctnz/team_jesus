@@ -18,9 +18,9 @@ export function ImpactCounter({ value, label, isLoading, large = false }: Impact
     if (value === displayValue) return;
 
     setIsAnimating(true);
-    const duration = 1000;
-    const steps = 30;
-    const increment = (value - displayValue) / steps;
+    const duration = 2500; // Reduced from 1000ms to 2500ms (2-3s range)
+    const steps = 60; // Increased steps for smoother animation
+    const diff = value - displayValue;
     let currentStep = 0;
 
     const timer = setInterval(() => {
@@ -30,7 +30,10 @@ export function ImpactCounter({ value, label, isLoading, large = false }: Impact
         setIsAnimating(false);
         clearInterval(timer);
       } else {
-        setDisplayValue(prev => prev + increment);
+        // Non-linear easing (ease-out) - starts fast, slows down
+        const progress = currentStep / steps;
+        const easeOut = 1 - Math.pow(1 - progress, 3); // Cubic ease-out
+        setDisplayValue(displayValue + (diff * easeOut));
       }
     }, duration / steps);
 
@@ -42,13 +45,14 @@ export function ImpactCounter({ value, label, isLoading, large = false }: Impact
       <div
         className={
           large
-            ? "text-3xl md:text-7xl font-display font-black text-white tabular-nums transition-opacity duration-300"
+            ? "text-5xl md:text-7xl font-display font-black text-white tabular-nums transition-opacity duration-300"
             : "text-3xl md:text-4xl font-bold text-primary-700 tabular-nums transition-opacity duration-300"
         }
         aria-live="polite"
         aria-atomic="true"
         style={{
           opacity: isLoading ? 0.5 : 1,
+          fontWeight: large ? 900 : 700, // Heavier weight for large counter
         }}
       >
         {isLoading ? '...' : formatNumber(Math.floor(displayValue))}

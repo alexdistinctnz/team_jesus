@@ -55,9 +55,9 @@ export function ImpactStats() {
   };
 
   return (
-    <section className="min-h-screen py-20 text-white relative overflow-hidden" style={{ backgroundColor: '#161616' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ transform: 'scale(0.75)', transformOrigin: 'center' }}>
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+    <section className="min-h-screen py-10 md:py-20 text-white relative overflow-hidden flex items-center justify-center" style={{ backgroundColor: '#161616' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Impact stats */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -67,30 +67,31 @@ export function ImpactStats() {
             className="space-y-6"
           >
             <div className="relative">
-              <p className="text-3xl md:text-5xl font-sans font-extrabold mb-4 text-white relative z-10">You told</p>
+              <p className="text-2xl md:text-3xl lg:text-5xl font-sans font-extrabold mb-2 md:mb-4 text-white relative z-10">You told</p>
 
               {/* Radial gradient circle behind number - positioned around "about" */}
               <div className="relative mb-0">
                 <div className="absolute inset-0 flex items-center justify-start pointer-events-none -z-10">
-                  <div className="w-[572px] h-[572px] -translate-x-[10px] translate-y-[120px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/50 to-transparent rounded-full blur-3xl"></div>
+                  <div className="w-[300px] h-[300px] md:w-[572px] md:h-[572px] -translate-x-[5px] md:-translate-x-[10px] translate-y-[60px] md:translate-y-[120px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/50 to-transparent rounded-full blur-3xl"></div>
                 </div>
-                <div className="relative text-[2.625rem] md:text-[5.25rem] font-sans font-extrabold text-white tabular-nums leading-tight z-10">
+                <div className="relative text-3xl md:text-[2.625rem] lg:text-[5.25rem] font-sans font-extrabold text-white tabular-nums leading-tight z-10">
                   10,029,090
                 </div>
               </div>
 
-              <p className="text-3xl md:text-5xl font-sans font-extrabold text-white relative z-10">people about Jesus!</p>
+              <p className="text-2xl md:text-3xl lg:text-5xl font-sans font-extrabold text-white relative z-10">people about Jesus!</p>
             </div>
 
-            <p className="text-xl md:text-2xl font-extrabold text-white leading-relaxed max-w-xl relative z-10 mt-10">
+            <p className="text-lg md:text-xl lg:text-2xl font-extrabold text-white leading-relaxed max-w-xl relative z-10 mt-6 md:mt-10">
               These people might have never heard the word without YOU.
             </p>
 
-            <div className="pt-6 relative z-10">
-              <blockquote className="text-white font-semibold text-base md:text-lg leading-relaxed">
-                "Whoever brings back a sinner from his wandering<br />will save his soul from death and will cover a multitude of sins."
+            <div className="pt-4 md:pt-6 relative z-10">
+              <blockquote className="text-white font-semibold text-sm md:text-base lg:text-lg leading-relaxed">
+                "Whoever brings back a sinner from his wandering<br className="hidden md:block" />
+                <span className="md:hidden"> </span>will save his soul from death and will cover a multitude of sins."
               </blockquote>
-              <p className="text-sm text-white font-semibold mt-2 text-right">James 5:20 (ESV)</p>
+              <p className="text-xs md:text-sm text-white font-semibold mt-2 text-right">James 5:20 (ESV)</p>
             </div>
           </motion.div>
 
@@ -103,13 +104,13 @@ export function ImpactStats() {
             className="flex flex-col items-center"
           >
             {/* Donate Widget and Progress Bar side by side */}
-            <div className="flex items-start gap-6 mb-8">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-6 mb-8">
               {/* Donate Widget Container with donor circles below */}
               <div className="flex flex-col gap-4">
                 <DonateWidgetPopup />
 
                 {/* Donor circles below - 2 rows of 5 */}
-                <div className="grid grid-cols-5 gap-2 justify-items-center">
+                <div className="grid grid-cols-5 gap-1 md:gap-2 justify-items-center">
                   {topDonors.map((donor, index) => (
                     <motion.div
                       key={donor.id}
@@ -118,7 +119,7 @@ export function ImpactStats() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
                       whileHover={{ scale: 1.1 }}
-                      className="w-20 h-20 flex items-center justify-center"
+                      className="w-12 h-12 md:w-16 lg:w-20 md:h-16 lg:h-20 flex items-center justify-center"
                     >
                       {getDonorIcon(donor.icon)}
                     </motion.div>
@@ -152,7 +153,7 @@ export function ImpactStats() {
                 </motion.div>
 
                 {/* Vertical Progress Bar */}
-                <div className="relative w-20 h-[558px] bg-white overflow-hidden mb-2">
+                <div className="relative w-16 md:w-20 h-[400px] md:h-[558px] bg-white overflow-hidden mb-2">
                   <motion.div
                     initial={{ height: 0 }}
                     whileInView={{ height: '40%' }}

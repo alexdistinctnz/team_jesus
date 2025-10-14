@@ -35,10 +35,7 @@ const faqItems: FAQItem[] = [
 
 export function FAQ() {
   return (
-    <section className="py-20 relative">
-      {/* Gradient background from transparent to light gold */}
-      <div className="absolute inset-0 -top-32 bg-gradient-to-b from-transparent via-[#F5E6D3]/50 to-[#F5E6D3] pointer-events-none" />
-
+    <section className="py-12 md:py-20 relative bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +44,7 @@ export function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-black rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-rich rounded-full mb-4">
             <HelpCircle className="w-4 h-4 text-white" />
             <span className="text-sm font-semibold text-white uppercase tracking-wide">Have Questions?</span>
           </div>
@@ -67,7 +64,7 @@ export function FAQ() {
             >
               <Accordion.Item
                 value={`item-${index}`}
-                className="group bg-black rounded-2xl shadow-md hover:shadow-lg transition-all border-2 border-slate-800 hover:border-[#C9A961] overflow-hidden relative"
+                className="group bg-gold-rich rounded-2xl shadow-md hover:shadow-lg transition-all border-2 border-gold-DEFAULT hover:border-gold-bright overflow-hidden relative"
               >
                 {/* Shine animation on hover */}
                 <motion.div
@@ -81,8 +78,8 @@ export function FAQ() {
                   <Accordion.Trigger
                     className={cn(
                       "w-full px-6 py-5 text-left flex items-center justify-between relative z-10",
-                      "hover:bg-[#3D3020] transition-colors",
-                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A961]/50 focus-visible:ring-inset"
+                      "hover:brightness-110 transition-all",
+                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-bright focus-visible:ring-inset"
                     )}
                   >
                     <span className="font-semibold text-lg text-white pr-4 transition-colors">
@@ -94,7 +91,7 @@ export function FAQ() {
 
                 <Accordion.Content className="overflow-hidden transition-all duration-300 ease-in-out data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
                   <div className="px-6 pb-5 pt-2 relative z-10">
-                    <p className="text-slate-300 leading-relaxed">{item.answer}</p>
+                    <p className="text-white leading-relaxed">{item.answer}</p>
                   </div>
                 </Accordion.Content>
               </Accordion.Item>

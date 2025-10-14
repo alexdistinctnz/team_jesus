@@ -18,26 +18,32 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-6 md:mb-12"
         >
           {/* Logo */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-3 md:mb-6">
             <Image
               src="/images/Team_Jesus_Logo.png"
               alt="PostClips Logo"
               width={144}
               height={144}
-              className="w-22 md:w-36 h-auto"
+              className="w-16 md:w-36 h-auto"
             />
           </div>
 
-          <h1 className="text-3xl md:text-7xl font-display text-white mb-4 tracking-tight">
+          <h1 className="text-3xl md:text-7xl font-display text-white mb-2 md:mb-4 tracking-tight">
             <span className="font-extralight">#TEAM</span>
             <span className="font-black">JESUS</span>
           </h1>
-          <p className="text-base md:text-lg text-white font-black">
-            Raising $8M to tell 8 billion people about Jesus
-          </p>
+
+          {/* Strapline - 2x size on desktop, constrained width, line break on mobile after "billion" */}
+          <div className="flex justify-center">
+            <p className="text-base md:text-4xl text-white font-black max-w-full md:max-w-[700px]">
+              <span className="inline md:inline">Raising $8M to tell 8 billion</span>
+              <br className="md:hidden" />
+              <span className="inline md:inline"> people about Jesus</span>
+            </p>
+          </div>
         </motion.div>
 
         {/* Large counter - like TeamWater's prominent counter */}
@@ -45,7 +51,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-12"
         >
           <div className="inline-block">
             <ImpactCounter

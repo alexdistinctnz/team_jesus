@@ -36,6 +36,16 @@ const config: Config = {
           800: '#00785a',
           900: '#00503c',
         },
+        gold: {
+          bright: '#F4C542', // Monthly border bright gold
+          rich: '#B8860B', // FAQ background rich gold
+          DEFAULT: '#D4A574', // General gold
+        },
+        impact: {
+          light: '#D4F4DD', // Light green for impact section
+          DEFAULT: '#4ADE80', // Medium green
+          dark: '#16A34A', // Dark green for text
+        },
       },
       fontFamily: {
         sans: ['var(--font-sora)', ...fontFamily.sans],
