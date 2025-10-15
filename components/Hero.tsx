@@ -23,7 +23,7 @@ export function Hero() {
           {/* Logo */}
           <div className="flex justify-center mb-3 md:mb-6">
             <Image
-              src="/images/Team_Jesus_Logo.png"
+              src="/images/logo.png"
               alt="PostClips Logo"
               width={144}
               height={144}
