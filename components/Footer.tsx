@@ -34,7 +34,7 @@ export function Footer() {
           <div className="flex items-center justify-center">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.5">
               <Image
-                src="/images/Team_Jesus_Logo.png"
+                src="/images/logo.png"
                 alt="Team Jesus"
                 width={96}
                 height={96}
@@ -56,7 +56,7 @@ export function Footer() {
           <div className="flex items-center justify-center">
             <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.5">
               <Image
-                src="/images/Team_Jesus_Logo.png"
+                src="/images/logo.png"
                 alt="Team Jesus"
                 width={96}
                 height={96}
