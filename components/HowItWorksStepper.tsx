@@ -168,9 +168,9 @@ export function HowItWorksStepper() {
           {/* Cloud with text */}
           <div className="relative mx-auto max-w-6xl">
             <div className="relative">
-              {/* Cloud SVG as background */}
+              {/* Cloud photoreal background */}
               <Image
-                src="/images/cloud.svg"
+                src="/images/cloud_photoreal.png"
                 alt="Cloud background"
                 width={1167}
                 height={770}
