@@ -55,19 +55,18 @@ export function ImpactStats() {
   };
 
   return (
-    <section className="min-h-screen py-10 md:py-20 text-white relative overflow-hidden flex items-center justify-center" style={{ backgroundColor: '#161616' }}>
+    <section className="min-h-screen py-10 md:py-20 text-white relative flex items-center justify-center" style={{ backgroundColor: '#161616' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Impact stats */}
-          <div className="space-y-6">
-            <div className="relative">
+          <div className="space-y-6 overflow-visible">
+            <div className="relative overflow-visible">
               <p className="text-2xl md:text-3xl lg:text-5xl font-sans font-extrabold mb-2 md:mb-4 text-white relative z-10">You told</p>
 
               {/* Radial gradient circle behind number - positioned around "about" */}
-              <div className="relative mb-0">
-                <div className="absolute inset-0 flex items-center justify-start pointer-events-none -z-10">
-                  <div className="w-[400px] h-[400px] md:w-[700px] md:h-[700px] -translate-x-[5px] md:-translate-x-[10px] translate-y-[60px] md:translate-y-[120px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/70 to-transparent rounded-full blur-3xl"></div>
-                </div>
+              <div className="relative mb-0 overflow-visible">
+                {/* Blue glow spotlight */}
+                <div className="absolute left-0 top-0 w-[400px] h-[400px] md:w-[700px] md:h-[700px] -translate-x-[5px] md:-translate-x-[10px] translate-y-[60px] md:translate-y-[120px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/70 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
                 <div className="relative text-3xl md:text-[2.625rem] lg:text-[5.25rem] font-sans font-extrabold text-white tabular-nums leading-tight z-10">
                   10,029,090
                 </div>
