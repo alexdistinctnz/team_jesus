@@ -83,13 +83,7 @@ export function HowItWorksStepper() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#F5E6D3]/60 via-30% to-white to-60% pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
+        <div className="text-center">
           <h2 className="text-6xl md:text-8xl font-sans font-extrabold text-black mb-6">
             HOW IT WORKS
           </h2>
@@ -155,27 +149,26 @@ export function HowItWorksStepper() {
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Content Panel */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative mt-8"
-        >
+        <div className="relative mt-8">
           {/* Cloud with text */}
-          <div className="relative mx-auto max-w-6xl">
+          <div className="relative mx-auto w-full -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
             <div className="relative">
-              {/* Cloud photoreal background */}
-              <Image
-                src="/images/cloud_photoreal.png"
-                alt="Cloud background"
-                width={1167}
-                height={770}
-                className="w-full h-auto"
-              />
+              {/* Cloud photoreal background - thinner and full width */}
+              <div className="relative w-full overflow-hidden" style={{ transform: 'scaleY(0.7)' }}>
+                <Image
+                  src="/images/cloud_photoreal.png"
+                  alt="Cloud background"
+                  width={1167}
+                  height={770}
+                  className="w-full h-auto"
+                  style={{ minWidth: '100%' }}
+                />
+                {/* Gradient overlay to reduce texture in middle */}
+                <div className="absolute inset-0 bg-gradient-radial from-white/40 via-transparent to-transparent" />
+              </div>
 
               {/* Text positioned over cloud */}
               <div className="absolute inset-0 flex items-center justify-center px-9 sm:px-16 md:px-20 lg:px-28">
@@ -184,7 +177,7 @@ export function HowItWorksStepper() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="text-xs sm:text-sm md:text-base lg:text-lg text-black leading-snug sm:leading-relaxed text-center"
+                  className="text-xs sm:text-sm md:text-base lg:text-lg text-black leading-snug sm:leading-relaxed text-center font-bold"
                 >
                   {tabContent[activeTab as keyof typeof tabContent].description}
                 </motion.p>
@@ -194,11 +187,8 @@ export function HowItWorksStepper() {
 
           <div className="max-w-4xl mx-auto">
             {/* Grid sections with decorative lines */}
-            <motion.div
+            <div
               key={`${activeTab}-sections`}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
               className="relative"
             >
               {/* Vertical center line */}
@@ -211,12 +201,8 @@ export function HowItWorksStepper() {
                 const isLast = index === tabContent[activeTab as keyof typeof tabContent].sections.length - 1;
 
                 return (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="relative"
                   >
                     {/* Top horizontal line (skip for first item) */}
@@ -266,12 +252,12 @@ export function HowItWorksStepper() {
                         </>
                       )}
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

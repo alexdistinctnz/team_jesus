@@ -95,13 +95,7 @@ export function RecentDonors() {
   return (
     <section className="py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-white rounded-3xl p-6 md:p-8 shadow-lg"
-        >
+        <div className="bg-white rounded-3xl p-6 md:p-8 shadow-lg">
           {/* Header with tabs */}
           <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-200">
             {/* Tab buttons with animated pill */}
@@ -195,49 +189,43 @@ export function RecentDonors() {
 
           {/* Donor list */}
           <div className="space-y-0">
-            <AnimatePresence mode="popLayout">
-              {displayedDonors.map((donor, index) => (
-                <motion.div
-                  key={`${donor.name}-${donor.timestamp}`}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.4, delay: index * 0.02 }}
-                  className="py-6 flex items-start gap-4"
-                  style={{
-                    borderBottom: index < displayedDonors.length - 1 ? '3px solid rgb(203 213 225)' : 'none',
-                    borderRadius: '2px'
-                  }}
-                >
-                  {/* Avatar */}
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
-                    {getDonorIcon(donor.peopleReached)}
-                  </div>
+            {displayedDonors.map((donor, index) => (
+              <div
+                key={`${donor.name}-${donor.timestamp}`}
+                className="py-6 flex items-start gap-4"
+                style={{
+                  borderBottom: index < displayedDonors.length - 1 ? '3px solid rgb(203 213 225)' : 'none',
+                  borderRadius: '2px'
+                }}
+              >
+                {/* Avatar */}
+                <div className="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  {getDonorIcon(donor.peopleReached)}
+                </div>
 
-                  {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-lg text-black">{donor.name}</h3>
-                    {donor.message && (
-                      <p className="text-sm text-black mt-1 mb-2">{donor.message}</p>
-                    )}
-                    <p className="text-sm text-black">{donor.timestamp}</p>
-                  </div>
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-lg text-black">{donor.name}</h3>
+                  {donor.message && (
+                    <p className="text-sm text-black mt-1 mb-2">{donor.message}</p>
+                  )}
+                  <p className="text-sm text-black">{donor.timestamp}</p>
+                </div>
 
-                  {/* Impact badge */}
-                  <div className="text-right flex-shrink-0">
-                    <div className="inline-flex flex-col items-end">
-                      <div className="bg-black text-white font-bold text-2xl px-4 py-2 rounded-lg mb-1">
-                        {(donor.peopleReached / 1000).toLocaleString()}
-                      </div>
-                      <div className="text-xs text-slate-500 font-semibold uppercase tracking-wide text-right">
-                        <div>PEOPLE TOLD</div>
-                        <div>ABOUT JESUS</div>
-                      </div>
+                {/* Impact badge */}
+                <div className="text-right flex-shrink-0">
+                  <div className="inline-flex flex-col items-end">
+                    <div className="bg-black text-white font-bold text-2xl px-4 py-2 rounded-lg mb-1">
+                      {(donor.peopleReached / 1000).toLocaleString()}
+                    </div>
+                    <div className="text-xs text-slate-500 font-semibold uppercase tracking-wide text-right">
+                      <div>PEOPLE TOLD</div>
+                      <div>ABOUT JESUS</div>
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* See All / Collapse button */}
@@ -264,7 +252,7 @@ export function RecentDonors() {
               No donors found matching "{searchQuery}"
             </div>
           )}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

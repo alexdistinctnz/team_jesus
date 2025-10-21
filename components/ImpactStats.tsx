@@ -59,20 +59,14 @@ export function ImpactStats() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Impact stats */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
-          >
+          <div className="space-y-6">
             <div className="relative">
               <p className="text-2xl md:text-3xl lg:text-5xl font-sans font-extrabold mb-2 md:mb-4 text-white relative z-10">You told</p>
 
               {/* Radial gradient circle behind number - positioned around "about" */}
               <div className="relative mb-0">
                 <div className="absolute inset-0 flex items-center justify-start pointer-events-none -z-10">
-                  <div className="w-[300px] h-[300px] md:w-[572px] md:h-[572px] -translate-x-[5px] md:-translate-x-[10px] translate-y-[60px] md:translate-y-[120px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/50 to-transparent rounded-full blur-3xl"></div>
+                  <div className="w-[400px] h-[400px] md:w-[700px] md:h-[700px] -translate-x-[5px] md:-translate-x-[10px] translate-y-[60px] md:translate-y-[120px] bg-gradient-radial from-[#0973AC] via-[#0973AC]/70 to-transparent rounded-full blur-3xl"></div>
                 </div>
                 <div className="relative text-3xl md:text-[2.625rem] lg:text-[5.25rem] font-sans font-extrabold text-white tabular-nums leading-tight z-10">
                   10,029,090
@@ -93,16 +87,10 @@ export function ImpactStats() {
               </blockquote>
               <p className="text-xs md:text-sm text-white font-semibold mt-2 text-right">James 5:20 (ESV)</p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right side - Donation Widget, Progress Bar, and Badges */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-center"
-          >
+          <div className="flex flex-col items-center">
             {/* Donate Widget and Progress Bar side by side */}
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-6 mb-8">
               {/* Donate Widget Container with donor circles below */}
@@ -188,7 +176,7 @@ export function ImpactStats() {
                 </motion.div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

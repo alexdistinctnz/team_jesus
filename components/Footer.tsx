@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 export function Footer() {
@@ -11,13 +10,7 @@ export function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Desktop layout */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="hidden md:flex items-center justify-between"
-        >
+        <div className="hidden md:flex items-center justify-between">
           {/* #TeamJesus */}
           <div className="font-heading text-2xl font-bold">
             #TEAMJESUS
@@ -32,7 +25,7 @@ export function Footer() {
 
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.5">
+            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.25">
               <Image
                 src="/images/logo.png"
                 alt="Team Jesus"
@@ -42,19 +35,13 @@ export function Footer() {
               />
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Mobile layout - stacked */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="md:hidden flex flex-col items-center gap-6"
-        >
+        <div className="md:hidden flex flex-col items-center gap-6">
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.5">
+            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.25">
               <Image
                 src="/images/logo.png"
                 alt="Team Jesus"
@@ -76,7 +63,7 @@ export function Footer() {
               CONTACT US
             </a>
           </nav>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

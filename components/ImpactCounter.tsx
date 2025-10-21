@@ -18,7 +18,7 @@ export function ImpactCounter({ value, label, isLoading, large = false }: Impact
     if (value === displayValue) return;
 
     setIsAnimating(true);
-    const duration = 2500; // Reduced from 1000ms to 2500ms (2-3s range)
+    const duration = 800; // Fast animation for better UX
     const steps = 60; // Increased steps for smoother animation
     const diff = value - displayValue;
     let currentStep = 0;
@@ -45,7 +45,7 @@ export function ImpactCounter({ value, label, isLoading, large = false }: Impact
       <div
         className={
           large
-            ? "text-5xl md:text-7xl font-display font-black text-white tabular-nums transition-opacity duration-300"
+            ? "text-6xl md:text-8xl font-display font-black text-white tabular-nums transition-opacity duration-300"
             : "text-3xl md:text-4xl font-bold text-primary-700 tabular-nums transition-opacity duration-300"
         }
         aria-live="polite"

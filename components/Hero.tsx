@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { useMetrics } from '@/hooks/useMetrics';
 import { ImpactCounter } from './ImpactCounter';
 import { DonateWidget } from './DonateWidget';
@@ -14,21 +13,18 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Logo and Main heading - centered */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-6 md:mb-12"
-        >
+        <div className="text-center mb-6 md:mb-12">
           {/* Logo */}
           <div className="flex justify-center mb-3 md:mb-6">
-            <Image
-              src="/images/logo.png"
-              alt="PostClips Logo"
-              width={144}
-              height={144}
-              className="w-16 md:w-36 h-auto"
-            />
+            <div className="w-16 h-16 md:w-36 md:h-36 bg-white rounded-full flex items-center justify-center p-0.25">
+              <Image
+                src="/images/logo.png"
+                alt="PostClips Logo"
+                width={144}
+                height={144}
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
 
           <h1 className="text-4xl md:text-7xl font-display text-white mb-2 md:mb-4 tracking-tight">
@@ -43,15 +39,10 @@ export function Hero() {
               people about Jesus
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Large counter - like TeamWater's prominent counter */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-center mb-8 md:mb-12"
-        >
+        <div className="text-center mb-8 md:mb-12">
           <div className="inline-block">
             <ImpactCounter
               value={metrics?.peopleReached ?? 0}
@@ -59,22 +50,19 @@ export function Hero() {
               isLoading={isLoading}
               large
             />
-            <p className="text-white text-base md:text-2xl font-black mt-2 uppercase tracking-wide">
+            <p className="text-white text-lg md:text-3xl font-black mt-2 uppercase tracking-wide">
               People told about Jesus
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Donation widget */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <div
           className="mx-auto"
           style={{ maxWidth: '432px' }}
         >
           <DonateWidget />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
