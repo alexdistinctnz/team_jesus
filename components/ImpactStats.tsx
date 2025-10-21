@@ -63,23 +63,23 @@ export function ImpactStats() {
             <div className="relative overflow-visible">
               <p className="text-2xl md:text-3xl lg:text-5xl font-sans font-extrabold mb-2 md:mb-4 text-white relative z-10">You told</p>
 
-              {/* Radial gradient circle behind number - positioned around "about" */}
-              <div className="relative mb-0 overflow-visible">
-                {/* Blue glow spotlight */}
+              <div className="relative text-3xl md:text-[2.625rem] lg:text-[5.25rem] font-sans font-extrabold text-white tabular-nums leading-tight z-10 mb-0">
+                10,029,090
+              </div>
+
+              {/* Blue glow spotlight - positioned behind "about" */}
+              <div className="relative overflow-visible">
                 <div
-                  className="absolute left-0 top-0 w-[400px] h-[400px] md:w-[700px] md:h-[700px] -translate-x-[5px] md:-translate-x-[10px] translate-y-[60px] md:translate-y-[120px] rounded-full pointer-events-none"
+                  className="absolute left-0 top-1/2 w-[400px] h-[400px] md:w-[700px] md:h-[700px] rounded-full pointer-events-none"
                   style={{
                     background: 'radial-gradient(circle, rgba(9, 115, 172, 0.8) 0%, rgba(9, 115, 172, 0.4) 40%, transparent 70%)',
                     filter: 'blur(80px)',
+                    transform: 'translate(-5px, -50%) translateY(0px)',
                     zIndex: 0
                   }}
                 ></div>
-                <div className="relative text-3xl md:text-[2.625rem] lg:text-[5.25rem] font-sans font-extrabold text-white tabular-nums leading-tight z-10">
-                  10,029,090
-                </div>
+                <p className="text-2xl md:text-3xl lg:text-5xl font-sans font-extrabold text-white relative z-10">people about Jesus!</p>
               </div>
-
-              <p className="text-2xl md:text-3xl lg:text-5xl font-sans font-extrabold text-white relative z-10">people about Jesus!</p>
             </div>
 
             <p className="text-lg md:text-xl lg:text-2xl font-extrabold text-white leading-relaxed max-w-xl relative z-10 mt-6 md:mt-10">
