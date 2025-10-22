@@ -16,13 +16,13 @@ export function Hero() {
         <div className="text-center mb-6 md:mb-12">
           {/* Logo */}
           <div className="flex justify-center mb-3 md:mb-6">
-            <div className="w-16 h-16 md:w-36 md:h-36 bg-white rounded-full flex items-center justify-center p-0.25">
+            <div className="w-16 h-16 md:w-36 md:h-36 bg-white rounded-full flex items-center justify-center p-0.25 border-0">
               <Image
                 src="/images/logo.png"
                 alt="PostClips Logo"
                 width={144}
                 height={144}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain border-0"
               />
             </div>
           </div>

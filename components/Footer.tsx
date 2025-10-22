@@ -18,20 +18,20 @@ export function Footer() {
 
           {/* Contact Us */}
           <nav className="font-heading text-base font-bold">
-            <a href="mailto:hello@postclips.com" className="hover:text-white transition-colors">
+            <a href="mailto:hello@postclips.com" className="hover:text-[#F4C542] transition-colors">
               CONTACT US
             </a>
           </nav>
 
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.25">
+            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.25 border-0">
               <Image
                 src="/images/logo.png"
                 alt="Team Jesus"
                 width={96}
                 height={96}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain border-0"
               />
             </div>
           </div>
@@ -41,13 +41,13 @@ export function Footer() {
         <div className="md:hidden flex flex-col items-center gap-6">
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.25">
+            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.25 border-0">
               <Image
                 src="/images/logo.png"
                 alt="Team Jesus"
                 width={96}
                 height={96}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain border-0"
               />
             </div>
           </div>
@@ -59,7 +59,7 @@ export function Footer() {
 
           {/* Contact Us */}
           <nav className="font-heading text-base font-bold">
-            <a href="mailto:hello@postclips.com" className="hover:text-white transition-colors">
+            <a href="mailto:hello@postclips.com" className="hover:text-[#F4C542] transition-colors">
               CONTACT US
             </a>
           </nav>

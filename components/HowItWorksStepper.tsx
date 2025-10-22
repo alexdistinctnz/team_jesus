@@ -157,7 +157,7 @@ export function HowItWorksStepper() {
           <div className="relative mx-auto w-full -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
             <div className="relative">
               {/* Cloud photoreal background - thinner and full width */}
-              <div className="relative w-full overflow-hidden" style={{ transform: 'scaleY(0.7)' }}>
+              <div className="relative w-full overflow-hidden" style={{ transform: 'scaleY(0.7) scaleX(1.2)' }}>
                 <Image
                   src="/images/cloud_photoreal.png"
                   alt="Cloud background"
@@ -167,7 +167,7 @@ export function HowItWorksStepper() {
                   style={{ minWidth: '100%' }}
                 />
                 {/* Gradient overlay to reduce texture in middle */}
-                <div className="absolute inset-0 bg-gradient-radial from-white/40 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-radial from-white/70 via-transparent to-transparent" />
               </div>
 
               {/* Text positioned over cloud */}

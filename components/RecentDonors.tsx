@@ -188,11 +188,11 @@ export function RecentDonors() {
           </div>
 
           {/* Donor list */}
-          <div className="space-y-0">
+          <div className="space-y-0 max-h-[900px] overflow-y-auto">
             {displayedDonors.map((donor, index) => (
               <div
                 key={`${donor.name}-${donor.timestamp}`}
-                className="py-6 flex items-start gap-4"
+                className="py-3 flex items-start gap-4"
                 style={{
                   borderBottom: index < displayedDonors.length - 1 ? '3px solid rgb(203 213 225)' : 'none',
                   borderRadius: '2px'
