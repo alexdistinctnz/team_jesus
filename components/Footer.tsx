@@ -25,7 +25,7 @@ export function Footer() {
 
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.25 border-0">
+            <div className="w-24 h-24 rounded-full flex items-center justify-center border-0">
               <Image
                 src="/images/logo.png"
                 alt="Team Jesus"
@@ -41,7 +41,7 @@ export function Footer() {
         <div className="md:hidden flex flex-col items-center gap-6">
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-0.25 border-0">
+            <div className="w-24 h-24 rounded-full flex items-center justify-center border-0">
               <Image
                 src="/images/logo.png"
                 alt="Team Jesus"
