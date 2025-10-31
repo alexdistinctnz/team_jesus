@@ -8,6 +8,15 @@ import Image from 'next/image';
 export function HowItWorksStepper() {
   const [activeTab, setActiveTab] = useState('why');
 
+  // Customizable elliptical mask gradient settings
+  const maskConfig = {
+    ellipseWidth: '70%',      // Horizontal size of visible area
+    ellipseHeight: '60%',     // Vertical size of visible area
+    fadeStart: '50%',         // Where transparency begins
+    fadeEnd: '90%',           // Where it becomes fully transparent
+    position: 'center'        // Center point of the ellipse
+  };
+
   const tabContent = {
     why: {
       description: "Jesus makes it clear that your purpose on earth is to build the kingdom of Heaven. God commands us: 'Go therefore and make disciples of all nations' (Matthew 28:19-20) and 'Follow me, and I will make you fishers of men' (Matthew 4:19). If no one spreads the gospel, people stay lost. God requires you to obey His word and share the Good News.",
@@ -157,7 +166,13 @@ export function HowItWorksStepper() {
           <div className="relative mx-auto w-full -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
             <div className="relative">
               {/* Cloud photoreal background - thinner and full width */}
-              <div className="relative w-full overflow-hidden scale-y-[1.0] sm:scale-y-[0.8] md:scale-y-[0.7] scale-x-[1.3] sm:scale-x-[1.25] md:scale-x-[1.2]">
+              <div
+                className="relative w-full overflow-hidden scale-y-[1.0] sm:scale-y-[0.8] md:scale-y-[0.7] scale-x-[1.3] sm:scale-x-[1.25] md:scale-x-[1.2]"
+                style={{
+                  maskImage: `radial-gradient(ellipse ${maskConfig.ellipseWidth} ${maskConfig.ellipseHeight} at ${maskConfig.position}, black ${maskConfig.fadeStart}, transparent ${maskConfig.fadeEnd})`,
+                  WebkitMaskImage: `radial-gradient(ellipse ${maskConfig.ellipseWidth} ${maskConfig.ellipseHeight} at ${maskConfig.position}, black ${maskConfig.fadeStart}, transparent ${maskConfig.fadeEnd})`
+                }}
+              >
                 <Image
                   src="/images/cloud_photoreal_curves.png"
                   alt="Cloud background"
