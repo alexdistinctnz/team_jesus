@@ -13,7 +13,7 @@ export function HowItWorksStepper() {
     ellipseWidth: '70%',      // Horizontal size of visible area
     ellipseHeight: '60%',     // Vertical size of visible area
     fadeStart: '50%',         // Where transparency begins
-    fadeEnd: '90%',           // Where it becomes fully transparent
+    fadeEnd: '65%',           // Where it becomes fully transparent
     position: 'center'        // Center point of the ellipse
   };
 
