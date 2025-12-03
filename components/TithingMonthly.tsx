@@ -47,7 +47,7 @@ export function TithingMonthly() {
               </p>
               <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border-2 border-emerald-200">
                 <p className="font-semibold text-emerald-900 text-xl mb-2">
-                  PostClips allocates 10% of monthly profits to #TeamJesus
+                  Team Jesus allocates 10% of monthly profits to #TeamJesus
                 </p>
                 <p className="text-slate-700">
                   As our business grows, so does our impact for the Gospel.

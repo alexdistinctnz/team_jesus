@@ -18,7 +18,7 @@ export function Footer() {
 
           {/* Contact Us */}
           <nav className="font-heading text-base font-bold">
-            <a href="mailto:hello@postclips.com" className="hover:text-[#F4C542] transition-colors">
+            <a href="mailto:hello@teamjesus.com" className="hover:text-[#F4C542] transition-colors">
               CONTACT US
             </a>
           </nav>
@@ -59,7 +59,7 @@ export function Footer() {
 
           {/* Contact Us */}
           <nav className="font-heading text-base font-bold">
-            <a href="mailto:hello@postclips.com" className="hover:text-[#F4C542] transition-colors">
+            <a href="mailto:hello@teamjesus.com" className="hover:text-[#F4C542] transition-colors">
               CONTACT US
             </a>
           </nav>

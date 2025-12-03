@@ -13,7 +13,7 @@ interface FAQItem {
 const faqItems: FAQItem[] = [
   {
     question: 'Where does my donation go?',
-    answer: '100% of donations go directly to commission payments for clippers who create and distribute Gospel content. PostClips operations are funded separately through business revenue.',
+    answer: '100% of donations go directly to commission payments for clippers who create and distribute Gospel content. Team Jesus operations are funded separately through business revenue.',
   },
   {
     question: 'Who are the clippers?',
@@ -29,7 +29,7 @@ const faqItems: FAQItem[] = [
   },
   {
     question: 'Can I cancel my monthly donation?',
-    answer: 'Yes, you can cancel your monthly donation at any time by contacting us at hello@postclips.com.',
+    answer: 'Yes, you can cancel your monthly donation at any time by contacting us at hello@teamjesus.com.',
   },
 ];
 

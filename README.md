@@ -1,4 +1,4 @@
-# TeamJesus / PostClips Microsite
+# TeamJesus Microsite
 
 A production ready Next.js donor facing microsite built with modern design, animations, and accessibility.
 
@@ -200,7 +200,7 @@ team_jesus/
 * Drop shadows on section images
 * Gradient background transition
 * Scripture references
-* White PostClips logo
+* Team Jesus branding
 
 ### Accordion Components (WhyThisMatters, FAQ)
 
@@ -509,7 +509,7 @@ Replace placeholders in `components/TrustBand.tsx` with actual logos.
 * Counter animation sped up (2.5s, cubic ease out)
 * Light green impact section in donation widget
 * Bright gold monthly border (#F4C542)
-* White PostClips logo variant
+* Team Jesus branding
 * Gold FAQ backgrounds (#B8860B)
 * Animated search in Recent Donors
 * Tab pill animation with spring physics

@@ -19,7 +19,7 @@ export function Hero() {
             <div className="w-16 h-16 md:w-36 md:h-36 rounded-full flex items-center justify-center border-0">
               <Image
                 src="/images/logo.png"
-                alt="PostClips Logo"
+                alt="Team Jesus Logo"
                 width={144}
                 height={144}
                 className="w-full h-full object-contain border-0"

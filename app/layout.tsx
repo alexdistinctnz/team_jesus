@@ -18,18 +18,18 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: '#TeamJesus - $1 = 1,000 People Hear About Jesus',
-  description: 'Join #TeamJesus in raising $8.142M to tell 8.142 billion people about Jesus through PostClips. Every dollar funds Gospel content that reaches 1,000 people.',
+  description: 'Join #TeamJesus in raising $8.142M to tell 8.142 billion people about Jesus through Team Jesus. Every dollar funds Gospel content that reaches 1,000 people.',
   openGraph: {
     title: '#TeamJesus - $1 = 1,000 People Hear About Jesus',
     description: 'Join the movement to reach 8.142 billion people with the Gospel through short-form video content.',
     type: 'website',
-    url: 'https://postclips.com/teamjesus',
+    url: '#',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: '#TeamJesus - PostClips',
+        alt: '#TeamJesus',
       },
     ],
   },

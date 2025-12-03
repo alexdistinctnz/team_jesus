@@ -62,7 +62,7 @@ Scripture teaches that our faithful service is rewarded eternally.
 
 We take stewardship seriously. Your donations go **100% to commission payments** for clippers who create and post Gospel content that reaches people around the world.
 
-PostClips operates sustainably through revenue from our business services. This allows us to ensure that every dollar you give directly funds the mission to reach people with the message of Jesus.
+Team Jesus operates sustainably through revenue from our business services. This allows us to ensure that every dollar you give directly funds the mission to reach people with the message of Jesus.
 
 **Results-based model:** We pay clippers $0.01 per 10 views, so your investment drives measurable, real-world impact.
 
@@ -75,7 +75,7 @@ PostClips operates sustainably through revenue from our business services. This 
 **Tithing**—giving the first 10% of your income—is a biblical principle that honors God and advances His kingdom. Monthly giving provides **consistent support** for ongoing Gospel outreach.
 
 ### Key Message:
-**PostClips allocates 10% of monthly profits to #TeamJesus**
+**Team Jesus allocates 10% of monthly profits to #TeamJesus**
 
 As our business grows, so does our impact for the Gospel.
 
@@ -86,7 +86,7 @@ As our business grows, so does our impact for the Gospel.
 A section showing partner logos and ministry partnerships.
 
 ### Partners Listed:
-- PostClips
+- Team Jesus
 - Elevation Church
 - Partner 3 (placeholder)
 - Partner 4 (placeholder)

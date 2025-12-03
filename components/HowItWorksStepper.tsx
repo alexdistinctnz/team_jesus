@@ -52,11 +52,11 @@ export function HowItWorksStepper() {
       ]
     },
     how: {
-      description: "Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime. PostClips runs as a real business, generating revenue by providing posting and distribution services to traditional media companies. This allows us to fund development, operations, and business costs—so 100% of your donation goes directly as commission to those posting content about Jesus.",
+      description: "Give a man a fish, and you feed him for a day. Teach a man to fish, and you feed him for a lifetime. Team Jesus runs as a real business, generating revenue by providing posting and distribution services to traditional media companies. This allows us to fund development, operations, and business costs—so 100% of your donation goes directly as commission to those posting content about Jesus.",
       sections: [
         {
-          title: "PostClips Business Model",
-          text: "PostClips runs as a real business. We generate revenue by providing the same posting and distribution service for traditional media companies. This allows us to fund the development, operations, and costs of owning a business like this. That way you, the donor, are not paying for anything in connection to operations. 100% of your donation is given directly as a commission to the people posting the content, so they can make a living distributing content about Jesus.",
+          title: "Team Jesus Business Model",
+          text: "Team Jesus runs as a real business. We generate revenue by providing the same posting and distribution service for traditional media companies. This allows us to fund the development, operations, and costs of owning a business like this. That way you, the donor, are not paying for anything in connection to operations. 100% of your donation is given directly as a commission to the people posting the content, so they can make a living distributing content about Jesus.",
           icon: Video,
           image: "/images/how_it_works/how_business_model.jpg",
           align: "left"
@@ -76,10 +76,10 @@ export function HowItWorksStepper() {
           align: "left"
         },
         {
-          title: "PostClips' Action",
-          text: "Because of this, PostClips allocates 10% of its monthly profits to Team Jesus. These funds are used to support the production of more non-denominational Christian content (we need a lot!) and pay clippers directly as a commission for posting the content, so they can make a living distributing content about Jesus. We'd be honored for you to join us in making this part of your monthly tithe, as we believe it's one of the most effective ways to share Jesus with the world.",
+          title: "Team Jesus' Action",
+          text: "Because of this, Team Jesus allocates 10% of its monthly profits to the mission. These funds are used to support the production of more non-denominational Christian content (we need a lot!) and pay clippers directly as a commission for posting the content, so they can make a living distributing content about Jesus. We'd be honored for you to join us in making this part of your monthly tithe, as we believe it's one of the most effective ways to share Jesus with the world.",
           icon: Video,
-          image: "/images/how_it_works/how_postclips_action.jpg",
+          image: "/images/how_it_works/how_team_jesus_action.jpg",
           align: "right"
         }
       ]
@@ -120,17 +120,6 @@ export function HowItWorksStepper() {
             <p className="text-sm text-gray-600 mt-2 text-center">
               *Any scripture references are from the English Standard Version of the Bible.
             </p>
-          </div>
-
-          {/* PostClips Logo */}
-          <div className="mb-12">
-            <Image
-              src="/images/PostClips_Logo_Final_RGB_White.svg"
-              alt="PostClips"
-              width={300}
-              height={100}
-              className="mx-auto w-[300px] h-auto"
-            />
           </div>
 
           {/* Tab Navigation */}

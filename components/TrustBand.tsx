@@ -5,7 +5,7 @@ import { Building2 } from 'lucide-react';
 
 export function TrustBand() {
   const partners = [
-    { name: 'PostClips', width: 120 },
+    { name: 'Team Jesus', width: 120 },
     { name: 'Elevation Church', width: 150 },
     { name: 'Partner 3', width: 110 },
     { name: 'Partner 4', width: 130 },

@@ -71,7 +71,7 @@ export function Stewardship() {
               clippers who create and post Gospel content that reaches people around the world.
             </p>
             <p className="leading-relaxed">
-              PostClips operates sustainably through revenue from our business services. This allows us to
+              Team Jesus operates sustainably through revenue from our business services. This allows us to
               ensure that every dollar you give directly funds the mission to reach people with the message of Jesus.
             </p>
             <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-6 border-2 border-primary-200">
